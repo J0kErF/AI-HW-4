@@ -1,6 +1,6 @@
 # Index — Portfolio Entry (Macro view)
 
-Nodes **459** · Edges **390** · Communities **139**.
+Nodes **459** · Edges **398** · Communities **138**.
 
 ## Central nodes (hubs)
 

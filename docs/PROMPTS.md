@@ -114,6 +114,19 @@ prompts that *failed* and what was changed.
   vs 2, iterations 3 vs 1) reported, not hidden.
 - **Quality:** 29 tests pass, coverage ~91%, ruff clean; tests never hit network.
 
+### P0-2.polish — complete unchecked Phase 0/1/2 items
+- **Phase 1 — venv reproduction:** isolated venv (`uv`/pytest), ran the two
+  `test_hooks.py` selectors: **2 failed** at buggy (code + fixed test), **2 passed**
+  at the fixed commit. `buggy→red, fixed→green` verified on Windows/py3.13.
+- **Phase 2 — semantic layer:** implemented `SemanticLayer.augment()` (bounded
+  ≤40 functions, dunders skipped, self-pairs forbidden) → `semantically_similar_to`
+  INFERRED/AMBIGUOUS edges via the Gatekeeper; enabled in `build_graph`. Iteration:
+  first run returned degenerate self-pairs (many `__init__`) → filtered dunders +
+  strengthened the prompt → 8 meaningful edges. Split SDK → `sdk/builders.py` mixin
+  to keep files ≤150 LOC.
+- **Phase 0:** `uv lock` (71 packages) committed; repo shared with the lecturer.
+- **Quality:** 32 tests pass, coverage ~91.7%, ruff clean.
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …

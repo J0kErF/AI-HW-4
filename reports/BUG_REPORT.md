@@ -50,15 +50,22 @@ The upstream ground-truth patch is in §4.
 `run_hook` iterates `for script in scripts: run_script_with_context(...)`.
 Verified by the two failing tests going green at the fixed commit.
 
-## 5. Reproduction (documented)
+## 5. Reproduction (VERIFIED in an isolated venv, Windows / Python 3.13)
 ```bash
-uv run python -m graphquest clone        # checks out the buggy commit
-# Full test run needs cookiecutter's deps + pytest (isolated venv):
-#   python -m venv .t && .t/bin/pip install -e data/target_repo pytest pytest-mock freezegun
-#   .t/bin/python -m pytest data/target_repo/tests/test_hooks.py::TestFindHooks::test_find_hook
+uv run python -m graphquest clone   # buggy code + fixed-commit test overlaid
+python -m venv .repro
+.repro/Scripts/pip install -e data/target_repo pytest pytest-mock freezegun
+cd data/target_repo
+python -m pytest tests/test_hooks.py::TestFindHooks::test_find_hook \
+                 tests/test_hooks.py::TestExternalHooks::test_run_hook -o addopts=""
 ```
-Source-level defect **confirmed present** at the buggy commit (Phase 1). Full
-pytest reproduction is a Phase-4 prerequisite, run in an isolated venv.
+Result (both selectors):
+- **Buggy** (code `d7e7b28` + fixed test): **2 failed** — `test_find_hook` fails on
+  `actual_hook_path[0]` (buggy code returns a string, not a list).
+- **Fixed** (`90434ff`): **2 passed**.
+
+`buggy → red`, `fixed → green` confirmed. (`-o addopts=""` clears the target's
+`--cov` inifile options; the target's own deps install cleanly.)
 
 ## 6. Before / after
 Graph/architecture diff after the fix (Phase 4): the `find_hook`→`run_hook`

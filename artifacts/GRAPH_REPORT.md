@@ -1,19 +1,19 @@
 # GRAPH_REPORT — Graphify
 
-- Nodes: **459**  ·  Edges: **390**  ·  Communities: **139**  ·  Bridges: **253**
+- Nodes: **459**  ·  Edges: **398**  ·  Communities: **138**  ·  Bridges: **251**
 
 ## God-node / bottleneck candidates (highest betweenness)
 _All paths through one node = architectural risk; verify against source._
 
+- `generate_files` — betweenness 0.006 (`cookiecutter/generate.py::generate_files`)
 - `cookiecutter` — betweenness 0.006 (`cookiecutter/main.py::cookiecutter`)
-- `generate_files` — betweenness 0.005 (`cookiecutter/generate.py::generate_files`)
 - `determine_repo_dir` — betweenness 0.002 (`cookiecutter/repository.py::determine_repo_dir`)
 - `_run_hook_from_repo_dir` — betweenness 0.002 (`cookiecutter/generate.py::_run_hook_from_repo_dir`)
 - `run_hook` — betweenness 0.002 (`cookiecutter/hooks.py::run_hook`)
 
 ## Top central nodes (degree)
 
-- `generate_files` — degree 0.095
+- `generate_files` — degree 0.097
 - `cookiecutter` — degree 0.064
 - `cli_runner` — degree 0.046
 - `prompt_for_config` — degree 0.042
@@ -26,8 +26,8 @@ _All paths through one node = architectural risk; verify against source._
 
 - `cookiecutter.cli` — `cookiecutter.log`
 - `version_msg` — `main`
-- `main` — `configure_logger`
 - `main` — `cookiecutter`
+- `main` — `configure_logger`
 - `_expand_path` — `get_config`
 - `merge_configs` — `get_config`
 - `merge_configs` — `test_merge_configs`

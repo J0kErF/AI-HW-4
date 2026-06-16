@@ -4176,7 +4176,7 @@
     },
     {
       "source": "cookiecutter/cli.py::main",
-      "target": "cookiecutter/log.py::configure_logger",
+      "target": "cookiecutter/main.py::cookiecutter",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4184,7 +4184,7 @@
     },
     {
       "source": "cookiecutter/cli.py::main",
-      "target": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/log.py::configure_logger",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4200,22 +4200,6 @@
     },
     {
       "source": "cookiecutter/config.py::get_config",
-      "target": "cookiecutter/config.py::merge_configs",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/config.py"
-    },
-    {
-      "source": "cookiecutter/config.py::get_config",
-      "target": "cookiecutter/exceptions.py::InvalidConfiguration",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/config.py"
-    },
-    {
-      "source": "cookiecutter/config.py::get_config",
       "target": "cookiecutter/exceptions.py::ConfigDoesNotExistException",
       "label": "calls",
       "evidence": "extracted",
@@ -4225,6 +4209,22 @@
     {
       "source": "cookiecutter/config.py::get_config",
       "target": "cookiecutter/config.py::_expand_path",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/config.py"
+    },
+    {
+      "source": "cookiecutter/config.py::get_config",
+      "target": "cookiecutter/config.py::merge_configs",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/config.py"
+    },
+    {
+      "source": "cookiecutter/config.py::get_config",
+      "target": "cookiecutter/exceptions.py::InvalidConfiguration",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4448,7 +4448,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_context",
-      "target": "cookiecutter/generate.py::apply_overwrites_to_context",
+      "target": "cookiecutter/replay.py::load",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4456,7 +4456,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_context",
-      "target": "cookiecutter/replay.py::load",
+      "target": "cookiecutter/generate.py::apply_overwrites_to_context",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4512,7 +4512,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/utils.py::rmtree",
+      "target": "cookiecutter/generate.py::is_copy_only_path",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4520,7 +4520,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/generate.py::render_and_create_dir",
+      "target": "cookiecutter/environment.py::StrictEnvironment",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4544,15 +4544,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/utils.py::work_in",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/generate.py"
-    },
-    {
-      "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/exceptions.py::UndefinedVariableInTemplate",
+      "target": "cookiecutter/utils.py::rmtree",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4568,15 +4560,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/environment.py::StrictEnvironment",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/generate.py"
-    },
-    {
-      "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/generate.py::is_copy_only_path",
+      "target": "cookiecutter/exceptions.py::UndefinedVariableInTemplate",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4585,6 +4569,22 @@
     {
       "source": "cookiecutter/generate.py::generate_files",
       "target": "cookiecutter/find.py::find_template",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/generate.py"
+    },
+    {
+      "source": "cookiecutter/generate.py::generate_files",
+      "target": "cookiecutter/generate.py::render_and_create_dir",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/generate.py"
+    },
+    {
+      "source": "cookiecutter/generate.py::generate_files",
+      "target": "cookiecutter/utils.py::work_in",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4616,14 +4616,6 @@
     },
     {
       "source": "cookiecutter/hooks.py::run_script",
-      "target": "cookiecutter/utils.py::make_executable",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/hooks.py"
-    },
-    {
-      "source": "cookiecutter/hooks.py::run_script",
       "target": "cookiecutter/exceptions.py::FailedHookException",
       "label": "calls",
       "evidence": "extracted",
@@ -4631,8 +4623,8 @@
       "source_file": "cookiecutter/hooks.py"
     },
     {
-      "source": "cookiecutter/hooks.py::run_script_with_context",
-      "target": "cookiecutter/hooks.py::run_script",
+      "source": "cookiecutter/hooks.py::run_script",
+      "target": "cookiecutter/utils.py::make_executable",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4647,8 +4639,8 @@
       "source_file": "cookiecutter/hooks.py"
     },
     {
-      "source": "cookiecutter/hooks.py::run_hook",
-      "target": "cookiecutter/hooks.py::find_hook",
+      "source": "cookiecutter/hooks.py::run_script_with_context",
+      "target": "cookiecutter/hooks.py::run_script",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4657,6 +4649,14 @@
     {
       "source": "cookiecutter/hooks.py::run_hook",
       "target": "cookiecutter/hooks.py::run_script_with_context",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/hooks.py"
+    },
+    {
+      "source": "cookiecutter/hooks.py::run_hook",
+      "target": "cookiecutter/hooks.py::find_hook",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4720,6 +4720,22 @@
     },
     {
       "source": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/config.py::get_user_config",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/main.py"
+    },
+    {
+      "source": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/exceptions.py::InvalidModeException",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/main.py"
+    },
+    {
+      "source": "cookiecutter/main.py::cookiecutter",
       "target": "cookiecutter/replay.py::load",
       "label": "calls",
       "evidence": "extracted",
@@ -4728,7 +4744,15 @@
     },
     {
       "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/repository.py::determine_repo_dir",
+      "target": "cookiecutter/utils.py::rmtree",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/main.py"
+    },
+    {
+      "source": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/prompt.py::prompt_for_config",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4752,23 +4776,7 @@
     },
     {
       "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/config.py::get_user_config",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/main.py"
-    },
-    {
-      "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/prompt.py::prompt_for_config",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/main.py"
-    },
-    {
-      "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/utils.py::rmtree",
+      "target": "cookiecutter/repository.py::determine_repo_dir",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4777,14 +4785,6 @@
     {
       "source": "cookiecutter/main.py::cookiecutter",
       "target": "cookiecutter/generate.py::generate_files",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/main.py"
-    },
-    {
-      "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/exceptions.py::InvalidModeException",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4824,7 +4824,15 @@
     },
     {
       "source": "cookiecutter/prompt.py::prompt_for_config",
-      "target": "cookiecutter/prompt.py::render_variable",
+      "target": "cookiecutter/prompt.py::read_user_variable",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/prompt.py"
+    },
+    {
+      "source": "cookiecutter/prompt.py::prompt_for_config",
+      "target": "cookiecutter/prompt.py::prompt_choice_for_config",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4848,23 +4856,15 @@
     },
     {
       "source": "cookiecutter/prompt.py::prompt_for_config",
-      "target": "cookiecutter/prompt.py::prompt_choice_for_config",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/prompt.py"
-    },
-    {
-      "source": "cookiecutter/prompt.py::prompt_for_config",
-      "target": "cookiecutter/prompt.py::read_user_variable",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/prompt.py"
-    },
-    {
-      "source": "cookiecutter/prompt.py::prompt_for_config",
       "target": "cookiecutter/environment.py::StrictEnvironment",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/prompt.py"
+    },
+    {
+      "source": "cookiecutter/prompt.py::prompt_for_config",
+      "target": "cookiecutter/prompt.py::render_variable",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4880,7 +4880,7 @@
     },
     {
       "source": "cookiecutter/replay.py::dump",
-      "target": "cookiecutter/utils.py::make_sure_path_exists",
+      "target": "cookiecutter/replay.py::get_file_name",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4888,7 +4888,7 @@
     },
     {
       "source": "cookiecutter/replay.py::dump",
-      "target": "cookiecutter/replay.py::get_file_name",
+      "target": "cookiecutter/utils.py::make_sure_path_exists",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4928,7 +4928,7 @@
     },
     {
       "source": "cookiecutter/repository.py::determine_repo_dir",
-      "target": "cookiecutter/exceptions.py::RepositoryNotFound",
+      "target": "cookiecutter/repository.py::is_repo_url",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4944,7 +4944,7 @@
     },
     {
       "source": "cookiecutter/repository.py::determine_repo_dir",
-      "target": "cookiecutter/vcs.py::clone",
+      "target": "cookiecutter/repository.py::expand_abbreviations",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4960,15 +4960,7 @@
     },
     {
       "source": "cookiecutter/repository.py::determine_repo_dir",
-      "target": "cookiecutter/repository.py::is_repo_url",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/repository.py"
-    },
-    {
-      "source": "cookiecutter/repository.py::determine_repo_dir",
-      "target": "cookiecutter/repository.py::expand_abbreviations",
+      "target": "cookiecutter/vcs.py::clone",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4977,6 +4969,14 @@
     {
       "source": "cookiecutter/repository.py::determine_repo_dir",
       "target": "cookiecutter/repository.py::repository_has_cookiecutter_json",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/repository.py"
+    },
+    {
+      "source": "cookiecutter/repository.py::determine_repo_dir",
+      "target": "cookiecutter/exceptions.py::RepositoryNotFound",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5024,14 +5024,6 @@
     },
     {
       "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/utils.py::prompt_and_delete",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/vcs.py"
-    },
-    {
-      "source": "cookiecutter/vcs.py::clone",
       "target": "cookiecutter/vcs.py::is_vcs_installed",
       "label": "calls",
       "evidence": "extracted",
@@ -5040,7 +5032,31 @@
     },
     {
       "source": "cookiecutter/vcs.py::clone",
+      "target": "cookiecutter/vcs.py::identify_repo",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/vcs.py"
+    },
+    {
+      "source": "cookiecutter/vcs.py::clone",
       "target": "cookiecutter/exceptions.py::RepositoryNotFound",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/vcs.py"
+    },
+    {
+      "source": "cookiecutter/vcs.py::clone",
+      "target": "cookiecutter/exceptions.py::RepositoryCloneFailed",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/vcs.py"
+    },
+    {
+      "source": "cookiecutter/vcs.py::clone",
+      "target": "cookiecutter/utils.py::prompt_and_delete",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5057,22 +5073,6 @@
     {
       "source": "cookiecutter/vcs.py::clone",
       "target": "cookiecutter/exceptions.py::VCSNotInstalled",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/vcs.py"
-    },
-    {
-      "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/exceptions.py::RepositoryCloneFailed",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/vcs.py"
-    },
-    {
-      "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/vcs.py::identify_repo",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5104,7 +5104,7 @@
     },
     {
       "source": "cookiecutter/zipfile.py::unzip",
-      "target": "cookiecutter/utils.py::prompt_and_delete",
+      "target": "cookiecutter/prompt.py::read_repo_password",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5112,7 +5112,7 @@
     },
     {
       "source": "cookiecutter/zipfile.py::unzip",
-      "target": "cookiecutter/prompt.py::read_repo_password",
+      "target": "cookiecutter/utils.py::prompt_and_delete",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5384,7 +5384,7 @@
     },
     {
       "source": "tests/repository/test_is_repo_url.py::test_expand_abbreviations",
-      "target": "cookiecutter/repository.py::expand_abbreviations",
+      "target": "cookiecutter/repository.py::is_repo_url",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5392,7 +5392,7 @@
     },
     {
       "source": "tests/repository/test_is_repo_url.py::test_expand_abbreviations",
-      "target": "cookiecutter/repository.py::is_repo_url",
+      "target": "cookiecutter/repository.py::expand_abbreviations",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5816,7 +5816,7 @@
     },
     {
       "source": "tests/test_generate_context.py::test_generate_context",
-      "target": "tests/test_generate_context.py::context_data",
+      "target": "cookiecutter/generate.py::generate_context",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5824,7 +5824,7 @@
     },
     {
       "source": "tests/test_generate_context.py::test_generate_context",
-      "target": "cookiecutter/generate.py::generate_context",
+      "target": "tests/test_generate_context.py::context_data",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6488,7 +6488,7 @@
     },
     {
       "source": "tests/test_hooks.py::test_run_failing_hook",
-      "target": "cookiecutter/utils.py::work_in",
+      "target": "cookiecutter/hooks.py::run_hook",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6496,7 +6496,7 @@
     },
     {
       "source": "tests/test_hooks.py::test_run_failing_hook",
-      "target": "cookiecutter/hooks.py::run_hook",
+      "target": "cookiecutter/utils.py::work_in",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6592,7 +6592,7 @@
     },
     {
       "source": "tests/test_output_folder.py::test_output_folder",
-      "target": "cookiecutter/generate.py::generate_context",
+      "target": "cookiecutter/generate.py::generate_files",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6600,14 +6600,6 @@
     },
     {
       "source": "tests/test_output_folder.py::test_output_folder",
-      "target": "cookiecutter/generate.py::generate_files",
-      "label": "tested_by",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "tests/test_output_folder.py"
-    },
-    {
-      "source": "tests/test_output_folder.py::test_exception_when_output_folder_exists",
       "target": "cookiecutter/generate.py::generate_context",
       "label": "tested_by",
       "evidence": "extracted",
@@ -6617,6 +6609,14 @@
     {
       "source": "tests/test_output_folder.py::test_exception_when_output_folder_exists",
       "target": "cookiecutter/generate.py::generate_files",
+      "label": "tested_by",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "tests/test_output_folder.py"
+    },
+    {
+      "source": "tests/test_output_folder.py::test_exception_when_output_folder_exists",
+      "target": "cookiecutter/generate.py::generate_context",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6632,7 +6632,7 @@
     },
     {
       "source": "tests/test_prompt.py::test_convert_to_str",
-      "target": "cookiecutter/prompt.py::render_variable",
+      "target": "cookiecutter/environment.py::StrictEnvironment",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6640,7 +6640,7 @@
     },
     {
       "source": "tests/test_prompt.py::test_convert_to_str",
-      "target": "cookiecutter/environment.py::StrictEnvironment",
+      "target": "cookiecutter/prompt.py::render_variable",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6944,7 +6944,7 @@
     },
     {
       "source": "tests/test_utils.py::test_rmtree",
-      "target": "tests/test_utils.py::make_readonly",
+      "target": "cookiecutter/utils.py::rmtree",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6952,7 +6952,7 @@
     },
     {
       "source": "tests/test_utils.py::test_rmtree",
-      "target": "cookiecutter/utils.py::rmtree",
+      "target": "tests/test_utils.py::make_readonly",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -7200,7 +7200,7 @@
     },
     {
       "source": "tests/zipfile/test_unzip.py::test_unzip_url",
-      "target": "tests/zipfile/test_unzip.py::mock_download",
+      "target": "cookiecutter/zipfile.py::unzip",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -7208,14 +7208,6 @@
     },
     {
       "source": "tests/zipfile/test_unzip.py::test_unzip_url",
-      "target": "cookiecutter/zipfile.py::unzip",
-      "label": "tested_by",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "tests/zipfile/test_unzip.py"
-    },
-    {
-      "source": "tests/zipfile/test_unzip.py::test_unzip_url_existing_cache",
       "target": "tests/zipfile/test_unzip.py::mock_download",
       "label": "tested_by",
       "evidence": "extracted",
@@ -7231,7 +7223,7 @@
       "source_file": "tests/zipfile/test_unzip.py"
     },
     {
-      "source": "tests/zipfile/test_unzip.py::test_unzip_url_existing_cache_no_input",
+      "source": "tests/zipfile/test_unzip.py::test_unzip_url_existing_cache",
       "target": "tests/zipfile/test_unzip.py::mock_download",
       "label": "tested_by",
       "evidence": "extracted",
@@ -7241,6 +7233,14 @@
     {
       "source": "tests/zipfile/test_unzip.py::test_unzip_url_existing_cache_no_input",
       "target": "cookiecutter/zipfile.py::unzip",
+      "label": "tested_by",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "tests/zipfile/test_unzip.py"
+    },
+    {
+      "source": "tests/zipfile/test_unzip.py::test_unzip_url_existing_cache_no_input",
+      "target": "tests/zipfile/test_unzip.py::mock_download",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -7253,6 +7253,70 @@
       "evidence": "extracted",
       "confidence": 0.9,
       "source_file": "tests/zipfile/test_unzip.py"
+    },
+    {
+      "source": "cookiecutter/config.py::get_config",
+      "target": "cookiecutter/config.py::get_user_config",
+      "label": "semantically_similar_to",
+      "evidence": "inferred",
+      "confidence": 0.85,
+      "source_file": "cookiecutter/config.py"
+    },
+    {
+      "source": "cookiecutter/hooks.py::run_script",
+      "target": "cookiecutter/hooks.py::run_script_with_context",
+      "label": "semantically_similar_to",
+      "evidence": "inferred",
+      "confidence": 0.85,
+      "source_file": "cookiecutter/hooks.py"
+    },
+    {
+      "source": "cookiecutter/prompt.py::read_user_variable",
+      "target": "cookiecutter/prompt.py::read_user_yes_no",
+      "label": "semantically_similar_to",
+      "evidence": "inferred",
+      "confidence": 0.7,
+      "source_file": "cookiecutter/prompt.py"
+    },
+    {
+      "source": "cookiecutter/prompt.py::read_user_choice",
+      "target": "cookiecutter/prompt.py::prompt_choice_for_config",
+      "label": "semantically_similar_to",
+      "evidence": "inferred",
+      "confidence": 0.8,
+      "source_file": "cookiecutter/prompt.py"
+    },
+    {
+      "source": "cookiecutter/replay.py::dump",
+      "target": "cookiecutter/replay.py::load",
+      "label": "semantically_similar_to",
+      "evidence": "inferred",
+      "confidence": 0.75,
+      "source_file": "cookiecutter/replay.py"
+    },
+    {
+      "source": "cookiecutter/generate.py::generate_file",
+      "target": "cookiecutter/generate.py::generate_files",
+      "label": "semantically_similar_to",
+      "evidence": "inferred",
+      "confidence": 0.85,
+      "source_file": "cookiecutter/generate.py"
+    },
+    {
+      "source": "cookiecutter/generate.py::render_and_create_dir",
+      "target": "cookiecutter/generate.py::ensure_dir_is_templated",
+      "label": "semantically_similar_to",
+      "evidence": "ambiguous",
+      "confidence": 0.65,
+      "source_file": "cookiecutter/generate.py"
+    },
+    {
+      "source": "cookiecutter/extensions.py::jsonify",
+      "target": "cookiecutter/prompt.py::process_json",
+      "label": "semantically_similar_to",
+      "evidence": "ambiguous",
+      "confidence": 0.6,
+      "source_file": "cookiecutter/extensions.py"
     }
   ]
 }

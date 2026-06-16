@@ -10,11 +10,11 @@
 - ☑ `shared/version.py` + `shared/config.py` implemented with passing tests
   - *Note:* default `pytest` is **red until Phase 2** by design — `fail_under=85`
     over stubbed `src/`. Run `pytest -p no:cov` for the 6 green infra tests.
-- ☐ Generate `uv.lock` and commit it (V3 hard requirement — needs `uv` + network)
-  - *DoD:* `uv lock` run; `uv.lock` + `pyproject.toml` are the single dep source.
-- ◐ Push to GitHub → **https://github.com/J0kErF/AI-HW-4** (pushed `main`)
-  - ☐ Share repo with rmisegal@gmail.com (GitHub Settings → Collaborators — manual)
-  - *DoD:* repo shared, README renders, commits tell PRD→PLAN→TODO→code story.
+- ☑ Generate `uv.lock` and commit it (`uv lock` — 71 packages resolved);
+  `pyproject.toml` + `uv.lock` are the single dependency source.
+- ☑ Push to GitHub → **https://github.com/J0kErF/AI-HW-4** (`main` pushed)
+- ☑ Shared repo with rmisegal@gmail.com (done by submitter via GitHub Settings)
+  - *DoD met:* repo shared, README renders, commits tell PRD→PLAN→TODO→code story.
 
 ## Phase 1 — Acquire the unfamiliar codebase  ◐
 - ☑ Pick & pin one BugsInPy project + bug id → **cookiecutter bug 2** (`setup.json`)
@@ -22,8 +22,9 @@
   (`find_hook` returns single path; docstring-vs-code gap noted in BUG_REPORT)
 - ☑ `acquire` service (`BugInfo`, `bug_metadata` parser, `TargetCheckout`) + SDK
   `clone_target()` implemented + tested (subprocess mocked — no network)
-- ☐ Reproduce the failing test in an isolated venv (`buggy` red → `fixed` green)
-  - *DoD:* both `test_hooks.py` selectors fail at buggy commit, pass at fixed; logged in BUG_REPORT.
+- ☑ Reproduce the failing test in an isolated venv (`buggy` red → `fixed` green) —
+  **verified** (Windows/py3.13): both `test_hooks.py` selectors **2 failed** at buggy,
+  **2 passed** at fixed; logged in `reports/BUG_REPORT.md §5`.
 
 ## Phase 2 — Graphify  ◐
 - ☑ `CodeLayer.extract()` — AST nodes/edges (EXTRACTED), token-free; resilient to
@@ -34,11 +35,14 @@
   communities, bridges, God-nodes. (NetworkX is installed; pure graph theory.)
 - ☑ `VaultWriter.write()` — `index.md`, `hot.md`, per-node notes with `[[wikilinks]]`
 - ☑ `ReportWriter` → `GRAPH_REPORT.md`; `Graphifier` composition; `graphify` CLI + SDK
-- ☐ `SemanticLayer.augment()` — bounded INFERRED/AMBIGUOUS edges via Gatekeeper
-  (needs LLM key + Gatekeeper.execute; comes with the agent phase). Pipeline runs
-  token-free without it (EXTRACTED-only) and graph is real.
-  - *DoD (remaining):* semantic edges added when key present; ≥85% cov reached as
-    Phase 3-5 modules land.
+- ☑ `SemanticLayer.augment()` — bounded LLM layer (≤40 functions, dunders skipped)
+  emits `semantically_similar_to` INFERRED/AMBIGUOUS edges via the Gatekeeper.
+  Enabled in `build_graph` when `semantic_layer_enabled` + a key are present;
+  off → deterministic graph. **Live on cookiecutter: +8 edges** (6 inferred,
+  2 ambiguous), e.g. `get_config~get_user_config`, `generate_file~generate_files`.
+  Graph now demonstrates all three Graphify layers. (SDK split into
+  `sdk/builders.py` mixin to keep files ≤150 LOC.)
+  - *DoD met:* `graph.json` carries extracted+inferred+ambiguous evidence.
 
 ## Phase 3 — Reverse engineering  ☑
 - ☑ `DiagramGenerator.block_diagram()` (Mermaid flowchart, modules grouped by dir)

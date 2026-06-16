@@ -162,11 +162,15 @@ graph-first and a **live, honest token benchmark showing 71% fewer tokens / 94%
 fewer source chars**; 29 tests, **~91% coverage**, ruff-clean; reproducible
 BugsInPy checkout (buggy code + fixed test).
 
+All three Graphify evidence layers are live in the committed graph: deterministic
+EXTRACTED (390) + bounded-LLM INFERRED/AMBIGUOUS `semantically_similar_to` (8).
+Failing test verified `buggy → red`, `fixed → green` in an isolated venv;
+`uv.lock` committed.
+
 **Known gaps:** the agent's fix is *directionally* correct (returns a list) but
-not byte-identical to upstream (small model, minimal context); the bounded
-semantic-layer edges are implemented but not enabled in the committed graph
-(EXTRACTED-only); full `pytest` reproduction of the target's failing test in an
-isolated venv is documented but not automated; `uv.lock` not yet generated here.
+not byte-identical to upstream (small model, minimal context); the semantic layer
+proposes similarity candidates for one bounded slice (≤40 functions), not the
+whole graph; no GUI (CLI + SDK only).
 
 ## 14. License & credits
 MIT. Graphify/Obsidian concepts © Dr. Yoram Segal (course material). Built with
