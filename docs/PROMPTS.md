@@ -72,6 +72,16 @@ prompts that *failed* and what was changed.
   `CookiecutterException` hierarchy (17 inherits) and both insights.
 - **Quality:** 20 tests pass (diagrams 100%, report 92%); ruff clean; coverage 78%.
 
+### P4.0 — API Gatekeeper (Phase 4 prerequisite)
+- **Context given:** V3 §5 (single chokepoint; rate limit from config; queue/
+  backpressure; retries; token/cost ledger; budget cap).
+- **Outcome:** `RateLimiter` (sliding-window, blocks on limit, injected clock/
+  sleep) + `ApiGatekeeper` (execute with rate-limit→budget→retry→record; pricing
+  from config; `BudgetExceededError`). Fully offline-tested (mock call, virtual
+  clock — no waits/network); gatekeeper 97%, limiter 100%.
+- **Note:** the live debugging agent + token benchmark (Phases 4-5) need a real
+  LLM key in `.env`; the machinery and budget accounting are ready.
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …

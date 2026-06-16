@@ -49,7 +49,11 @@
   - *DoD met:* diagrams render in GitHub; insights cite `source_file` + evidence.
   - 20 tests pass; diagrams 100%, report 92%; ruff clean.
 
-## Phase 4 — Graph-guided debug agent  ☐
+## Phase 4 — Graph-guided debug agent  ◐
+- ☑ **Prereq:** `ApiGatekeeper` + `RateLimiter` implemented (blocking backpressure,
+  retries, token/cost ledger, budget cap) — fully offline-tested (97%/100%).
+  Unblocks the semantic layer and the agent's LLM calls.
+- ☐ **Needs an LLM key** (`OPENAI_API_KEY`/DeepSeek in `.env`) for a real run.
 - ☐ `GraphTools` (query/path/explain/read_source_span)
 - ☐ `DebugNodes` (observe→relate→hypothesize→validate→fix) + `should_continue`
 - ☐ `DebugWorkflow` (StateGraph wiring, iteration cap)
