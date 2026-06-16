@@ -16,19 +16,34 @@ With multiple matching hook scripts in a template's `hooks/` dir, only the
 **first** one runs. `test_find_hook` expects a *list* of hook paths; the buggy
 `find_hook` returns a single path (or `None`).
 
-## 2. Investigation (to be filled by the agent in Phase 4)
-- **OBS** — failing test points at `find_hook`/`run_hook` (community: hooks).
-- **REL** — `run_hook --calls--> find_hook` (EXTRACTED edge). The contract of
-  the *called* function is the suspect, not the caller.
-- **CONF** — EXTRACTED call edge → strong; confirm at source.
-- **CTX** — note the **rationale-vs-implementation gap**: `find_hook`'s docstring
-  says *"Return a dict of all hook scripts provided… Dict's key will be…"* but
-  the buggy code `return os.path.abspath(...)` on first match → returns one path.
-- **SRC** — open `cookiecutter/hooks.py` to confirm.
+## 2. Investigation (LIVE — graph-guided LangGraph agent, deepseek-chat)
+Faithful BugsInPy reproduction: buggy code + the *fixed commit's* test overlaid
+(`TargetCheckout` does this), so `test_find_hook` asserts `find_hook(...)[0]` —
+indexing a **list** the buggy code never returns.
+
+- **OBS** — from the failing-test name the agent followed `tested_by` edges to
+  the suspect `cookiecutter/hooks.py::find_hook` (no source read yet).
+- **REL/CONF** — EXTRACTED `tested_by` edge → strong; also `run_hook --calls-->
+  find_hook`. The *called* function's contract is the suspect.
+- **CTX/SRC** — the agent read ONLY two spans (find_hook + test_find_hook), not
+  whole files, and concluded:
+  > "The test expects `hooks.find_hook` to return a list where the first element
+  > is an absolute path … causing the assertion `expected_pre == actual_hook_path[0]`
+  > to fail."
+- **Cost of the agent run:** ~1.3k tokens, ~$0.0006.
 
 ## 3. Root cause
-`cookiecutter/hooks.py::find_hook` returns the **first** matching script (single
-path) instead of **all** matching scripts; `run_hook` then runs only that one.
+`cookiecutter/hooks.py::find_hook` returns the **first** matching script (a single
+path / `None`) instead of a **list** of all matching scripts; the updated test
+indexes the result as a list (`[0]`), so it fails. `run_hook` likewise runs only
+the one returned script.
+
+## 3a. Agent's proposed fix (directionally correct)
+The agent emitted a diff making `find_hook` `return [hook_path]` / `return []`
+(a list) — the correct *direction* of the upstream fix. It is not byte-identical
+to upstream (which collects ALL matches and updates `run_hook` to iterate); a
+small model reading minimal context gets the contract right but not every detail.
+The upstream ground-truth patch is in §4.
 
 ## 4. Fix (matches upstream ground truth)
 `find_hook` collects matches into a list (`return None` only when empty);

@@ -27,6 +27,7 @@ class GraphTools:
         self._repo = Path(repo_root)
         self._files: set[str] = set()
         self.units_read = 0
+        self.chars_read = 0  # chars of source actually fed to the model (token proxy)
 
     @property
     def files_read(self) -> int:
@@ -62,12 +63,15 @@ class GraphTools:
     def read_source_span(self, node_id: str) -> str:
         """Read ONLY the source lines for one node (SRC validation step)."""
         node = self._nodes.get(node_id)
-        if not node:
+        path = self._repo / node["source_file"] if node else None
+        if not node or not path.exists():
             return ""
         self.units_read += 1
         self._files.add(node["source_file"])
-        text = (self._repo / node["source_file"]).read_text(encoding="utf-8", errors="replace")
+        text = path.read_text(encoding="utf-8", errors="replace")
         lines = text.splitlines()
         start = max(node.get("line", 1) - 1, 0)
         end = node.get("end_line") or len(lines)
-        return "\n".join(lines[start:end])
+        span = "\n".join(lines[start:end])
+        self.chars_read += len(span)
+        return span

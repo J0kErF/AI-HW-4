@@ -27,6 +27,7 @@ class DebugState(TypedDict, total=False):
     question: str
     hot_context: str
     visited_nodes: list[str]
+    test_nodes: list[str]
     suspect_src: str
     hypotheses: list[dict]
     root_cause: str

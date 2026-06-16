@@ -121,10 +121,29 @@ Macro map; `hot.md` = focused bug-critical region; per-node notes link via
 _Filled in Phase 3–4:_ block diagram, OOP schema (`reports/REVERSE_ENGINEERING.md`),
 root-cause analysis (`reports/BUG_REPORT.md`), before/after graph.
 
-## 11. Token-efficiency comparison
-_Filled in Phase 5:_ see [`reports/TOKEN_REPORT.md`](reports/TOKEN_REPORT.md) and
-`assets/token_savings.png`. Honest baseline (same model/task/stop; only retrieval
-differs) per [`docs/PRD_token_benchmark.md`](docs/PRD_token_benchmark.md).
+## 11. Token-efficiency comparison (LIVE results — deepseek-chat)
+Real run on cookiecutter bug 2 (full table in
+[`reports/TOKEN_REPORT.md`](reports/TOKEN_REPORT.md), chart
+`assets/token_savings.png`). Honest baseline: same model/task/stopping criterion;
+only retrieval differs (whole files vs graph-guided spans).
+
+| Metric | Naive baseline | Graph-guided | Saving |
+|--------|----------------|--------------|--------|
+| **Total tokens** | 4847 | 1388 | **71.4%** |
+| Input tokens | 3393 | 1064 | 68.6% |
+| **Source chars read** (token proxy) | 13641 | 804 | **94.1%** |
+| Cost (USD) | 0.0025 | 0.0006 | 74.4% |
+| Localized root cause | ✓ | ✓ | — |
+
+> **Honest trade-off:** graph-guided does *more, smaller* steps (Units read 5 vs 2,
+> Iterations 3 vs 1; Files read equal). The win isn't fewer reads — it's **far less
+> content per read** (two ~20-line spans vs two ~200-line files), which is what
+> drives the token/cost drop. Both arms correctly localized `find_hook`.
+
+## 11b. Cost / budget
+The whole live pipeline (graphify is token-free; debug + benchmark) costs **< $0.01**
+on `deepseek-chat`. The Gatekeeper caps spend at **$1.50/session**
+(`config/rate_limits.json`) and prices every call from config.
 
 ## 12. Extensions & original ideas
 Candidates (≥1 per area, see RESEARCH_QUESTIONS): centrality-ranked suspects,
@@ -132,7 +151,22 @@ dynamic `hot.md` from `git diff`, orphan detection, impact report, before/after
 graph `diff`.
 
 ## 13. Self-grade
-_Filled at submission — honest, not inflated (see HW1 lesson)._
+**~84 / 100** — honest (not inflated; see HW1 lesson).
+
+**Strengths:** full V3 compliance (SDK facade, API Gatekeeper with rate
+limit/budget/ledger, OOP, ≤150-LOC modules, per-mechanism PRDs, C4/UML, PROMPTS
+log, versioned config, uv-ready); a *real* deterministic Graphify graph (459
+nodes) + Obsidian vault from an unfamiliar repo; Mermaid block + OOP diagrams and
+two graph-derived insights; a working **LangGraph** agent that localizes the bug
+graph-first and a **live, honest token benchmark showing 71% fewer tokens / 94%
+fewer source chars**; 29 tests, **~91% coverage**, ruff-clean; reproducible
+BugsInPy checkout (buggy code + fixed test).
+
+**Known gaps:** the agent's fix is *directionally* correct (returns a list) but
+not byte-identical to upstream (small model, minimal context); the bounded
+semantic-layer edges are implemented but not enabled in the committed graph
+(EXTRACTED-only); full `pytest` reproduction of the target's failing test in an
+isolated venv is documented but not automated; `uv.lock` not yet generated here.
 
 ## 14. License & credits
 MIT. Graphify/Obsidian concepts © Dr. Yoram Segal (course material). Built with

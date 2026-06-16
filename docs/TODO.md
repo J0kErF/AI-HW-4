@@ -58,16 +58,20 @@
 - ☑ `DebugWorkflow` (real LangGraph `StateGraph`); `SDK.debug` + `debug` CLI
 - ☑ `LLMClient` (OpenAI-compatible, billed via Gatekeeper); machinery fully
   mocked-tested (agent localizes find_hook, emits fix, 3-step token_log)
-- ☐ **LIVE RUN** (needs `OPENAI_API_KEY`/DeepSeek in `.env`): localize the real
-  bug + emit fix diff; confirm the target test goes green.
+- ☑ **LIVE RUN** (deepseek-chat): faithful BugsInPy repro (buggy code + fixed test
+  overlaid by `TargetCheckout`); agent localized `find_hook` graph-first and gave
+  the correct root cause (test expects a list) + a list-returning fix, ~1.3k
+  tokens / $0.0006. Fix is directionally correct, not byte-identical to upstream.
 
 ## Phase 5 — Token benchmark (the thesis)  ◐
 - ☑ `NaiveBaseline.run()` (whole test file + module under test; same model/task/stop)
 - ☑ Guided arm via the agent; isolated gatekeeper ledger per arm
 - ☑ `BenchmarkComparator` → `TOKEN_REPORT.md` + matplotlib `token_savings.png`;
   `SDK.benchmark` + `benchmark` CLI. Mocked tests prove guided opens fewer files.
-- ☐ **LIVE RUN**: produce the real baseline-vs-guided token numbers.
-  - *DoD:* honest comparison table; ≥60% token saving demonstrated or explained.
+- ☑ **LIVE RUN** (deepseek-chat): **71.4% total-token saving** (4847→1388),
+  94.1% fewer source chars, 74.4% lower cost; both arms localized. Honest
+  trade-offs (units/iterations higher) shown in `reports/TOKEN_REPORT.md` + chart.
+  - *DoD met:* honest table; ≥60% token saving demonstrated.
 
 ## Phase 6 — Docs, visuals, self-grade  ☐
 - ☐ README: install/usage, screenshots, diagrams, cost table, self-grade

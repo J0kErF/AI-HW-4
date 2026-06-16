@@ -42,8 +42,12 @@ def test_checkout_clones_then_pins_commit(tmp_path: Path) -> None:
     assert out == dest
     assert calls[0][:2] == ["git", "clone"]
     assert bug.github_url in calls[0]
-    assert calls[-1][:3] == ["git", "checkout", "--quiet"]
-    assert calls[-1][-1] == _TARGET["buggy_commit_id"]
+    # buggy code is checked out...
+    assert any(c[:3] == ["git", "checkout", "--quiet"] and c[-1] == _TARGET["buggy_commit_id"]
+               for c in calls)
+    # ...and the failing test is overlaid from the fixed commit (BugsInPy semantics)
+    assert calls[-1][:4] == ["git", "checkout", "--quiet", _TARGET["fixed_commit_id"]]
+    assert calls[-1][-1] == _TARGET["test_file"]
 
 
 def test_checkout_existing_repo_skips_clone(tmp_path: Path) -> None:

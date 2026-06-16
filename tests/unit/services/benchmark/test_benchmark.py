@@ -54,11 +54,12 @@ def test_debug_returns_fix(repo_and_graph, fake_llm_client) -> None:
 
 
 def test_benchmark_writes_report_and_chart(repo_and_graph, fake_llm_client, tmp_path: Path) -> None:
-    """Both arms run; report + chart written; guided reads fewer FILES.
+    """Both arms run; report + chart written; guided reads fewer source chars.
 
-    (Token *saving* is proven in the real run; a fixed-count mock can't show it.
-    The honest structural claim the mock proves is: guided opens fewer files —
-    one function span vs the whole test file + module.)
+    (Absolute token *saving* is proven in the real run; a fixed-count mock can't
+    show it. The honest structural claim the mock proves is: graph-guided reads
+    far fewer source characters — function spans vs whole files — which is the
+    direct driver of the token saving.)
     """
     repo, gj = repo_and_graph
     report = tmp_path / "TOKEN_REPORT.md"
@@ -66,7 +67,7 @@ def test_benchmark_writes_report_and_chart(repo_and_graph, fake_llm_client, tmp_
     baseline, guided = _runner(repo, gj, fake_llm_client).run(report, chart)
     assert report.exists() and chart.exists()
     assert baseline.arm == "baseline" and guided.arm == "graph_guided"
-    assert guided.files_read < baseline.files_read  # 1 span file < 2 whole files
+    assert guided.chars_read < baseline.chars_read  # spans << whole files
 
 
 def test_comparator_renders_dash_for_zero_baseline(tmp_path: Path) -> None:

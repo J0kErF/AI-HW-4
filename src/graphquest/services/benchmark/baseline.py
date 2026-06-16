@@ -61,6 +61,7 @@ class NaiveBaseline:
             output_tokens=sum(r.output_tokens for r in self._gk._ledger),
             files_read=len(files),
             units_read=len(files),
+            chars_read=sum(len(f) for f in files),
             iterations=1,
             cost_usd=self._gk.total_cost_usd,
             localized="find_hook" in resp.text.lower(),

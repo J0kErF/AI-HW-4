@@ -28,6 +28,7 @@ class BenchmarkComparator:
         ("Output tokens", "output_tokens"),
         ("Files read", "files_read"),
         ("Units read", "units_read"),
+        ("Source chars read (token proxy)", "chars_read"),
         ("Iterations", "iterations"),
         ("Cost (USD)", "cost_usd"),
     ]
@@ -57,6 +58,14 @@ class BenchmarkComparator:
             "the graph-guided agent follows `tested_by`/`calls` edges to the suspect and",
             "reads only that function's source span. The one-time semantic graph-build",
             "cost is separate (this run used the deterministic, token-free graph).",
+            "",
+            "## Honest trade-offs",
+            "Graph-guided does **more, smaller** steps: `Units read` and `Iterations` are",
+            "higher (an `explain` plus two short spans across observe/validate/fix) and",
+            "`Files read` is equal — both arms touch the test file and the module. The win",
+            "is not fewer reads but **far less content per read**: the agent feeds the model",
+            "two ~20-line spans instead of two ~200-line files, which is why `Source chars`",
+            "and `Total tokens` drop sharply while step counts rise.",
             "",
         ]
         out.write_text("\n".join(lines), encoding="utf-8")

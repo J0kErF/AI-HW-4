@@ -27,12 +27,14 @@ class DebugNodes:
     def observe(self, state: DebugState) -> DebugState:
         """OBS: from the failing-test names, follow tested_by edges to suspects."""
         tests = set(re.findall(r"test_\w+", state["question"]))
-        suspects, summaries = [], []
+        suspects, test_nodes, summaries = [], [], []
         for e in self._tools.query(label="tested_by"):
             if any(e["source"].endswith(t) for t in tests) and e["target"] not in suspects:
                 suspects.append(e["target"])
+                test_nodes.append(e["source"])
                 summaries.append(self._tools.explain(e["target"]))
         state["visited_nodes"] = suspects
+        state["test_nodes"] = test_nodes
         state["hot_context"] = "\n\n".join(summaries) or "no tested_by suspects found"
         return state
 
@@ -49,14 +51,22 @@ class DebugNodes:
         return state
 
     def validate(self, state: DebugState) -> DebugState:
-        """SRC: read ONLY the top suspect's source span and confirm the cause."""
+        """SRC: read the suspect span + the failing test span, confirm the cause.
+
+        Following the ``tested_by`` edge to the test gives the assertion the fix
+        must satisfy — so the root cause is grounded in what the test expects,
+        not in a possibly-stale docstring. Still two small spans, not whole files.
+        """
         top = state["visited_nodes"][0] if state.get("visited_nodes") else ""
         src = self._tools.read_source_span(top)
         state["suspect_src"] = src  # cache so `fix` does not re-read the file
+        test_node = state.get("test_nodes", [""])[0]
+        test_src = self._tools.read_source_span(test_node) if test_node else ""
         resp = self._llm.complete(
             _SYS,
-            f"Failing tests: {state['question']}\n\nSource of `{top}`:\n```python\n{src}\n```\n"
-            "State the exact root cause in one or two sentences.",
+            f"Failing tests: {state['question']}\n\nSource of suspect `{top}`:\n```python\n{src}"
+            f"\n```\n\nFailing test `{test_node}`:\n```python\n{test_src}\n```\n"
+            "State the exact root cause in one or two sentences, grounded in what the test asserts.",
         )
         state.setdefault("token_log", []).append((resp.input_tokens, resp.output_tokens))
         state["root_cause"] = resp.text

@@ -15,6 +15,7 @@ class BenchmarkRun:
         output_tokens: Total completion tokens consumed.
         files_read: Number of source files opened.
         units_read: Number of textual units (functions/notes) read.
+        chars_read: Characters of source fed to the model (token proxy).
         iterations: Number of investigation rounds.
         seconds: Wall-clock time to stop.
         cost_usd: Cost from the gatekeeper ledger.
@@ -26,6 +27,7 @@ class BenchmarkRun:
     output_tokens: int = 0
     files_read: int = 0
     units_read: int = 0
+    chars_read: int = 0
     iterations: int = 0
     seconds: float = 0.0
     cost_usd: float = 0.0

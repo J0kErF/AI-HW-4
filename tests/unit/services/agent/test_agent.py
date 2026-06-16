@@ -21,6 +21,10 @@ def graph_and_repo(tmp_path: Path) -> tuple[Path, Path]:
         "def find_hook(name):\n    for f in files:\n        return f  # bug: single\n    return None\n",
         encoding="utf-8",
     )
+    (repo / "t").mkdir()
+    (repo / "t" / "test_hooks.py").write_text(
+        "def test_find_hook():\n    assert find_hook('x') == ['a', 'b']\n", encoding="utf-8"
+    )
     graph = {
         "version": "1.00",
         "nodes": [

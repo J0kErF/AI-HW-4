@@ -74,6 +74,7 @@ class BenchmarkRunner:
             output_tokens=sum(r.output_tokens for r in gk._ledger),
             files_read=tools.files_read,
             units_read=tools.units_read,
+            chars_read=tools.chars_read,
             iterations=len(state.get("token_log", [])),
             cost_usd=gk.total_cost_usd,
             localized="find_hook" in answer,

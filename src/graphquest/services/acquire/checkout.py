@@ -34,9 +34,12 @@ class TargetCheckout:
         self._run(["git", *args], cwd=str(cwd) if cwd else None, check=True)
 
     def checkout(self, bug: BugInfo, ref: str = "buggy") -> Path:
-        """Clone ``bug.github_url`` and check out the commit for ``ref``.
+        """Clone ``bug.github_url`` and check out the BugsInPy revision for ``ref``.
 
-        Idempotent: if the repo already exists it only fetches + checks out.
+        Faithful BugsInPy reproduction: for ``ref="buggy"`` we check out the buggy
+        commit's CODE but overlay the failing test from the *fixed* commit, so the
+        bug is actually exposed (the raw buggy commit ships the pre-fix test, which
+        passes). Idempotent: an existing repo is only fetched + re-checked-out.
 
         Args:
             bug: Pinned bug metadata.
@@ -51,4 +54,7 @@ class TargetCheckout:
             self._git("clone", bug.github_url, str(self._dir))
         self._git("fetch", "--all", "--quiet", cwd=self._dir)
         self._git("checkout", "--quiet", commit, cwd=self._dir)
+        if ref == "buggy" and bug.test_file:
+            # Overlay the failing test from the fixed commit (BugsInPy semantics).
+            self._git("checkout", "--quiet", bug.fixed_commit_id, "--", bug.test_file, cwd=self._dir)
         return self._dir

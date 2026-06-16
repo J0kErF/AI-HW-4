@@ -98,6 +98,22 @@ prompts that *failed* and what was changed.
 - **Quality:** 29 tests pass; coverage **~91% (gate met)**; ruff clean. LLM is
   mocked — no network in tests. Live run needs a key.
 
+### P4.2 / P5.2 — LIVE run on deepseek-chat
+- **Context:** real DeepSeek key in `.env` (git-ignored, never committed).
+- **Iteration / what failed and why:** first live debug gave a wrong root cause
+  ("returns None, expects {}") — because the raw buggy commit ships the *pre-fix*
+  test (consistent with buggy code → no failure exposed). Fixed `TargetCheckout`
+  to overlay the failing test from the fixed commit (true BugsInPy semantics);
+  re-cloned + re-graphified. Also made `validate` follow the `tested_by` edge to
+  read the test span, so the root cause is grounded in the assertion.
+- **Result (debug):** agent localized `find_hook` graph-first and correctly stated
+  the list-vs-single contract; fix returns a list (directionally upstream-correct);
+  ~1.3k tokens, $0.0006.
+- **Result (benchmark):** **71.4% total-token saving** (4847→1388), 94.1% fewer
+  source chars, 74.4% lower cost; both arms localized. Honest trade-offs (units 5
+  vs 2, iterations 3 vs 1) reported, not hidden.
+- **Quality:** 29 tests pass, coverage ~91%, ruff clean; tests never hit network.
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …
