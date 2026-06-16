@@ -9,8 +9,30 @@ from __future__ import annotations
 
 import json
 from pathlib import Path
+from types import SimpleNamespace
 
 import pytest
+
+
+class _FakeCompletions:
+    """Stand-in for openai ``client.chat.completions`` (no network)."""
+
+    def __init__(self, reply: str) -> None:
+        self._reply = reply
+        self.calls = 0
+
+    def create(self, model, messages, temperature=0.0):  # noqa: ANN001, ANN201
+        self.calls += 1
+        usage = SimpleNamespace(prompt_tokens=50, completion_tokens=10)
+        message = SimpleNamespace(content=self._reply)
+        return SimpleNamespace(choices=[SimpleNamespace(message=message)], usage=usage)
+
+
+@pytest.fixture
+def fake_llm_client():  # noqa: ANN201
+    """A fake OpenAI-compatible client whose replies mention `find_hook`."""
+    reply = "Root cause: find_hook returns a single path.\n```diff\n- return path\n+ return [path]\n```"
+    return SimpleNamespace(chat=SimpleNamespace(completions=_FakeCompletions(reply)))
 
 
 @pytest.fixture

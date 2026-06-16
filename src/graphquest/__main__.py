@@ -38,10 +38,13 @@ def _dispatch(sdk: GraphQuestSDK, command: str) -> None:
     if command in ("reverse", "all"):
         result = sdk.reverse_engineer(graph)
         print(f"reverse-engineering report: {result['report_path']}")
-    if command == "debug":
-        sdk.debug()
-    if command == "benchmark":
-        sdk.benchmark()
+    if command in ("debug", "all"):
+        r = sdk.debug()
+        print(f"root cause: {r['root_cause'][:200]}")
+        print(f"agent tokens: {r['total_tokens']}  cost: ${r['cost_usd']:.4f}")
+    if command in ("benchmark", "all"):
+        base, guided = sdk.benchmark()
+        print(f"baseline tokens: {base.total_tokens}  guided tokens: {guided.total_tokens}")
 
 
 if __name__ == "__main__":

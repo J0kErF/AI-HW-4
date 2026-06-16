@@ -53,17 +53,20 @@
 - ☑ **Prereq:** `ApiGatekeeper` + `RateLimiter` implemented (blocking backpressure,
   retries, token/cost ledger, budget cap) — fully offline-tested (97%/100%).
   Unblocks the semantic layer and the agent's LLM calls.
-- ☐ **Needs an LLM key** (`OPENAI_API_KEY`/DeepSeek in `.env`) for a real run.
-- ☐ `GraphTools` (query/path/explain/read_source_span)
-- ☐ `DebugNodes` (observe→relate→hypothesize→validate→fix) + `should_continue`
-- ☐ `DebugWorkflow` (StateGraph wiring, iteration cap)
-- ☐ Localize root cause + emit fix diff; confirm target test goes green
-  - *DoD:* `debug` command produces correct fix; per-step `token_log` recorded.
+- ☑ `GraphTools` (query/neighbors/explain/read_source_span — reads function spans, not files)
+- ☑ `DebugNodes` (observe→hypothesize→validate→fix; source read last, span cached)
+- ☑ `DebugWorkflow` (real LangGraph `StateGraph`); `SDK.debug` + `debug` CLI
+- ☑ `LLMClient` (OpenAI-compatible, billed via Gatekeeper); machinery fully
+  mocked-tested (agent localizes find_hook, emits fix, 3-step token_log)
+- ☐ **LIVE RUN** (needs `OPENAI_API_KEY`/DeepSeek in `.env`): localize the real
+  bug + emit fix diff; confirm the target test goes green.
 
-## Phase 5 — Token benchmark (the thesis)  ☐
-- ☐ `NaiveBaseline.run()` (whole-file reads, same model/task/stop)
-- ☐ Guided arm (reuse agent) instrumented identically
-- ☐ `BenchmarkComparator` → `TOKEN_REPORT.md` + `assets/token_savings.png`
+## Phase 5 — Token benchmark (the thesis)  ◐
+- ☑ `NaiveBaseline.run()` (whole test file + module under test; same model/task/stop)
+- ☑ Guided arm via the agent; isolated gatekeeper ledger per arm
+- ☑ `BenchmarkComparator` → `TOKEN_REPORT.md` + matplotlib `token_savings.png`;
+  `SDK.benchmark` + `benchmark` CLI. Mocked tests prove guided opens fewer files.
+- ☐ **LIVE RUN**: produce the real baseline-vs-guided token numbers.
   - *DoD:* honest comparison table; ≥60% token saving demonstrated or explained.
 
 ## Phase 6 — Docs, visuals, self-grade  ☐

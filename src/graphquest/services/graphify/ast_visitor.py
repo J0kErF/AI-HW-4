@@ -18,6 +18,7 @@ class FuncFact:
     qualname: str
     name: str
     lineno: int
+    end_lineno: int
     calls: set[str] = field(default_factory=set)
     is_test: bool = False
 
@@ -28,6 +29,7 @@ class ClassFact:
 
     name: str
     lineno: int
+    end_lineno: int
     bases: list[str] = field(default_factory=list)
 
 
@@ -78,7 +80,10 @@ def analyze_file(source: str, module: str, rel: str) -> FileFacts:
     for node in ast.walk(tree):
         if isinstance(node, ast.ClassDef):
             bases = [b.id for b in node.bases if isinstance(b, ast.Name)]
-            facts.classes.append(ClassFact(name=node.name, lineno=node.lineno, bases=bases))
+            facts.classes.append(
+                ClassFact(name=node.name, lineno=node.lineno,
+                          end_lineno=node.end_lineno or node.lineno, bases=bases)
+            )
         elif isinstance(node, ast.ImportFrom) and node.module:
             facts.imports.append(node.module)
         elif isinstance(node, ast.Import):
@@ -92,6 +97,7 @@ def analyze_file(source: str, module: str, rel: str) -> FileFacts:
                     qualname=node.name,
                     name=node.name,
                     lineno=node.lineno,
+                    end_lineno=node.end_lineno or node.lineno,
                     calls=_collect_calls(node),
                     is_test=is_test,
                 )

@@ -26,8 +26,8 @@ _All paths through one node = architectural risk; verify against source._
 
 - `cookiecutter.cli` — `cookiecutter.log`
 - `version_msg` — `main`
-- `main` — `cookiecutter`
 - `main` — `configure_logger`
+- `main` — `cookiecutter`
 - `_expand_path` — `get_config`
 - `merge_configs` — `get_config`
 - `merge_configs` — `test_merge_configs`

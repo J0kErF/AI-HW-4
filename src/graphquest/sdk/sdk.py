@@ -8,11 +8,13 @@ as methods.
 
 from __future__ import annotations
 
+import os
 from pathlib import Path
 
 from graphquest.services.acquire.checkout import TargetCheckout
 from graphquest.services.acquire.models import BugInfo
 from graphquest.services.benchmark.models import BenchmarkRun
+from graphquest.services.benchmark.runner import BenchmarkRunner
 from graphquest.services.graphify.code_layer import CodeLayer
 from graphquest.services.graphify.graphifier import Graphifier
 from graphquest.services.graphify.metrics import MetricsCalculator
@@ -21,8 +23,9 @@ from graphquest.services.graphify.report_writer import ReportWriter
 from graphquest.services.graphify.vault_writer import VaultWriter
 from graphquest.services.reverse_engineering.diagrams import DiagramGenerator
 from graphquest.services.reverse_engineering.report import ReverseEngineeringReport
-from graphquest.shared.config import Config
+from graphquest.shared.config import Config, get_secret
 from graphquest.shared.gatekeeper import ApiGatekeeper
+from graphquest.shared.llm import LLMClient, build_chat_client
 
 
 class GraphQuestSDK:
@@ -41,8 +44,39 @@ class GraphQuestSDK:
     """
 
     def __init__(self, config: Config | None = None) -> None:
+        try:
+            from dotenv import load_dotenv
+
+            load_dotenv()
+        except ImportError:
+            pass
         self._config = config or Config()
         self._gatekeeper = ApiGatekeeper(rate_limits=self._config.rate_limits)
+
+    # --- LLM / orchestration helpers ---
+    def _new_gatekeeper(self) -> ApiGatekeeper:
+        """A fresh gatekeeper with its own ledger (one per benchmark arm)."""
+        return ApiGatekeeper(rate_limits=self._config.rate_limits)
+
+    def _llm(self, gatekeeper: ApiGatekeeper) -> LLMClient:
+        """Build an LLM client bound to ``gatekeeper`` from env config."""
+        model_env = self._config.get("agent.model_env", "GRAPHQUEST_MODEL")
+        model = os.environ.get(model_env, "deepseek-chat")
+        client = build_chat_client(get_secret("OPENAI_API_KEY"), os.environ.get("OPENAI_BASE_URL"))
+        return LLMClient(gatekeeper, model, client)
+
+    def _runner(self) -> BenchmarkRunner:
+        """Construct the Phase 4-5 orchestration runner."""
+        selectors = self._config.get("target.test_selectors", [])
+        question = " ".join(selectors) or self._config.get("target.test_file", "")
+        return BenchmarkRunner(
+            repo_root=Path(self._config.get("graphify.scan_root", "data/target_repo")),
+            graph_json=Path(self._config.get("graphify.outputs_dir", "artifacts")) / "graph.json",
+            question=question,
+            test_file=self._config.get("target.test_file", ""),
+            llm_factory=self._llm,
+            gk_factory=self._new_gatekeeper,
+        )
 
     def __enter__(self) -> GraphQuestSDK:
         return self
@@ -112,12 +146,15 @@ class GraphQuestSDK:
     # --- Phase 4: graph-guided debugging agent ---
     def debug(self) -> dict:
         """Run the LangGraph agent to localize and fix the bug, graph-first."""
-        raise NotImplementedError("Phase 4")
+        return self._runner().debug()
 
     # --- Phase 5: token-efficiency proof ---
     def benchmark(self) -> tuple[BenchmarkRun, BenchmarkRun]:
-        """Run baseline vs graph-guided arms and write the token report."""
-        raise NotImplementedError("Phase 5")
+        """Run baseline vs graph-guided arms and write the token report + chart."""
+        reports = Path(self._config.get("graphify.outputs_dir", "artifacts")).parent / "reports"
+        assets = Path(self._config.get("graphify.outputs_dir", "artifacts")).parent / "assets"
+        reports.mkdir(parents=True, exist_ok=True)
+        return self._runner().run(reports / "TOKEN_REPORT.md", assets / "token_savings.png")
 
     @property
     def total_cost_usd(self) -> float:

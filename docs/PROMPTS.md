@@ -82,6 +82,22 @@ prompts that *failed* and what was changed.
 - **Note:** the live debugging agent + token benchmark (Phases 4-5) need a real
   LLM key in `.env`; the machinery and budget accounting are ready.
 
+### P4.1 / P5.1 — LangGraph agent + token benchmark (machinery)
+- **Context given:** PRD_debug_agent + PRD_token_benchmark; the real cookiecutter
+  graph.json (with line ranges added so the agent reads a function span, not a file).
+- **Outcome:** `LLMClient` (OpenAI-compatible, billed via Gatekeeper); `GraphTools`
+  (query/neighbors/explain/read_source_span); `DebugNodes`
+  (observe→hypothesize→validate→fix, source-last, span cached to avoid re-reads);
+  `DebugWorkflow` (real LangGraph StateGraph); `NaiveBaseline` (whole test file +
+  module under test); `BenchmarkComparator` (TOKEN_REPORT.md + matplotlib chart);
+  `BenchmarkRunner`; `SDK.debug`/`benchmark` + CLI.
+- **Iteration:** the fake LLM returns fixed token counts, so a mock can't show the
+  token *saving* — switched the benchmark test to assert the structural claim it
+  CAN prove (guided opens 1 span-file vs baseline's 2 whole files); real numbers
+  come from the live run. Also cached the suspect span so `fix` doesn't re-read.
+- **Quality:** 29 tests pass; coverage **~91% (gate met)**; ruff clean. LLM is
+  mocked — no network in tests. Live run needs a key.
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …

@@ -76,16 +76,19 @@ class CodeLayer:
         nodes: list[Node] = []
         index: dict[str, list[str]] = {}
 
-        def add(node_id: str, ntype: NodeType, label: str, src: str, key: str) -> None:
-            nodes.append(Node(id=node_id, type=ntype, label=label, source_file=src))
+        def add(node_id, ntype, label, src, key, line=0, end=0):  # noqa: ANN001, ANN202
+            nodes.append(Node(id=node_id, type=ntype, label=label, source_file=src,
+                              line=line, end_line=end))
             index.setdefault(key, []).append(node_id)
 
         for f in facts:
             add(f.rel, NodeType.MODULE, f.module, f.rel, f.module)
             for c in f.classes:
-                add(f"{f.rel}::{c.name}", NodeType.CLASS, c.name, f.rel, c.name)
+                add(f"{f.rel}::{c.name}", NodeType.CLASS, c.name, f.rel, c.name,
+                    c.lineno, c.end_lineno)
             for fn in f.functions:
-                add(f"{f.rel}::{fn.qualname}", NodeType.FUNCTION, fn.name, f.rel, fn.name)
+                add(f"{f.rel}::{fn.qualname}", NodeType.FUNCTION, fn.name, f.rel, fn.name,
+                    fn.lineno, fn.end_lineno)
         return nodes, index
 
     def _resolve(self, name: str, index: dict[str, list[str]], exclude_id: str) -> str | None:

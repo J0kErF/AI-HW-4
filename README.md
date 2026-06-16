@@ -53,16 +53,14 @@ uv run python -m graphquest all         # full pipeline
 
 # Quality gates
 uv run ruff check                       # 0 errors
-uv run pytest -p no:cov                 # 17 tests pass (Phases 0-2)
-uv run pytest                           # coverage <85% by design until Phases 3-5 land
+uv run pytest                           # 29 tests pass, coverage ≥85% (currently ~91%)
 ```
-> **The suite is green; the coverage *gate* is intentionally "red" until the
-> remaining phases land.** 17 tests pass (config, acquire, graphify code layer,
-> metrics, vault, end-to-end Graphifier). The default `pytest` run enforces
-> `fail_under = 85` over all of `src/`; the Phase 3-5 service modules are still
-> specified stubs, so total coverage (~77%) is below the gate by design. The
-> implemented modules are well-covered (code_layer 100%, metrics 100%, checkout
-> 100%). We do **not** `omit` stubs to inflate the number.
+> **Quality gates pass.** 29 tests green across all phases (config, acquire,
+> graphify code layer/metrics/vault/Graphifier, reverse-engineering diagrams,
+> gatekeeper/rate-limiter, the LangGraph agent and the benchmark — LLM mocked).
+> Coverage **~91%** (≥85% gate met); ruff clean. The **live** debugging run and
+> the real token numbers require an LLM key in `.env` (`graphquest debug` /
+> `benchmark`); the suite itself never makes a network call.
 Or through the SDK (the single entry point for all logic):
 ```python
 from graphquest import GraphQuestSDK

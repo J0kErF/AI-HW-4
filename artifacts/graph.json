@@ -6,6 +6,8 @@
       "type": "module",
       "label": "__main__",
       "source_file": "__main__.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -13,6 +15,8 @@
       "type": "module",
       "label": "cookiecutter.__init__",
       "source_file": "cookiecutter/__init__.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -20,6 +24,8 @@
       "type": "module",
       "label": "cookiecutter.__main__",
       "source_file": "cookiecutter/__main__.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -27,6 +33,8 @@
       "type": "module",
       "label": "cookiecutter.cli",
       "source_file": "cookiecutter/cli.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -34,6 +42,8 @@
       "type": "function",
       "label": "version_msg",
       "source_file": "cookiecutter/cli.py",
+      "line": 24,
+      "end_line": 29,
       "community": null
     },
     {
@@ -41,6 +51,8 @@
       "type": "function",
       "label": "validate_extra_context",
       "source_file": "cookiecutter/cli.py",
+      "line": 32,
+      "end_line": 43,
       "community": null
     },
     {
@@ -48,6 +60,8 @@
       "type": "function",
       "label": "main",
       "source_file": "cookiecutter/cli.py",
+      "line": 105,
+      "end_line": 166,
       "community": null
     },
     {
@@ -55,6 +69,8 @@
       "type": "module",
       "label": "cookiecutter.config",
       "source_file": "cookiecutter/config.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -62,6 +78,8 @@
       "type": "function",
       "label": "_expand_path",
       "source_file": "cookiecutter/config.py",
+      "line": 29,
+      "end_line": 33,
       "community": null
     },
     {
@@ -69,6 +87,8 @@
       "type": "function",
       "label": "merge_configs",
       "source_file": "cookiecutter/config.py",
+      "line": 36,
+      "end_line": 52,
       "community": null
     },
     {
@@ -76,6 +96,8 @@
       "type": "function",
       "label": "get_config",
       "source_file": "cookiecutter/config.py",
+      "line": 55,
+      "end_line": 79,
       "community": null
     },
     {
@@ -83,6 +105,8 @@
       "type": "function",
       "label": "get_user_config",
       "source_file": "cookiecutter/config.py",
+      "line": 82,
+      "end_line": 124,
       "community": null
     },
     {
@@ -90,6 +114,8 @@
       "type": "module",
       "label": "cookiecutter.environment",
       "source_file": "cookiecutter/environment.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -97,6 +123,8 @@
       "type": "class",
       "label": "ExtensionLoaderMixin",
       "source_file": "cookiecutter/environment.py",
+      "line": 7,
+      "end_line": 49,
       "community": null
     },
     {
@@ -104,6 +132,8 @@
       "type": "class",
       "label": "StrictEnvironment",
       "source_file": "cookiecutter/environment.py",
+      "line": 52,
+      "end_line": 64,
       "community": null
     },
     {
@@ -111,6 +141,8 @@
       "type": "function",
       "label": "__init__",
       "source_file": "cookiecutter/environment.py",
+      "line": 14,
+      "end_line": 36,
       "community": null
     },
     {
@@ -118,6 +150,8 @@
       "type": "function",
       "label": "_read_extensions",
       "source_file": "cookiecutter/environment.py",
+      "line": 38,
+      "end_line": 49,
       "community": null
     },
     {
@@ -125,6 +159,8 @@
       "type": "function",
       "label": "__init__",
       "source_file": "cookiecutter/environment.py",
+      "line": 59,
+      "end_line": 64,
       "community": null
     },
     {
@@ -132,6 +168,8 @@
       "type": "module",
       "label": "cookiecutter.exceptions",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -139,6 +177,8 @@
       "type": "class",
       "label": "CookiecutterException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 4,
+      "end_line": 9,
       "community": null
     },
     {
@@ -146,6 +186,8 @@
       "type": "class",
       "label": "NonTemplatedInputDirException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 12,
+      "end_line": 18,
       "community": null
     },
     {
@@ -153,6 +195,8 @@
       "type": "class",
       "label": "UnknownTemplateDirException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 21,
+      "end_line": 27,
       "community": null
     },
     {
@@ -160,6 +204,8 @@
       "type": "class",
       "label": "MissingProjectDir",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 32,
+      "end_line": 38,
       "community": null
     },
     {
@@ -167,6 +213,8 @@
       "type": "class",
       "label": "ConfigDoesNotExistException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 43,
+      "end_line": 49,
       "community": null
     },
     {
@@ -174,6 +222,8 @@
       "type": "class",
       "label": "InvalidConfiguration",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 52,
+      "end_line": 58,
       "community": null
     },
     {
@@ -181,6 +231,8 @@
       "type": "class",
       "label": "UnknownRepoType",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 61,
+      "end_line": 66,
       "community": null
     },
     {
@@ -188,6 +240,8 @@
       "type": "class",
       "label": "VCSNotInstalled",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 69,
+      "end_line": 74,
       "community": null
     },
     {
@@ -195,6 +249,8 @@
       "type": "class",
       "label": "ContextDecodingException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 77,
+      "end_line": 82,
       "community": null
     },
     {
@@ -202,6 +258,8 @@
       "type": "class",
       "label": "OutputDirExistsException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 85,
+      "end_line": 90,
       "community": null
     },
     {
@@ -209,6 +267,8 @@
       "type": "class",
       "label": "InvalidModeException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 93,
+      "end_line": 99,
       "community": null
     },
     {
@@ -216,6 +276,8 @@
       "type": "class",
       "label": "FailedHookException",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 102,
+      "end_line": 107,
       "community": null
     },
     {
@@ -223,6 +285,8 @@
       "type": "class",
       "label": "UndefinedVariableInTemplate",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 110,
+      "end_line": 130,
       "community": null
     },
     {
@@ -230,6 +294,8 @@
       "type": "class",
       "label": "UnknownExtension",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 133,
+      "end_line": 138,
       "community": null
     },
     {
@@ -237,6 +303,8 @@
       "type": "class",
       "label": "RepositoryNotFound",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 141,
+      "end_line": 146,
       "community": null
     },
     {
@@ -244,6 +312,8 @@
       "type": "class",
       "label": "RepositoryCloneFailed",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 149,
+      "end_line": 154,
       "community": null
     },
     {
@@ -251,6 +321,8 @@
       "type": "class",
       "label": "InvalidZipRepository",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 157,
+      "end_line": 163,
       "community": null
     },
     {
@@ -258,6 +330,8 @@
       "type": "function",
       "label": "__init__",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 118,
+      "end_line": 122,
       "community": null
     },
     {
@@ -265,6 +339,8 @@
       "type": "function",
       "label": "__str__",
       "source_file": "cookiecutter/exceptions.py",
+      "line": 124,
+      "end_line": 130,
       "community": null
     },
     {
@@ -272,6 +348,8 @@
       "type": "module",
       "label": "cookiecutter.extensions",
       "source_file": "cookiecutter/extensions.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -279,6 +357,8 @@
       "type": "class",
       "label": "JsonifyExtension",
       "source_file": "cookiecutter/extensions.py",
+      "line": 10,
+      "end_line": 20,
       "community": null
     },
     {
@@ -286,6 +366,8 @@
       "type": "class",
       "label": "RandomStringExtension",
       "source_file": "cookiecutter/extensions.py",
+      "line": 23,
+      "end_line": 37,
       "community": null
     },
     {
@@ -293,6 +375,8 @@
       "type": "class",
       "label": "SlugifyExtension",
       "source_file": "cookiecutter/extensions.py",
+      "line": 40,
+      "end_line": 51,
       "community": null
     },
     {
@@ -300,6 +384,8 @@
       "type": "function",
       "label": "__init__",
       "source_file": "cookiecutter/extensions.py",
+      "line": 13,
+      "end_line": 20,
       "community": null
     },
     {
@@ -307,6 +393,8 @@
       "type": "function",
       "label": "__init__",
       "source_file": "cookiecutter/extensions.py",
+      "line": 26,
+      "end_line": 37,
       "community": null
     },
     {
@@ -314,6 +402,8 @@
       "type": "function",
       "label": "__init__",
       "source_file": "cookiecutter/extensions.py",
+      "line": 43,
+      "end_line": 51,
       "community": null
     },
     {
@@ -321,6 +411,8 @@
       "type": "function",
       "label": "jsonify",
       "source_file": "cookiecutter/extensions.py",
+      "line": 17,
+      "end_line": 18,
       "community": null
     },
     {
@@ -328,6 +420,8 @@
       "type": "function",
       "label": "random_ascii_string",
       "source_file": "cookiecutter/extensions.py",
+      "line": 30,
+      "end_line": 35,
       "community": null
     },
     {
@@ -335,6 +429,8 @@
       "type": "function",
       "label": "slugify",
       "source_file": "cookiecutter/extensions.py",
+      "line": 47,
+      "end_line": 49,
       "community": null
     },
     {
@@ -342,6 +438,8 @@
       "type": "module",
       "label": "cookiecutter.find",
       "source_file": "cookiecutter/find.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -349,6 +447,8 @@
       "type": "function",
       "label": "find_template",
       "source_file": "cookiecutter/find.py",
+      "line": 10,
+      "end_line": 31,
       "community": null
     },
     {
@@ -356,6 +456,8 @@
       "type": "module",
       "label": "cookiecutter.generate",
       "source_file": "cookiecutter/generate.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -363,6 +465,8 @@
       "type": "function",
       "label": "is_copy_only_path",
       "source_file": "cookiecutter/generate.py",
+      "line": 28,
+      "end_line": 45,
       "community": null
     },
     {
@@ -370,6 +474,8 @@
       "type": "function",
       "label": "apply_overwrites_to_context",
       "source_file": "cookiecutter/generate.py",
+      "line": 48,
+      "end_line": 67,
       "community": null
     },
     {
@@ -377,6 +483,8 @@
       "type": "function",
       "label": "generate_context",
       "source_file": "cookiecutter/generate.py",
+      "line": 70,
+      "end_line": 111,
       "community": null
     },
     {
@@ -384,6 +492,8 @@
       "type": "function",
       "label": "generate_file",
       "source_file": "cookiecutter/generate.py",
+      "line": 114,
+      "end_line": 189,
       "community": null
     },
     {
@@ -391,6 +501,8 @@
       "type": "function",
       "label": "render_and_create_dir",
       "source_file": "cookiecutter/generate.py",
+      "line": 192,
+      "end_line": 218,
       "community": null
     },
     {
@@ -398,6 +510,8 @@
       "type": "function",
       "label": "ensure_dir_is_templated",
       "source_file": "cookiecutter/generate.py",
+      "line": 221,
+      "end_line": 226,
       "community": null
     },
     {
@@ -405,6 +519,8 @@
       "type": "function",
       "label": "_run_hook_from_repo_dir",
       "source_file": "cookiecutter/generate.py",
+      "line": 229,
+      "end_line": 252,
       "community": null
     },
     {
@@ -412,6 +528,8 @@
       "type": "function",
       "label": "generate_files",
       "source_file": "cookiecutter/generate.py",
+      "line": 255,
+      "end_line": 372,
       "community": null
     },
     {
@@ -419,6 +537,8 @@
       "type": "module",
       "label": "cookiecutter.hooks",
       "source_file": "cookiecutter/hooks.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -426,6 +546,8 @@
       "type": "function",
       "label": "valid_hook",
       "source_file": "cookiecutter/hooks.py",
+      "line": 22,
+      "end_line": 36,
       "community": null
     },
     {
@@ -433,6 +555,8 @@
       "type": "function",
       "label": "find_hook",
       "source_file": "cookiecutter/hooks.py",
+      "line": 39,
+      "end_line": 61,
       "community": null
     },
     {
@@ -440,6 +564,8 @@
       "type": "function",
       "label": "run_script",
       "source_file": "cookiecutter/hooks.py",
+      "line": 64,
+      "end_line": 90,
       "community": null
     },
     {
@@ -447,6 +573,8 @@
       "type": "function",
       "label": "run_script_with_context",
       "source_file": "cookiecutter/hooks.py",
+      "line": 93,
+      "end_line": 111,
       "community": null
     },
     {
@@ -454,6 +582,8 @@
       "type": "function",
       "label": "run_hook",
       "source_file": "cookiecutter/hooks.py",
+      "line": 114,
+      "end_line": 127,
       "community": null
     },
     {
@@ -461,6 +591,8 @@
       "type": "module",
       "label": "cookiecutter.log",
       "source_file": "cookiecutter/log.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -468,6 +600,8 @@
       "type": "function",
       "label": "configure_logger",
       "source_file": "cookiecutter/log.py",
+      "line": 19,
+      "end_line": 51,
       "community": null
     },
     {
@@ -475,6 +609,8 @@
       "type": "module",
       "label": "cookiecutter.main",
       "source_file": "cookiecutter/main.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -482,6 +618,8 @@
       "type": "function",
       "label": "cookiecutter",
       "source_file": "cookiecutter/main.py",
+      "line": 21,
+      "end_line": 109,
       "community": null
     },
     {
@@ -489,6 +627,8 @@
       "type": "module",
       "label": "cookiecutter.prompt",
       "source_file": "cookiecutter/prompt.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -496,6 +636,8 @@
       "type": "function",
       "label": "read_user_variable",
       "source_file": "cookiecutter/prompt.py",
+      "line": 12,
+      "end_line": 19,
       "community": null
     },
     {
@@ -503,6 +645,8 @@
       "type": "function",
       "label": "read_user_yes_no",
       "source_file": "cookiecutter/prompt.py",
+      "line": 22,
+      "end_line": 32,
       "community": null
     },
     {
@@ -510,6 +654,8 @@
       "type": "function",
       "label": "read_repo_password",
       "source_file": "cookiecutter/prompt.py",
+      "line": 35,
+      "end_line": 41,
       "community": null
     },
     {
@@ -517,6 +663,8 @@
       "type": "function",
       "label": "read_user_choice",
       "source_file": "cookiecutter/prompt.py",
+      "line": 44,
+      "end_line": 78,
       "community": null
     },
     {
@@ -524,6 +672,8 @@
       "type": "function",
       "label": "process_json",
       "source_file": "cookiecutter/prompt.py",
+      "line": 81,
+      "end_line": 96,
       "community": null
     },
     {
@@ -531,6 +681,8 @@
       "type": "function",
       "label": "read_user_dict",
       "source_file": "cookiecutter/prompt.py",
+      "line": 99,
+      "end_line": 119,
       "community": null
     },
     {
@@ -538,6 +690,8 @@
       "type": "function",
       "label": "render_variable",
       "source_file": "cookiecutter/prompt.py",
+      "line": 122,
+      "end_line": 156,
       "community": null
     },
     {
@@ -545,6 +699,8 @@
       "type": "function",
       "label": "prompt_choice_for_config",
       "source_file": "cookiecutter/prompt.py",
+      "line": 159,
+      "end_line": 168,
       "community": null
     },
     {
@@ -552,6 +708,8 @@
       "type": "function",
       "label": "prompt_for_config",
       "source_file": "cookiecutter/prompt.py",
+      "line": 171,
+      "end_line": 226,
       "community": null
     },
     {
@@ -559,6 +717,8 @@
       "type": "module",
       "label": "cookiecutter.replay",
       "source_file": "cookiecutter/replay.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -566,6 +726,8 @@
       "type": "function",
       "label": "get_file_name",
       "source_file": "cookiecutter/replay.py",
+      "line": 12,
+      "end_line": 15,
       "community": null
     },
     {
@@ -573,6 +735,8 @@
       "type": "function",
       "label": "dump",
       "source_file": "cookiecutter/replay.py",
+      "line": 18,
+      "end_line": 35,
       "community": null
     },
     {
@@ -580,6 +744,8 @@
       "type": "function",
       "label": "load",
       "source_file": "cookiecutter/replay.py",
+      "line": 38,
+      "end_line": 51,
       "community": null
     },
     {
@@ -587,6 +753,8 @@
       "type": "module",
       "label": "cookiecutter.repository",
       "source_file": "cookiecutter/repository.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -594,6 +762,8 @@
       "type": "function",
       "label": "is_repo_url",
       "source_file": "cookiecutter/repository.py",
+      "line": 21,
+      "end_line": 23,
       "community": null
     },
     {
@@ -601,6 +771,8 @@
       "type": "function",
       "label": "is_zip_file",
       "source_file": "cookiecutter/repository.py",
+      "line": 26,
+      "end_line": 28,
       "community": null
     },
     {
@@ -608,6 +780,8 @@
       "type": "function",
       "label": "expand_abbreviations",
       "source_file": "cookiecutter/repository.py",
+      "line": 31,
+      "end_line": 46,
       "community": null
     },
     {
@@ -615,6 +789,8 @@
       "type": "function",
       "label": "repository_has_cookiecutter_json",
       "source_file": "cookiecutter/repository.py",
+      "line": 49,
+      "end_line": 60,
       "community": null
     },
     {
@@ -622,6 +798,8 @@
       "type": "function",
       "label": "determine_repo_dir",
       "source_file": "cookiecutter/repository.py",
+      "line": 63,
+      "end_line": 130,
       "community": null
     },
     {
@@ -629,6 +807,8 @@
       "type": "module",
       "label": "cookiecutter.utils",
       "source_file": "cookiecutter/utils.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -636,6 +816,8 @@
       "type": "function",
       "label": "force_delete",
       "source_file": "cookiecutter/utils.py",
+      "line": 15,
+      "end_line": 22,
       "community": null
     },
     {
@@ -643,6 +825,8 @@
       "type": "function",
       "label": "rmtree",
       "source_file": "cookiecutter/utils.py",
+      "line": 25,
+      "end_line": 30,
       "community": null
     },
     {
@@ -650,6 +834,8 @@
       "type": "function",
       "label": "make_sure_path_exists",
       "source_file": "cookiecutter/utils.py",
+      "line": 33,
+      "end_line": 45,
       "community": null
     },
     {
@@ -657,6 +843,8 @@
       "type": "function",
       "label": "work_in",
       "source_file": "cookiecutter/utils.py",
+      "line": 49,
+      "end_line": 60,
       "community": null
     },
     {
@@ -664,6 +852,8 @@
       "type": "function",
       "label": "make_executable",
       "source_file": "cookiecutter/utils.py",
+      "line": 63,
+      "end_line": 69,
       "community": null
     },
     {
@@ -671,6 +861,8 @@
       "type": "function",
       "label": "prompt_and_delete",
       "source_file": "cookiecutter/utils.py",
+      "line": 72,
+      "end_line": 107,
       "community": null
     },
     {
@@ -678,6 +870,8 @@
       "type": "module",
       "label": "cookiecutter.vcs",
       "source_file": "cookiecutter/vcs.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -685,6 +879,8 @@
       "type": "function",
       "label": "identify_repo",
       "source_file": "cookiecutter/vcs.py",
+      "line": 24,
+      "end_line": 45,
       "community": null
     },
     {
@@ -692,6 +888,8 @@
       "type": "function",
       "label": "is_vcs_installed",
       "source_file": "cookiecutter/vcs.py",
+      "line": 48,
+      "end_line": 54,
       "community": null
     },
     {
@@ -699,6 +897,8 @@
       "type": "function",
       "label": "clone",
       "source_file": "cookiecutter/vcs.py",
+      "line": 57,
+      "end_line": 120,
       "community": null
     },
     {
@@ -706,6 +906,8 @@
       "type": "module",
       "label": "cookiecutter.zipfile",
       "source_file": "cookiecutter/zipfile.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -713,6 +915,8 @@
       "type": "function",
       "label": "unzip",
       "source_file": "cookiecutter/zipfile.py",
+      "line": 13,
+      "end_line": 112,
       "community": null
     },
     {
@@ -720,6 +924,8 @@
       "type": "module",
       "label": "tests.__init__",
       "source_file": "tests/__init__.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -727,6 +933,8 @@
       "type": "module",
       "label": "tests.replay.test_dump",
       "source_file": "tests/replay/test_dump.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -734,6 +942,8 @@
       "type": "function",
       "label": "template_name",
       "source_file": "tests/replay/test_dump.py",
+      "line": 11,
+      "end_line": 13,
       "community": null
     },
     {
@@ -741,6 +951,8 @@
       "type": "function",
       "label": "replay_file",
       "source_file": "tests/replay/test_dump.py",
+      "line": 17,
+      "end_line": 20,
       "community": null
     },
     {
@@ -748,6 +960,8 @@
       "type": "function",
       "label": "remove_replay_dump",
       "source_file": "tests/replay/test_dump.py",
+      "line": 24,
+      "end_line": 31,
       "community": null
     },
     {
@@ -755,6 +969,8 @@
       "type": "function",
       "label": "test_type_error_if_no_template_name",
       "source_file": "tests/replay/test_dump.py",
+      "line": 34,
+      "end_line": 37,
       "community": null
     },
     {
@@ -762,6 +978,8 @@
       "type": "function",
       "label": "test_type_error_if_not_dict_context",
       "source_file": "tests/replay/test_dump.py",
+      "line": 40,
+      "end_line": 43,
       "community": null
     },
     {
@@ -769,6 +987,8 @@
       "type": "function",
       "label": "test_value_error_if_key_missing_in_context",
       "source_file": "tests/replay/test_dump.py",
+      "line": 46,
+      "end_line": 50,
       "community": null
     },
     {
@@ -776,6 +996,8 @@
       "type": "function",
       "label": "mock_ensure_failure",
       "source_file": "tests/replay/test_dump.py",
+      "line": 54,
+      "end_line": 60,
       "community": null
     },
     {
@@ -783,6 +1005,8 @@
       "type": "function",
       "label": "mock_ensure_success",
       "source_file": "tests/replay/test_dump.py",
+      "line": 64,
+      "end_line": 70,
       "community": null
     },
     {
@@ -790,6 +1014,8 @@
       "type": "function",
       "label": "test_ioerror_if_replay_dir_creation_fails",
       "source_file": "tests/replay/test_dump.py",
+      "line": 73,
+      "end_line": 78,
       "community": null
     },
     {
@@ -797,6 +1023,8 @@
       "type": "function",
       "label": "test_run_json_dump",
       "source_file": "tests/replay/test_dump.py",
+      "line": 81,
+      "end_line": 105,
       "community": null
     },
     {
@@ -804,6 +1032,8 @@
       "type": "function",
       "label": "fin_remove_replay_file",
       "source_file": "tests/replay/test_dump.py",
+      "line": 27,
+      "end_line": 29,
       "community": null
     },
     {
@@ -811,6 +1041,8 @@
       "type": "module",
       "label": "tests.replay.test_load",
       "source_file": "tests/replay/test_load.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -818,6 +1050,8 @@
       "type": "function",
       "label": "template_name",
       "source_file": "tests/replay/test_load.py",
+      "line": 11,
+      "end_line": 13,
       "community": null
     },
     {
@@ -825,6 +1059,8 @@
       "type": "function",
       "label": "replay_file",
       "source_file": "tests/replay/test_load.py",
+      "line": 17,
+      "end_line": 20,
       "community": null
     },
     {
@@ -832,6 +1068,8 @@
       "type": "function",
       "label": "test_type_error_if_no_template_name",
       "source_file": "tests/replay/test_load.py",
+      "line": 23,
+      "end_line": 26,
       "community": null
     },
     {
@@ -839,6 +1077,8 @@
       "type": "function",
       "label": "test_value_error_if_key_missing_in_context",
       "source_file": "tests/replay/test_load.py",
+      "line": 29,
+      "end_line": 33,
       "community": null
     },
     {
@@ -846,6 +1086,8 @@
       "type": "function",
       "label": "test_io_error_if_no_replay_file",
       "source_file": "tests/replay/test_load.py",
+      "line": 36,
+      "end_line": 39,
       "community": null
     },
     {
@@ -853,6 +1095,8 @@
       "type": "function",
       "label": "test_run_json_load",
       "source_file": "tests/replay/test_load.py",
+      "line": 42,
+      "end_line": 59,
       "community": null
     },
     {
@@ -860,6 +1104,8 @@
       "type": "module",
       "label": "tests.replay.test_replay",
       "source_file": "tests/replay/test_replay.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -867,6 +1113,8 @@
       "type": "function",
       "label": "test_get_replay_file_name",
       "source_file": "tests/replay/test_replay.py",
+      "line": 9,
+      "end_line": 12,
       "community": null
     },
     {
@@ -874,6 +1122,8 @@
       "type": "function",
       "label": "test_raise_on_invalid_mode",
       "source_file": "tests/replay/test_replay.py",
+      "line": 23,
+      "end_line": 26,
       "community": null
     },
     {
@@ -881,6 +1131,8 @@
       "type": "function",
       "label": "test_main_does_not_invoke_dump_but_load",
       "source_file": "tests/replay/test_replay.py",
+      "line": 29,
+      "end_line": 43,
       "community": null
     },
     {
@@ -888,6 +1140,8 @@
       "type": "function",
       "label": "test_main_does_not_invoke_load_but_dump",
       "source_file": "tests/replay/test_replay.py",
+      "line": 46,
+      "end_line": 60,
       "community": null
     },
     {
@@ -895,6 +1149,8 @@
       "type": "module",
       "label": "tests.repository.test_abbreviation_expansion",
       "source_file": "tests/repository/test_abbreviation_expansion.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -902,6 +1158,8 @@
       "type": "function",
       "label": "test_abbreviation_expansion",
       "source_file": "tests/repository/test_abbreviation_expansion.py",
+      "line": 43,
+      "end_line": 46,
       "community": null
     },
     {
@@ -909,6 +1167,8 @@
       "type": "function",
       "label": "test_abbreviation_expansion_prefix_not_0_in_braces",
       "source_file": "tests/repository/test_abbreviation_expansion.py",
+      "line": 49,
+      "end_line": 52,
       "community": null
     },
     {
@@ -916,6 +1176,8 @@
       "type": "module",
       "label": "tests.repository.test_determine_repo_dir_clones_repo",
       "source_file": "tests/repository/test_determine_repo_dir_clones_repo.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -923,6 +1185,8 @@
       "type": "function",
       "label": "test_zipfile_unzip",
       "source_file": "tests/repository/test_determine_repo_dir_clones_repo.py",
+      "line": 17,
+      "end_line": 48,
       "community": null
     },
     {
@@ -930,6 +1194,8 @@
       "type": "function",
       "label": "template_url",
       "source_file": "tests/repository/test_determine_repo_dir_clones_repo.py",
+      "line": 52,
+      "end_line": 57,
       "community": null
     },
     {
@@ -937,6 +1203,8 @@
       "type": "function",
       "label": "test_repository_url_should_clone",
       "source_file": "tests/repository/test_determine_repo_dir_clones_repo.py",
+      "line": 60,
+      "end_line": 89,
       "community": null
     },
     {
@@ -944,6 +1212,8 @@
       "type": "function",
       "label": "test_repository_url_with_no_context_file",
       "source_file": "tests/repository/test_determine_repo_dir_clones_repo.py",
+      "line": 92,
+      "end_line": 112,
       "community": null
     },
     {
@@ -951,6 +1221,8 @@
       "type": "module",
       "label": "tests.repository.test_determine_repo_dir_finds_existing_cookiecutter",
       "source_file": "tests/repository/test_determine_repo_dir_finds_existing_cookiecutter.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -958,6 +1230,8 @@
       "type": "function",
       "label": "template",
       "source_file": "tests/repository/test_determine_repo_dir_finds_existing_cookiecutter.py",
+      "line": 10,
+      "end_line": 12,
       "community": null
     },
     {
@@ -965,6 +1239,8 @@
       "type": "function",
       "label": "cloned_cookiecutter_path",
       "source_file": "tests/repository/test_determine_repo_dir_finds_existing_cookiecutter.py",
+      "line": 16,
+      "end_line": 25,
       "community": null
     },
     {
@@ -972,6 +1248,8 @@
       "type": "function",
       "label": "test_should_find_existing_cookiecutter",
       "source_file": "tests/repository/test_determine_repo_dir_finds_existing_cookiecutter.py",
+      "line": 28,
+      "end_line": 45,
       "community": null
     },
     {
@@ -979,6 +1257,8 @@
       "type": "module",
       "label": "tests.repository.test_determine_repo_dir_finds_subdirectories",
       "source_file": "tests/repository/test_determine_repo_dir_finds_subdirectories.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -986,6 +1266,8 @@
       "type": "function",
       "label": "template",
       "source_file": "tests/repository/test_determine_repo_dir_finds_subdirectories.py",
+      "line": 10,
+      "end_line": 12,
       "community": null
     },
     {
@@ -993,6 +1275,8 @@
       "type": "function",
       "label": "cloned_cookiecutter_path",
       "source_file": "tests/repository/test_determine_repo_dir_finds_subdirectories.py",
+      "line": 16,
+      "end_line": 29,
       "community": null
     },
     {
@@ -1000,6 +1284,8 @@
       "type": "function",
       "label": "test_should_find_existing_cookiecutter",
       "source_file": "tests/repository/test_determine_repo_dir_finds_subdirectories.py",
+      "line": 32,
+      "end_line": 46,
       "community": null
     },
     {
@@ -1007,6 +1293,8 @@
       "type": "function",
       "label": "test_local_repo_typo",
       "source_file": "tests/repository/test_determine_repo_dir_finds_subdirectories.py",
+      "line": 49,
+      "end_line": 72,
       "community": null
     },
     {
@@ -1014,6 +1302,8 @@
       "type": "module",
       "label": "tests.repository.test_determine_repository_should_use_local_repo",
       "source_file": "tests/repository/test_determine_repository_should_use_local_repo.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1021,6 +1311,8 @@
       "type": "function",
       "label": "test_finds_local_repo",
       "source_file": "tests/repository/test_determine_repository_should_use_local_repo.py",
+      "line": 10,
+      "end_line": 21,
       "community": null
     },
     {
@@ -1028,6 +1320,8 @@
       "type": "function",
       "label": "test_local_repo_with_no_context_raises",
       "source_file": "tests/repository/test_determine_repository_should_use_local_repo.py",
+      "line": 24,
+      "end_line": 43,
       "community": null
     },
     {
@@ -1035,6 +1329,8 @@
       "type": "function",
       "label": "test_local_repo_typo",
       "source_file": "tests/repository/test_determine_repository_should_use_local_repo.py",
+      "line": 46,
+      "end_line": 65,
       "community": null
     },
     {
@@ -1042,6 +1338,8 @@
       "type": "module",
       "label": "tests.repository.test_is_repo_url",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1049,6 +1347,8 @@
       "type": "function",
       "label": "zipfile",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 15,
+      "end_line": 17,
       "community": null
     },
     {
@@ -1056,6 +1356,8 @@
       "type": "function",
       "label": "test_is_zip_file",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 20,
+      "end_line": 22,
       "community": null
     },
     {
@@ -1063,6 +1365,8 @@
       "type": "function",
       "label": "remote_repo_url",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 36,
+      "end_line": 38,
       "community": null
     },
     {
@@ -1070,6 +1374,8 @@
       "type": "function",
       "label": "test_is_repo_url_for_remote_urls",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 41,
+      "end_line": 43,
       "community": null
     },
     {
@@ -1077,6 +1383,8 @@
       "type": "function",
       "label": "local_repo_url",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 56,
+      "end_line": 58,
       "community": null
     },
     {
@@ -1084,6 +1392,8 @@
       "type": "function",
       "label": "test_is_repo_url_for_local_urls",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 61,
+      "end_line": 63,
       "community": null
     },
     {
@@ -1091,6 +1401,8 @@
       "type": "function",
       "label": "test_expand_abbreviations",
       "source_file": "tests/repository/test_is_repo_url.py",
+      "line": 66,
+      "end_line": 75,
       "community": null
     },
     {
@@ -1098,6 +1410,8 @@
       "type": "module",
       "label": "tests.repository.test_repository_has_cookiecutter_json",
       "source_file": "tests/repository/test_repository_has_cookiecutter_json.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1105,6 +1419,8 @@
       "type": "function",
       "label": "test_valid_repository",
       "source_file": "tests/repository/test_repository_has_cookiecutter_json.py",
+      "line": 7,
+      "end_line": 9,
       "community": null
     },
     {
@@ -1112,6 +1428,8 @@
       "type": "function",
       "label": "test_invalid_repository",
       "source_file": "tests/repository/test_repository_has_cookiecutter_json.py",
+      "line": 15,
+      "end_line": 17,
       "community": null
     },
     {
@@ -1119,6 +1437,8 @@
       "type": "module",
       "label": "tests.test-extensions.custom-extension-post.hooks.post_gen_project",
       "source_file": "tests/test-extensions/custom-extension-post/hooks/post_gen_project.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1126,6 +1446,8 @@
       "type": "module",
       "label": "tests.test-extensions.custom-extension-pre.hooks.pre_gen_project",
       "source_file": "tests/test-extensions/custom-extension-pre/hooks/pre_gen_project.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1133,6 +1455,8 @@
       "type": "module",
       "label": "tests.test-extensions.hello_extension.__init__",
       "source_file": "tests/test-extensions/hello_extension/__init__.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1140,6 +1464,8 @@
       "type": "module",
       "label": "tests.test-extensions.hello_extension.hello_extension",
       "source_file": "tests/test-extensions/hello_extension/hello_extension.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1147,6 +1473,8 @@
       "type": "class",
       "label": "HelloExtension",
       "source_file": "tests/test-extensions/hello_extension/hello_extension.py",
+      "line": 6,
+      "end_line": 24,
       "community": null
     },
     {
@@ -1154,6 +1482,8 @@
       "type": "function",
       "label": "__init__",
       "source_file": "tests/test-extensions/hello_extension/hello_extension.py",
+      "line": 11,
+      "end_line": 13,
       "community": null
     },
     {
@@ -1161,6 +1491,8 @@
       "type": "function",
       "label": "_hello",
       "source_file": "tests/test-extensions/hello_extension/hello_extension.py",
+      "line": 15,
+      "end_line": 17,
       "community": null
     },
     {
@@ -1168,6 +1500,8 @@
       "type": "function",
       "label": "parse",
       "source_file": "tests/test-extensions/hello_extension/hello_extension.py",
+      "line": 19,
+      "end_line": 24,
       "community": null
     },
     {
@@ -1175,6 +1509,8 @@
       "type": "module",
       "label": "tests.test-generate-files-line-end.{{cookiecutter.test_name}}.{{cookiecutter.folder_name}}.{{cookiecutter.filename}}",
       "source_file": "tests/test-generate-files-line-end/{{cookiecutter.test_name}}/{{cookiecutter.folder_name}}/{{cookiecutter.filename}}.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1182,6 +1518,8 @@
       "type": "module",
       "label": "tests.test-output-folder.{{cookiecutter.test_name}}.{{cookiecutter.folder_name}}.{{cookiecutter.filename}}",
       "source_file": "tests/test-output-folder/{{cookiecutter.test_name}}/{{cookiecutter.folder_name}}/{{cookiecutter.filename}}.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1189,6 +1527,8 @@
       "type": "module",
       "label": "tests.test-pyhooks.hooks.post_gen_project",
       "source_file": "tests/test-pyhooks/hooks/post_gen_project.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1196,6 +1536,8 @@
       "type": "module",
       "label": "tests.test-pyhooks.hooks.pre_gen_project",
       "source_file": "tests/test-pyhooks/hooks/pre_gen_project.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1203,6 +1545,8 @@
       "type": "module",
       "label": "tests.test-pyshellhooks.hooks.post_gen_project",
       "source_file": "tests/test-pyshellhooks/hooks/post_gen_project.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1210,6 +1554,8 @@
       "type": "module",
       "label": "tests.test-pyshellhooks.hooks.pre_gen_project",
       "source_file": "tests/test-pyshellhooks/hooks/pre_gen_project.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1217,6 +1563,8 @@
       "type": "module",
       "label": "tests.test_abort_generate_on_hook_error",
       "source_file": "tests/test_abort_generate_on_hook_error.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1224,6 +1572,8 @@
       "type": "function",
       "label": "test_hooks_raises_errors",
       "source_file": "tests/test_abort_generate_on_hook_error.py",
+      "line": 19,
+      "end_line": 38,
       "community": null
     },
     {
@@ -1231,6 +1581,8 @@
       "type": "module",
       "label": "tests.test_cli",
       "source_file": "tests/test_cli.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1238,6 +1590,8 @@
       "type": "function",
       "label": "cli_runner",
       "source_file": "tests/test_cli.py",
+      "line": 16,
+      "end_line": 24,
       "community": null
     },
     {
@@ -1245,6 +1599,8 @@
       "type": "function",
       "label": "remove_fake_project_dir",
       "source_file": "tests/test_cli.py",
+      "line": 28,
+      "end_line": 35,
       "community": null
     },
     {
@@ -1252,6 +1608,8 @@
       "type": "function",
       "label": "make_fake_project_dir",
       "source_file": "tests/test_cli.py",
+      "line": 39,
+      "end_line": 41,
       "community": null
     },
     {
@@ -1259,6 +1617,8 @@
       "type": "function",
       "label": "version_cli_flag",
       "source_file": "tests/test_cli.py",
+      "line": 45,
+      "end_line": 47,
       "community": null
     },
     {
@@ -1266,6 +1626,8 @@
       "type": "function",
       "label": "test_cli_version",
       "source_file": "tests/test_cli.py",
+      "line": 50,
+      "end_line": 54,
       "community": null
     },
     {
@@ -1273,6 +1635,8 @@
       "type": "function",
       "label": "test_cli_error_on_existing_output_directory",
       "source_file": "tests/test_cli.py",
+      "line": 58,
+      "end_line": 63,
       "community": null
     },
     {
@@ -1280,6 +1644,8 @@
       "type": "function",
       "label": "test_cli",
       "source_file": "tests/test_cli.py",
+      "line": 67,
+      "end_line": 73,
       "community": null
     },
     {
@@ -1287,6 +1653,8 @@
       "type": "function",
       "label": "test_cli_verbose",
       "source_file": "tests/test_cli.py",
+      "line": 77,
+      "end_line": 83,
       "community": null
     },
     {
@@ -1294,6 +1662,8 @@
       "type": "function",
       "label": "test_cli_replay",
       "source_file": "tests/test_cli.py",
+      "line": 87,
+      "end_line": 108,
       "community": null
     },
     {
@@ -1301,6 +1671,8 @@
       "type": "function",
       "label": "test_cli_exit_on_noinput_and_replay",
       "source_file": "tests/test_cli.py",
+      "line": 112,
+      "end_line": 142,
       "community": null
     },
     {
@@ -1308,6 +1680,8 @@
       "type": "function",
       "label": "overwrite_cli_flag",
       "source_file": "tests/test_cli.py",
+      "line": 146,
+      "end_line": 148,
       "community": null
     },
     {
@@ -1315,6 +1689,8 @@
       "type": "function",
       "label": "test_run_cookiecutter_on_overwrite_if_exists_and_replay",
       "source_file": "tests/test_cli.py",
+      "line": 152,
+      "end_line": 178,
       "community": null
     },
     {
@@ -1322,6 +1698,8 @@
       "type": "function",
       "label": "test_cli_overwrite_if_exists_when_output_dir_does_not_exist",
       "source_file": "tests/test_cli.py",
+      "line": 182,
+      "end_line": 192,
       "community": null
     },
     {
@@ -1329,6 +1707,8 @@
       "type": "function",
       "label": "test_cli_overwrite_if_exists_when_output_dir_exists",
       "source_file": "tests/test_cli.py",
+      "line": 196,
+      "end_line": 203,
       "community": null
     },
     {
@@ -1336,6 +1716,8 @@
       "type": "function",
       "label": "output_dir_flag",
       "source_file": "tests/test_cli.py",
+      "line": 207,
+      "end_line": 209,
       "community": null
     },
     {
@@ -1343,6 +1725,8 @@
       "type": "function",
       "label": "output_dir",
       "source_file": "tests/test_cli.py",
+      "line": 213,
+      "end_line": 215,
       "community": null
     },
     {
@@ -1350,6 +1734,8 @@
       "type": "function",
       "label": "test_cli_output_dir",
       "source_file": "tests/test_cli.py",
+      "line": 218,
+      "end_line": 239,
       "community": null
     },
     {
@@ -1357,6 +1743,8 @@
       "type": "function",
       "label": "help_cli_flag",
       "source_file": "tests/test_cli.py",
+      "line": 243,
+      "end_line": 245,
       "community": null
     },
     {
@@ -1364,6 +1752,8 @@
       "type": "function",
       "label": "test_cli_help",
       "source_file": "tests/test_cli.py",
+      "line": 248,
+      "end_line": 252,
       "community": null
     },
     {
@@ -1371,6 +1761,8 @@
       "type": "function",
       "label": "user_config_path",
       "source_file": "tests/test_cli.py",
+      "line": 256,
+      "end_line": 258,
       "community": null
     },
     {
@@ -1378,6 +1770,8 @@
       "type": "function",
       "label": "test_user_config",
       "source_file": "tests/test_cli.py",
+      "line": 261,
+      "end_line": 282,
       "community": null
     },
     {
@@ -1385,6 +1779,8 @@
       "type": "function",
       "label": "test_default_user_config_overwrite",
       "source_file": "tests/test_cli.py",
+      "line": 285,
+      "end_line": 308,
       "community": null
     },
     {
@@ -1392,6 +1788,8 @@
       "type": "function",
       "label": "test_default_user_config",
       "source_file": "tests/test_cli.py",
+      "line": 311,
+      "end_line": 332,
       "community": null
     },
     {
@@ -1399,6 +1797,8 @@
       "type": "function",
       "label": "test_echo_undefined_variable_error",
       "source_file": "tests/test_cli.py",
+      "line": 339,
+      "end_line": 366,
       "community": null
     },
     {
@@ -1406,6 +1806,8 @@
       "type": "function",
       "label": "test_echo_unknown_extension_error",
       "source_file": "tests/test_cli.py",
+      "line": 369,
+      "end_line": 380,
       "community": null
     },
     {
@@ -1413,6 +1815,8 @@
       "type": "function",
       "label": "test_cli_extra_context",
       "source_file": "tests/test_cli.py",
+      "line": 384,
+      "end_line": 392,
       "community": null
     },
     {
@@ -1420,6 +1824,8 @@
       "type": "function",
       "label": "test_cli_extra_context_invalid_format",
       "source_file": "tests/test_cli.py",
+      "line": 396,
+      "end_line": 403,
       "community": null
     },
     {
@@ -1427,6 +1833,8 @@
       "type": "function",
       "label": "debug_file",
       "source_file": "tests/test_cli.py",
+      "line": 407,
+      "end_line": 409,
       "community": null
     },
     {
@@ -1434,6 +1842,8 @@
       "type": "function",
       "label": "test_debug_file_non_verbose",
       "source_file": "tests/test_cli.py",
+      "line": 413,
+      "end_line": 432,
       "community": null
     },
     {
@@ -1441,6 +1851,8 @@
       "type": "function",
       "label": "test_debug_file_verbose",
       "source_file": "tests/test_cli.py",
+      "line": 436,
+      "end_line": 459,
       "community": null
     },
     {
@@ -1448,6 +1860,8 @@
       "type": "function",
       "label": "test_directory_repo",
       "source_file": "tests/test_cli.py",
+      "line": 463,
+      "end_line": 471,
       "community": null
     },
     {
@@ -1455,6 +1869,8 @@
       "type": "function",
       "label": "cli_main",
       "source_file": "tests/test_cli.py",
+      "line": 20,
+      "end_line": 22,
       "community": null
     },
     {
@@ -1462,6 +1878,8 @@
       "type": "function",
       "label": "fin_remove_fake_project_dir",
       "source_file": "tests/test_cli.py",
+      "line": 31,
+      "end_line": 33,
       "community": null
     },
     {
@@ -1469,6 +1887,8 @@
       "type": "module",
       "label": "tests.test_cookiecutter_invocation",
       "source_file": "tests/test_cookiecutter_invocation.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1476,6 +1896,8 @@
       "type": "function",
       "label": "project_dir",
       "source_file": "tests/test_cookiecutter_invocation.py",
+      "line": 18,
+      "end_line": 23,
       "community": null
     },
     {
@@ -1483,6 +1905,8 @@
       "type": "function",
       "label": "test_should_raise_error_without_template_arg",
       "source_file": "tests/test_cookiecutter_invocation.py",
+      "line": 26,
+      "end_line": 35,
       "community": null
     },
     {
@@ -1490,6 +1914,8 @@
       "type": "function",
       "label": "test_should_invoke_main",
       "source_file": "tests/test_cookiecutter_invocation.py",
+      "line": 39,
+      "end_line": 47,
       "community": null
     },
     {
@@ -1497,6 +1923,8 @@
       "type": "module",
       "label": "tests.test_cookiecutter_local_no_input",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1504,6 +1932,8 @@
       "type": "function",
       "label": "remove_additional_dirs",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 15,
+      "end_line": 30,
       "community": null
     },
     {
@@ -1511,6 +1941,8 @@
       "type": "function",
       "label": "test_cookiecutter_no_input_return_project_dir",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 35,
+      "end_line": 42,
       "community": null
     },
     {
@@ -1518,6 +1950,8 @@
       "type": "function",
       "label": "test_cookiecutter_no_input_extra_context",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 46,
+      "end_line": 53,
       "community": null
     },
     {
@@ -1525,6 +1959,8 @@
       "type": "function",
       "label": "test_cookiecutter_templated_context",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 57,
+      "end_line": 60,
       "community": null
     },
     {
@@ -1532,6 +1968,8 @@
       "type": "function",
       "label": "test_cookiecutter_no_input_return_rendered_file",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 64,
+      "end_line": 70,
       "community": null
     },
     {
@@ -1539,6 +1977,8 @@
       "type": "function",
       "label": "test_cookiecutter_dict_values_in_context",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 74,
+      "end_line": 122,
       "community": null
     },
     {
@@ -1546,6 +1986,8 @@
       "type": "function",
       "label": "test_cookiecutter_template_cleanup",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 126,
+      "end_line": 140,
       "community": null
     },
     {
@@ -1553,6 +1995,8 @@
       "type": "function",
       "label": "fin_remove_additional_dirs",
       "source_file": "tests/test_cookiecutter_local_no_input.py",
+      "line": 18,
+      "end_line": 28,
       "community": null
     },
     {
@@ -1560,6 +2004,8 @@
       "type": "module",
       "label": "tests.test_cookiecutter_local_with_input",
       "source_file": "tests/test_cookiecutter_local_with_input.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1567,6 +2013,8 @@
       "type": "function",
       "label": "remove_additional_dirs",
       "source_file": "tests/test_cookiecutter_local_with_input.py",
+      "line": 10,
+      "end_line": 16,
       "community": null
     },
     {
@@ -1574,6 +2022,8 @@
       "type": "function",
       "label": "test_cookiecutter_local_with_input",
       "source_file": "tests/test_cookiecutter_local_with_input.py",
+      "line": 20,
+      "end_line": 30,
       "community": null
     },
     {
@@ -1581,6 +2031,8 @@
       "type": "function",
       "label": "test_cookiecutter_input_extra_context",
       "source_file": "tests/test_cookiecutter_local_with_input.py",
+      "line": 34,
+      "end_line": 44,
       "community": null
     },
     {
@@ -1588,6 +2040,8 @@
       "type": "module",
       "label": "tests.test_custom_extensions_in_hooks",
       "source_file": "tests/test_custom_extensions_in_hooks.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1595,6 +2049,8 @@
       "type": "function",
       "label": "template",
       "source_file": "tests/test_custom_extensions_in_hooks.py",
+      "line": 19,
+      "end_line": 21,
       "community": null
     },
     {
@@ -1602,6 +2058,8 @@
       "type": "function",
       "label": "output_dir",
       "source_file": "tests/test_custom_extensions_in_hooks.py",
+      "line": 25,
+      "end_line": 27,
       "community": null
     },
     {
@@ -1609,6 +2067,8 @@
       "type": "function",
       "label": "modify_syspath",
       "source_file": "tests/test_custom_extensions_in_hooks.py",
+      "line": 31,
+      "end_line": 33,
       "community": null
     },
     {
@@ -1616,6 +2076,8 @@
       "type": "function",
       "label": "test_hook_with_extension",
       "source_file": "tests/test_custom_extensions_in_hooks.py",
+      "line": 36,
+      "end_line": 54,
       "community": null
     },
     {
@@ -1623,6 +2085,8 @@
       "type": "module",
       "label": "tests.test_default_extensions",
       "source_file": "tests/test_default_extensions.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1630,6 +2094,8 @@
       "type": "function",
       "label": "freeze",
       "source_file": "tests/test_default_extensions.py",
+      "line": 11,
+      "end_line": 16,
       "community": null
     },
     {
@@ -1637,6 +2103,8 @@
       "type": "function",
       "label": "test_jinja2_time_extension",
       "source_file": "tests/test_default_extensions.py",
+      "line": 19,
+      "end_line": 39,
       "community": null
     },
     {
@@ -1644,6 +2112,8 @@
       "type": "function",
       "label": "test_jinja2_slugify_extension",
       "source_file": "tests/test_default_extensions.py",
+      "line": 42,
+      "end_line": 48,
       "community": null
     },
     {
@@ -1651,6 +2121,8 @@
       "type": "module",
       "label": "tests.test_environment",
       "source_file": "tests/test_environment.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1658,6 +2130,8 @@
       "type": "function",
       "label": "test_env_should_raise_for_unknown_extension",
       "source_file": "tests/test_environment.py",
+      "line": 8,
+      "end_line": 15,
       "community": null
     },
     {
@@ -1665,6 +2139,8 @@
       "type": "function",
       "label": "test_env_should_come_with_default_extensions",
       "source_file": "tests/test_environment.py",
+      "line": 18,
+      "end_line": 24,
       "community": null
     },
     {
@@ -1672,6 +2148,8 @@
       "type": "module",
       "label": "tests.test_exceptions",
       "source_file": "tests/test_exceptions.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1679,6 +2157,8 @@
       "type": "function",
       "label": "test_undefined_variable_to_str",
       "source_file": "tests/test_exceptions.py",
+      "line": 7,
+      "end_line": 21,
       "community": null
     },
     {
@@ -1686,6 +2166,8 @@
       "type": "module",
       "label": "tests.test_find",
       "source_file": "tests/test_find.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1693,6 +2175,8 @@
       "type": "function",
       "label": "repo_dir",
       "source_file": "tests/test_find.py",
+      "line": 10,
+      "end_line": 12,
       "community": null
     },
     {
@@ -1700,6 +2184,8 @@
       "type": "function",
       "label": "test_find_template",
       "source_file": "tests/test_find.py",
+      "line": 15,
+      "end_line": 20,
       "community": null
     },
     {
@@ -1707,6 +2193,8 @@
       "type": "module",
       "label": "tests.test_generate_context",
       "source_file": "tests/test_generate_context.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1714,6 +2202,8 @@
       "type": "function",
       "label": "context_data",
       "source_file": "tests/test_generate_context.py",
+      "line": 12,
+      "end_line": 50,
       "community": null
     },
     {
@@ -1721,6 +2211,8 @@
       "type": "function",
       "label": "test_generate_context",
       "source_file": "tests/test_generate_context.py",
+      "line": 55,
+      "end_line": 57,
       "community": null
     },
     {
@@ -1728,6 +2220,8 @@
       "type": "function",
       "label": "test_generate_context_with_json_decoding_error",
       "source_file": "tests/test_generate_context.py",
+      "line": 61,
+      "end_line": 73,
       "community": null
     },
     {
@@ -1735,6 +2229,8 @@
       "type": "function",
       "label": "test_default_context_replacement_in_generate_context",
       "source_file": "tests/test_generate_context.py",
+      "line": 76,
+      "end_line": 108,
       "community": null
     },
     {
@@ -1742,6 +2238,8 @@
       "type": "function",
       "label": "template_context",
       "source_file": "tests/test_generate_context.py",
+      "line": 112,
+      "end_line": 122,
       "community": null
     },
     {
@@ -1749,6 +2247,8 @@
       "type": "function",
       "label": "test_apply_overwrites_does_include_unused_variables",
       "source_file": "tests/test_generate_context.py",
+      "line": 125,
+      "end_line": 131,
       "community": null
     },
     {
@@ -1756,6 +2256,8 @@
       "type": "function",
       "label": "test_apply_overwrites_sets_non_list_value",
       "source_file": "tests/test_generate_context.py",
+      "line": 134,
+      "end_line": 140,
       "community": null
     },
     {
@@ -1763,6 +2265,8 @@
       "type": "function",
       "label": "test_apply_overwrites_does_not_modify_choices_for_invalid_overwrite",
       "source_file": "tests/test_generate_context.py",
+      "line": 143,
+      "end_line": 151,
       "community": null
     },
     {
@@ -1770,6 +2274,8 @@
       "type": "function",
       "label": "test_apply_overwrites_sets_default_for_choice_variable",
       "source_file": "tests/test_generate_context.py",
+      "line": 154,
+      "end_line": 160,
       "community": null
     },
     {
@@ -1777,6 +2283,8 @@
       "type": "module",
       "label": "tests.test_generate_copy_without_render",
       "source_file": "tests/test_generate_copy_without_render.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1784,6 +2292,8 @@
       "type": "function",
       "label": "remove_test_dir",
       "source_file": "tests/test_generate_copy_without_render.py",
+      "line": 11,
+      "end_line": 15,
       "community": null
     },
     {
@@ -1791,6 +2301,8 @@
       "type": "function",
       "label": "test_generate_copy_without_render_extensions",
       "source_file": "tests/test_generate_copy_without_render.py",
+      "line": 19,
+      "end_line": 75,
       "community": null
     },
     {
@@ -1798,6 +2310,8 @@
       "type": "module",
       "label": "tests.test_generate_file",
       "source_file": "tests/test_generate_file.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1805,6 +2319,8 @@
       "type": "function",
       "label": "tear_down",
       "source_file": "tests/test_generate_file.py",
+      "line": 14,
+      "end_line": 26,
       "community": null
     },
     {
@@ -1812,6 +2328,8 @@
       "type": "function",
       "label": "env",
       "source_file": "tests/test_generate_file.py",
+      "line": 30,
+      "end_line": 34,
       "community": null
     },
     {
@@ -1819,6 +2337,8 @@
       "type": "function",
       "label": "test_generate_file",
       "source_file": "tests/test_generate_file.py",
+      "line": 37,
+      "end_line": 49,
       "community": null
     },
     {
@@ -1826,6 +2346,8 @@
       "type": "function",
       "label": "test_generate_file_jsonify_filter",
       "source_file": "tests/test_generate_file.py",
+      "line": 52,
+      "end_line": 62,
       "community": null
     },
     {
@@ -1833,6 +2355,8 @@
       "type": "function",
       "label": "test_generate_file_random_ascii_string",
       "source_file": "tests/test_generate_file.py",
+      "line": 67,
+      "end_line": 76,
       "community": null
     },
     {
@@ -1840,6 +2364,8 @@
       "type": "function",
       "label": "test_generate_file_with_true_condition",
       "source_file": "tests/test_generate_file.py",
+      "line": 79,
+      "end_line": 96,
       "community": null
     },
     {
@@ -1847,6 +2373,8 @@
       "type": "function",
       "label": "test_generate_file_with_false_condition",
       "source_file": "tests/test_generate_file.py",
+      "line": 99,
+      "end_line": 113,
       "community": null
     },
     {
@@ -1854,6 +2382,8 @@
       "type": "function",
       "label": "expected_msg",
       "source_file": "tests/test_generate_file.py",
+      "line": 117,
+      "end_line": 124,
       "community": null
     },
     {
@@ -1861,6 +2391,8 @@
       "type": "function",
       "label": "test_generate_file_verbose_template_syntax_error",
       "source_file": "tests/test_generate_file.py",
+      "line": 127,
+      "end_line": 136,
       "community": null
     },
     {
@@ -1868,6 +2400,8 @@
       "type": "function",
       "label": "test_generate_file_does_not_translate_lf_newlines_to_crlf",
       "source_file": "tests/test_generate_file.py",
+      "line": 139,
+      "end_line": 154,
       "community": null
     },
     {
@@ -1875,6 +2409,8 @@
       "type": "function",
       "label": "test_generate_file_does_not_translate_crlf_newlines_to_lf",
       "source_file": "tests/test_generate_file.py",
+      "line": 157,
+      "end_line": 172,
       "community": null
     },
     {
@@ -1882,6 +2418,8 @@
       "type": "module",
       "label": "tests.test_generate_files",
       "source_file": "tests/test_generate_files.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -1889,6 +2427,8 @@
       "type": "function",
       "label": "test_ensure_dir_is_templated_raises",
       "source_file": "tests/test_generate_files.py",
+      "line": 16,
+      "end_line": 19,
       "community": null
     },
     {
@@ -1896,6 +2436,8 @@
       "type": "function",
       "label": "test_generate_files_nontemplated_exception",
       "source_file": "tests/test_generate_files.py",
+      "line": 22,
+      "end_line": 33,
       "community": null
     },
     {
@@ -1903,6 +2445,8 @@
       "type": "function",
       "label": "test_generate_files",
       "source_file": "tests/test_generate_files.py",
+      "line": 36,
+      "end_line": 49,
       "community": null
     },
     {
@@ -1910,6 +2454,8 @@
       "type": "function",
       "label": "test_generate_files_with_linux_newline",
       "source_file": "tests/test_generate_files.py",
+      "line": 52,
+      "end_line": 67,
       "community": null
     },
     {
@@ -1917,6 +2463,8 @@
       "type": "function",
       "label": "test_generate_files_with_trailing_newline_forced_to_linux_by_context",
       "source_file": "tests/test_generate_files.py",
+      "line": 70,
+      "end_line": 86,
       "community": null
     },
     {
@@ -1924,6 +2472,8 @@
       "type": "function",
       "label": "test_generate_files_with_windows_newline",
       "source_file": "tests/test_generate_files.py",
+      "line": 89,
+      "end_line": 104,
       "community": null
     },
     {
@@ -1931,6 +2481,8 @@
       "type": "function",
       "label": "test_generate_files_with_windows_newline_forced_to_linux_by_context",
       "source_file": "tests/test_generate_files.py",
+      "line": 107,
+      "end_line": 123,
       "community": null
     },
     {
@@ -1938,6 +2490,8 @@
       "type": "function",
       "label": "test_generate_files_binaries",
       "source_file": "tests/test_generate_files.py",
+      "line": 126,
+      "end_line": 144,
       "community": null
     },
     {
@@ -1945,6 +2499,8 @@
       "type": "function",
       "label": "test_generate_files_absolute_path",
       "source_file": "tests/test_generate_files.py",
+      "line": 147,
+      "end_line": 154,
       "community": null
     },
     {
@@ -1952,6 +2508,8 @@
       "type": "function",
       "label": "test_generate_files_output_dir",
       "source_file": "tests/test_generate_files.py",
+      "line": 157,
+      "end_line": 170,
       "community": null
     },
     {
@@ -1959,6 +2517,8 @@
       "type": "function",
       "label": "test_generate_files_permissions",
       "source_file": "tests/test_generate_files.py",
+      "line": 173,
+      "end_line": 215,
       "community": null
     },
     {
@@ -1966,6 +2526,8 @@
       "type": "function",
       "label": "test_generate_files_with_overwrite_if_exists_with_skip_if_file_exists",
       "source_file": "tests/test_generate_files.py",
+      "line": 218,
+      "end_line": 241,
       "community": null
     },
     {
@@ -1973,6 +2535,8 @@
       "type": "function",
       "label": "test_generate_files_with_skip_if_file_exists",
       "source_file": "tests/test_generate_files.py",
+      "line": 244,
+      "end_line": 267,
       "community": null
     },
     {
@@ -1980,6 +2544,8 @@
       "type": "function",
       "label": "test_generate_files_with_overwrite_if_exists",
       "source_file": "tests/test_generate_files.py",
+      "line": 270,
+      "end_line": 292,
       "community": null
     },
     {
@@ -1987,6 +2553,8 @@
       "type": "function",
       "label": "undefined_context",
       "source_file": "tests/test_generate_files.py",
+      "line": 296,
+      "end_line": 300,
       "community": null
     },
     {
@@ -1994,6 +2562,8 @@
       "type": "function",
       "label": "test_raise_undefined_variable_file_name",
       "source_file": "tests/test_generate_files.py",
+      "line": 303,
+      "end_line": 317,
       "community": null
     },
     {
@@ -2001,6 +2571,8 @@
       "type": "function",
       "label": "test_raise_undefined_variable_file_name_existing_project",
       "source_file": "tests/test_generate_files.py",
+      "line": 320,
+      "end_line": 337,
       "community": null
     },
     {
@@ -2008,6 +2580,8 @@
       "type": "function",
       "label": "test_raise_undefined_variable_file_content",
       "source_file": "tests/test_generate_files.py",
+      "line": 340,
+      "end_line": 354,
       "community": null
     },
     {
@@ -2015,6 +2589,8 @@
       "type": "function",
       "label": "test_raise_undefined_variable_dir_name",
       "source_file": "tests/test_generate_files.py",
+      "line": 357,
+      "end_line": 375,
       "community": null
     },
     {
@@ -2022,6 +2598,8 @@
       "type": "function",
       "label": "test_raise_undefined_variable_dir_name_existing_project",
       "source_file": "tests/test_generate_files.py",
+      "line": 378,
+      "end_line": 399,
       "community": null
     },
     {
@@ -2029,6 +2607,8 @@
       "type": "function",
       "label": "test_raise_undefined_variable_project_dir",
       "source_file": "tests/test_generate_files.py",
+      "line": 402,
+      "end_line": 415,
       "community": null
     },
     {
@@ -2036,6 +2616,8 @@
       "type": "module",
       "label": "tests.test_generate_hooks",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2043,6 +2625,8 @@
       "type": "function",
       "label": "remove_additional_folders",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 15,
+      "end_line": 27,
       "community": null
     },
     {
@@ -2050,6 +2634,8 @@
       "type": "function",
       "label": "test_ignore_hooks_dirs",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 31,
+      "end_line": 38,
       "community": null
     },
     {
@@ -2057,6 +2643,8 @@
       "type": "function",
       "label": "test_run_python_hooks",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 42,
+      "end_line": 54,
       "community": null
     },
     {
@@ -2064,6 +2652,8 @@
       "type": "function",
       "label": "test_run_python_hooks_cwd",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 58,
+      "end_line": 68,
       "community": null
     },
     {
@@ -2071,6 +2661,8 @@
       "type": "function",
       "label": "test_empty_hooks",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 73,
+      "end_line": 85,
       "community": null
     },
     {
@@ -2078,6 +2670,8 @@
       "type": "function",
       "label": "test_oserror_hooks",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 89,
+      "end_line": 109,
       "community": null
     },
     {
@@ -2085,6 +2679,8 @@
       "type": "function",
       "label": "test_run_failing_hook_removes_output_directory",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 113,
+      "end_line": 138,
       "community": null
     },
     {
@@ -2092,6 +2688,8 @@
       "type": "function",
       "label": "test_run_failing_hook_preserves_existing_output_directory",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 142,
+      "end_line": 168,
       "community": null
     },
     {
@@ -2099,6 +2697,8 @@
       "type": "function",
       "label": "test_run_shell_hooks",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 173,
+      "end_line": 190,
       "community": null
     },
     {
@@ -2106,6 +2706,8 @@
       "type": "function",
       "label": "test_run_shell_hooks_win",
       "source_file": "tests/test_generate_hooks.py",
+      "line": 195,
+      "end_line": 212,
       "community": null
     },
     {
@@ -2113,6 +2715,8 @@
       "type": "module",
       "label": "tests.test_get_config",
       "source_file": "tests/test_get_config.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2120,6 +2724,8 @@
       "type": "function",
       "label": "test_merge_configs",
       "source_file": "tests/test_get_config.py",
+      "line": 10,
+      "end_line": 49,
       "community": null
     },
     {
@@ -2127,6 +2733,8 @@
       "type": "function",
       "label": "test_get_config",
       "source_file": "tests/test_get_config.py",
+      "line": 52,
+      "end_line": 70,
       "community": null
     },
     {
@@ -2134,6 +2742,8 @@
       "type": "function",
       "label": "test_get_config_does_not_exist",
       "source_file": "tests/test_get_config.py",
+      "line": 73,
+      "end_line": 79,
       "community": null
     },
     {
@@ -2141,6 +2751,8 @@
       "type": "function",
       "label": "test_invalid_config",
       "source_file": "tests/test_get_config.py",
+      "line": 82,
+      "end_line": 91,
       "community": null
     },
     {
@@ -2148,6 +2760,8 @@
       "type": "function",
       "label": "test_get_config_with_defaults",
       "source_file": "tests/test_get_config.py",
+      "line": 94,
+      "end_line": 113,
       "community": null
     },
     {
@@ -2155,6 +2769,8 @@
       "type": "module",
       "label": "tests.test_get_user_config",
       "source_file": "tests/test_get_user_config.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2162,6 +2778,8 @@
       "type": "function",
       "label": "user_config_path",
       "source_file": "tests/test_get_user_config.py",
+      "line": 12,
+      "end_line": 14,
       "community": null
     },
     {
@@ -2169,6 +2787,8 @@
       "type": "function",
       "label": "back_up_rc",
       "source_file": "tests/test_get_user_config.py",
+      "line": 18,
+      "end_line": 38,
       "community": null
     },
     {
@@ -2176,6 +2796,8 @@
       "type": "function",
       "label": "custom_config",
       "source_file": "tests/test_get_user_config.py",
+      "line": 42,
+      "end_line": 58,
       "community": null
     },
     {
@@ -2183,6 +2805,8 @@
       "type": "function",
       "label": "test_get_user_config_valid",
       "source_file": "tests/test_get_user_config.py",
+      "line": 62,
+      "end_line": 67,
       "community": null
     },
     {
@@ -2190,6 +2814,8 @@
       "type": "function",
       "label": "test_get_user_config_invalid",
       "source_file": "tests/test_get_user_config.py",
+      "line": 71,
+      "end_line": 75,
       "community": null
     },
     {
@@ -2197,6 +2823,8 @@
       "type": "function",
       "label": "test_get_user_config_nonexistent",
       "source_file": "tests/test_get_user_config.py",
+      "line": 79,
+      "end_line": 81,
       "community": null
     },
     {
@@ -2204,6 +2832,8 @@
       "type": "function",
       "label": "custom_config_path",
       "source_file": "tests/test_get_user_config.py",
+      "line": 85,
+      "end_line": 87,
       "community": null
     },
     {
@@ -2211,6 +2841,8 @@
       "type": "function",
       "label": "test_specify_config_path",
       "source_file": "tests/test_get_user_config.py",
+      "line": 90,
+      "end_line": 97,
       "community": null
     },
     {
@@ -2218,6 +2850,8 @@
       "type": "function",
       "label": "test_default_config_path",
       "source_file": "tests/test_get_user_config.py",
+      "line": 100,
+      "end_line": 102,
       "community": null
     },
     {
@@ -2225,6 +2859,8 @@
       "type": "function",
       "label": "test_default_config_from_env_variable",
       "source_file": "tests/test_get_user_config.py",
+      "line": 105,
+      "end_line": 112,
       "community": null
     },
     {
@@ -2232,6 +2868,8 @@
       "type": "function",
       "label": "test_force_default_config",
       "source_file": "tests/test_get_user_config.py",
+      "line": 115,
+      "end_line": 122,
       "community": null
     },
     {
@@ -2239,6 +2877,8 @@
       "type": "function",
       "label": "test_expand_user_for_directories_in_config",
       "source_file": "tests/test_get_user_config.py",
+      "line": 125,
+      "end_line": 137,
       "community": null
     },
     {
@@ -2246,6 +2886,8 @@
       "type": "function",
       "label": "test_expand_vars_for_directories_in_config",
       "source_file": "tests/test_get_user_config.py",
+      "line": 140,
+      "end_line": 148,
       "community": null
     },
     {
@@ -2253,6 +2895,8 @@
       "type": "function",
       "label": "_expanduser",
       "source_file": "tests/test_get_user_config.py",
+      "line": 128,
+      "end_line": 129,
       "community": null
     },
     {
@@ -2260,6 +2904,8 @@
       "type": "module",
       "label": "tests.test_hooks",
       "source_file": "tests/test_hooks.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2267,6 +2913,8 @@
       "type": "class",
       "label": "TestFindHooks",
       "source_file": "tests/test_hooks.py",
+      "line": 53,
+      "end_line": 90,
       "community": null
     },
     {
@@ -2274,6 +2922,8 @@
       "type": "class",
       "label": "TestExternalHooks",
       "source_file": "tests/test_hooks.py",
+      "line": 93,
+      "end_line": 182,
       "community": null
     },
     {
@@ -2281,6 +2931,8 @@
       "type": "function",
       "label": "make_test_repo",
       "source_file": "tests/test_hooks.py",
+      "line": 12,
+      "end_line": 50,
       "community": null
     },
     {
@@ -2288,6 +2940,8 @@
       "type": "function",
       "label": "dir_with_hooks",
       "source_file": "tests/test_hooks.py",
+      "line": 186,
+      "end_line": 216,
       "community": null
     },
     {
@@ -2295,6 +2949,8 @@
       "type": "function",
       "label": "test_ignore_hook_backup_files",
       "source_file": "tests/test_hooks.py",
+      "line": 219,
+      "end_line": 224,
       "community": null
     },
     {
@@ -2302,6 +2958,8 @@
       "type": "function",
       "label": "setup_method",
       "source_file": "tests/test_hooks.py",
+      "line": 58,
+      "end_line": 60,
       "community": null
     },
     {
@@ -2309,6 +2967,8 @@
       "type": "function",
       "label": "teardown_method",
       "source_file": "tests/test_hooks.py",
+      "line": 62,
+      "end_line": 64,
       "community": null
     },
     {
@@ -2316,6 +2976,8 @@
       "type": "function",
       "label": "test_find_hook",
       "source_file": "tests/test_hooks.py",
+      "line": 66,
+      "end_line": 75,
       "community": null
     },
     {
@@ -2323,6 +2985,8 @@
       "type": "function",
       "label": "test_no_hooks",
       "source_file": "tests/test_hooks.py",
+      "line": 77,
+      "end_line": 80,
       "community": null
     },
     {
@@ -2330,6 +2994,8 @@
       "type": "function",
       "label": "test_unknown_hooks_dir",
       "source_file": "tests/test_hooks.py",
+      "line": 82,
+      "end_line": 85,
       "community": null
     },
     {
@@ -2337,6 +3003,8 @@
       "type": "function",
       "label": "test_hook_not_found",
       "source_file": "tests/test_hooks.py",
+      "line": 87,
+      "end_line": 90,
       "community": null
     },
     {
@@ -2344,6 +3012,8 @@
       "type": "function",
       "label": "setup_method",
       "source_file": "tests/test_hooks.py",
+      "line": 99,
+      "end_line": 101,
       "community": null
     },
     {
@@ -2351,6 +3021,8 @@
       "type": "function",
       "label": "teardown_method",
       "source_file": "tests/test_hooks.py",
+      "line": 103,
+      "end_line": 118,
       "community": null
     },
     {
@@ -2358,6 +3030,8 @@
       "type": "function",
       "label": "test_run_script",
       "source_file": "tests/test_hooks.py",
+      "line": 120,
+      "end_line": 123,
       "community": null
     },
     {
@@ -2365,6 +3039,8 @@
       "type": "function",
       "label": "test_run_script_cwd",
       "source_file": "tests/test_hooks.py",
+      "line": 125,
+      "end_line": 129,
       "community": null
     },
     {
@@ -2372,6 +3048,8 @@
       "type": "function",
       "label": "test_run_script_with_context",
       "source_file": "tests/test_hooks.py",
+      "line": 131,
+      "end_line": 157,
       "community": null
     },
     {
@@ -2379,6 +3057,8 @@
       "type": "function",
       "label": "test_run_hook",
       "source_file": "tests/test_hooks.py",
+      "line": 159,
+      "end_line": 168,
       "community": null
     },
     {
@@ -2386,6 +3066,8 @@
       "type": "function",
       "label": "test_run_failing_hook",
       "source_file": "tests/test_hooks.py",
+      "line": 170,
+      "end_line": 182,
       "community": null
     },
     {
@@ -2393,6 +3075,8 @@
       "type": "module",
       "label": "tests.test_log",
       "source_file": "tests/test_log.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2400,6 +3084,8 @@
       "type": "function",
       "label": "create_log_records",
       "source_file": "tests/test_log.py",
+      "line": 9,
+      "end_line": 21,
       "community": null
     },
     {
@@ -2407,6 +3093,8 @@
       "type": "function",
       "label": "info_messages",
       "source_file": "tests/test_log.py",
+      "line": 25,
+      "end_line": 31,
       "community": null
     },
     {
@@ -2414,6 +3102,8 @@
       "type": "function",
       "label": "debug_messages",
       "source_file": "tests/test_log.py",
+      "line": 35,
+      "end_line": 45,
       "community": null
     },
     {
@@ -2421,6 +3111,8 @@
       "type": "function",
       "label": "info_logger",
       "source_file": "tests/test_log.py",
+      "line": 49,
+      "end_line": 51,
       "community": null
     },
     {
@@ -2428,6 +3120,8 @@
       "type": "function",
       "label": "debug_logger",
       "source_file": "tests/test_log.py",
+      "line": 55,
+      "end_line": 57,
       "community": null
     },
     {
@@ -2435,6 +3129,8 @@
       "type": "function",
       "label": "debug_file",
       "source_file": "tests/test_log.py",
+      "line": 61,
+      "end_line": 63,
       "community": null
     },
     {
@@ -2442,6 +3138,8 @@
       "type": "function",
       "label": "info_logger_with_file",
       "source_file": "tests/test_log.py",
+      "line": 67,
+      "end_line": 69,
       "community": null
     },
     {
@@ -2449,6 +3147,8 @@
       "type": "function",
       "label": "test_info_stdout_logging",
       "source_file": "tests/test_log.py",
+      "line": 72,
+      "end_line": 86,
       "community": null
     },
     {
@@ -2456,6 +3156,8 @@
       "type": "function",
       "label": "test_debug_stdout_logging",
       "source_file": "tests/test_log.py",
+      "line": 89,
+      "end_line": 103,
       "community": null
     },
     {
@@ -2463,6 +3165,8 @@
       "type": "function",
       "label": "test_debug_file_logging",
       "source_file": "tests/test_log.py",
+      "line": 106,
+      "end_line": 120,
       "community": null
     },
     {
@@ -2470,6 +3174,8 @@
       "type": "module",
       "label": "tests.test_main",
       "source_file": "tests/test_main.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2477,6 +3183,8 @@
       "type": "function",
       "label": "test_replay_dump_template_name",
       "source_file": "tests/test_main.py",
+      "line": 5,
+      "end_line": 30,
       "community": null
     },
     {
@@ -2484,6 +3192,8 @@
       "type": "function",
       "label": "test_replay_load_template_name",
       "source_file": "tests/test_main.py",
+      "line": 33,
+      "end_line": 54,
       "community": null
     },
     {
@@ -2491,6 +3201,8 @@
       "type": "module",
       "label": "tests.test_output_folder",
       "source_file": "tests/test_output_folder.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2498,6 +3210,8 @@
       "type": "function",
       "label": "remove_output_folder",
       "source_file": "tests/test_output_folder.py",
+      "line": 17,
+      "end_line": 21,
       "community": null
     },
     {
@@ -2505,6 +3219,8 @@
       "type": "function",
       "label": "test_output_folder",
       "source_file": "tests/test_output_folder.py",
+      "line": 25,
+      "end_line": 43,
       "community": null
     },
     {
@@ -2512,6 +3228,8 @@
       "type": "function",
       "label": "test_exception_when_output_folder_exists",
       "source_file": "tests/test_output_folder.py",
+      "line": 47,
+      "end_line": 57,
       "community": null
     },
     {
@@ -2519,6 +3237,8 @@
       "type": "module",
       "label": "tests.test_preferred_encoding",
       "source_file": "tests/test_preferred_encoding.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2526,6 +3246,8 @@
       "type": "function",
       "label": "test_not_ascii",
       "source_file": "tests/test_preferred_encoding.py",
+      "line": 12,
+      "end_line": 27,
       "community": null
     },
     {
@@ -2533,6 +3255,8 @@
       "type": "module",
       "label": "tests.test_prompt",
       "source_file": "tests/test_prompt.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2540,6 +3264,8 @@
       "type": "class",
       "label": "TestRenderVariable",
       "source_file": "tests/test_prompt.py",
+      "line": 17,
+      "end_line": 66,
       "community": null
     },
     {
@@ -2547,6 +3273,8 @@
       "type": "class",
       "label": "TestPrompt",
       "source_file": "tests/test_prompt.py",
+      "line": 69,
+      "end_line": 251,
       "community": null
     },
     {
@@ -2554,6 +3282,8 @@
       "type": "class",
       "label": "TestReadUserChoice",
       "source_file": "tests/test_prompt.py",
+      "line": 254,
+      "end_line": 331,
       "community": null
     },
     {
@@ -2561,6 +3291,8 @@
       "type": "class",
       "label": "TestPromptChoiceForConfig",
       "source_file": "tests/test_prompt.py",
+      "line": 334,
+      "end_line": 379,
       "community": null
     },
     {
@@ -2568,6 +3300,8 @@
       "type": "function",
       "label": "patch_readline_on_win",
       "source_file": "tests/test_prompt.py",
+      "line": 11,
+      "end_line": 14,
       "community": null
     },
     {
@@ -2575,6 +3309,8 @@
       "type": "function",
       "label": "test_undefined_variable",
       "source_file": "tests/test_prompt.py",
+      "line": 397,
+      "end_line": 404,
       "community": null
     },
     {
@@ -2582,6 +3318,8 @@
       "type": "function",
       "label": "test_convert_to_str",
       "source_file": "tests/test_prompt.py",
+      "line": 30,
+      "end_line": 47,
       "community": null
     },
     {
@@ -2589,6 +3327,8 @@
       "type": "function",
       "label": "test_convert_to_str_complex_variables",
       "source_file": "tests/test_prompt.py",
+      "line": 60,
+      "end_line": 66,
       "community": null
     },
     {
@@ -2596,6 +3336,8 @@
       "type": "function",
       "label": "test_prompt_for_config",
       "source_file": "tests/test_prompt.py",
+      "line": 80,
+      "end_line": 87,
       "community": null
     },
     {
@@ -2603,6 +3345,8 @@
       "type": "function",
       "label": "test_prompt_for_config_dict",
       "source_file": "tests/test_prompt.py",
+      "line": 89,
+      "end_line": 98,
       "community": null
     },
     {
@@ -2610,6 +3354,8 @@
       "type": "function",
       "label": "test_should_render_dict",
       "source_file": "tests/test_prompt.py",
+      "line": 100,
+      "end_line": 115,
       "community": null
     },
     {
@@ -2617,6 +3363,8 @@
       "type": "function",
       "label": "test_should_render_deep_dict",
       "source_file": "tests/test_prompt.py",
+      "line": 117,
+      "end_line": 160,
       "community": null
     },
     {
@@ -2624,6 +3372,8 @@
       "type": "function",
       "label": "test_prompt_for_templated_config",
       "source_file": "tests/test_prompt.py",
+      "line": 162,
+      "end_line": 184,
       "community": null
     },
     {
@@ -2631,6 +3381,8 @@
       "type": "function",
       "label": "test_dont_prompt_for_private_context_var",
       "source_file": "tests/test_prompt.py",
+      "line": 186,
+      "end_line": 196,
       "community": null
     },
     {
@@ -2638,6 +3390,8 @@
       "type": "function",
       "label": "test_should_render_private_variables_with_two_underscores",
       "source_file": "tests/test_prompt.py",
+      "line": 198,
+      "end_line": 233,
       "community": null
     },
     {
@@ -2645,6 +3399,8 @@
       "type": "function",
       "label": "test_should_not_render_private_variables",
       "source_file": "tests/test_prompt.py",
+      "line": 235,
+      "end_line": 251,
       "community": null
     },
     {
@@ -2652,6 +3408,8 @@
       "type": "function",
       "label": "test_should_invoke_read_user_choice",
       "source_file": "tests/test_prompt.py",
+      "line": 257,
+      "end_line": 277,
       "community": null
     },
     {
@@ -2659,6 +3417,8 @@
       "type": "function",
       "label": "test_should_invoke_read_user_variable",
       "source_file": "tests/test_prompt.py",
+      "line": 279,
+      "end_line": 295,
       "community": null
     },
     {
@@ -2666,6 +3426,8 @@
       "type": "function",
       "label": "test_should_render_choices",
       "source_file": "tests/test_prompt.py",
+      "line": 297,
+      "end_line": 331,
       "community": null
     },
     {
@@ -2673,6 +3435,8 @@
       "type": "function",
       "label": "choices",
       "source_file": "tests/test_prompt.py",
+      "line": 338,
+      "end_line": 340,
       "community": null
     },
     {
@@ -2680,6 +3444,8 @@
       "type": "function",
       "label": "context",
       "source_file": "tests/test_prompt.py",
+      "line": 343,
+      "end_line": 345,
       "community": null
     },
     {
@@ -2687,6 +3453,8 @@
       "type": "function",
       "label": "test_should_return_first_option_if_no_input",
       "source_file": "tests/test_prompt.py",
+      "line": 347,
+      "end_line": 362,
       "community": null
     },
     {
@@ -2694,6 +3462,8 @@
       "type": "function",
       "label": "test_should_read_user_choice",
       "source_file": "tests/test_prompt.py",
+      "line": 364,
+      "end_line": 379,
       "community": null
     },
     {
@@ -2701,6 +3471,8 @@
       "type": "module",
       "label": "tests.test_read_repo_password",
       "source_file": "tests/test_read_repo_password.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2708,6 +3480,8 @@
       "type": "function",
       "label": "test_click_invocation",
       "source_file": "tests/test_read_repo_password.py",
+      "line": 5,
+      "end_line": 15,
       "community": null
     },
     {
@@ -2715,6 +3489,8 @@
       "type": "module",
       "label": "tests.test_read_user_choice",
       "source_file": "tests/test_read_user_choice.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2722,6 +3498,8 @@
       "type": "function",
       "label": "test_click_invocation",
       "source_file": "tests/test_read_user_choice.py",
+      "line": 18,
+      "end_line": 33,
       "community": null
     },
     {
@@ -2729,6 +3507,8 @@
       "type": "function",
       "label": "test_raise_if_options_is_not_a_non_empty_list",
       "source_file": "tests/test_read_user_choice.py",
+      "line": 36,
+      "end_line": 45,
       "community": null
     },
     {
@@ -2736,6 +3516,8 @@
       "type": "module",
       "label": "tests.test_read_user_dict",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2743,6 +3525,8 @@
       "type": "function",
       "label": "test_process_json_invalid_json",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 11,
+      "end_line": 16,
       "community": null
     },
     {
@@ -2750,6 +3534,8 @@
       "type": "function",
       "label": "test_process_json_non_dict",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 19,
+      "end_line": 24,
       "community": null
     },
     {
@@ -2757,6 +3543,8 @@
       "type": "function",
       "label": "test_process_json_valid_json",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 27,
+      "end_line": 37,
       "community": null
     },
     {
@@ -2764,6 +3552,8 @@
       "type": "function",
       "label": "test_process_json_deep_dict",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 40,
+      "end_line": 73,
       "community": null
     },
     {
@@ -2771,6 +3561,8 @@
       "type": "function",
       "label": "test_should_raise_type_error",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 76,
+      "end_line": 83,
       "community": null
     },
     {
@@ -2778,6 +3570,8 @@
       "type": "function",
       "label": "test_should_call_prompt_with_process_json",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 86,
+      "end_line": 97,
       "community": null
     },
     {
@@ -2785,6 +3579,8 @@
       "type": "function",
       "label": "test_read_user_dict_default_value",
       "source_file": "tests/test_read_user_dict.py",
+      "line": 100,
+      "end_line": 115,
       "community": null
     },
     {
@@ -2792,6 +3588,8 @@
       "type": "module",
       "label": "tests.test_read_user_variable",
       "source_file": "tests/test_read_user_variable.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2799,6 +3597,8 @@
       "type": "function",
       "label": "test_click_invocation",
       "source_file": "tests/test_read_user_variable.py",
+      "line": 10,
+      "end_line": 20,
       "community": null
     },
     {
@@ -2806,6 +3606,8 @@
       "type": "module",
       "label": "tests.test_read_user_yes_no",
       "source_file": "tests/test_read_user_yes_no.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2813,6 +3615,8 @@
       "type": "function",
       "label": "test_click_invocation",
       "source_file": "tests/test_read_user_yes_no.py",
+      "line": 10,
+      "end_line": 20,
       "community": null
     },
     {
@@ -2820,6 +3624,8 @@
       "type": "module",
       "label": "tests.test_repo_not_found",
       "source_file": "tests/test_repo_not_found.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2827,6 +3633,8 @@
       "type": "function",
       "label": "test_should_raise_error_if_repo_does_not_exist",
       "source_file": "tests/test_repo_not_found.py",
+      "line": 7,
+      "end_line": 10,
       "community": null
     },
     {
@@ -2834,6 +3642,8 @@
       "type": "module",
       "label": "tests.test_specify_output_dir",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2841,6 +3651,8 @@
       "type": "function",
       "label": "context",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 8,
+      "end_line": 17,
       "community": null
     },
     {
@@ -2848,6 +3660,8 @@
       "type": "function",
       "label": "output_dir",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 21,
+      "end_line": 23,
       "community": null
     },
     {
@@ -2855,6 +3669,8 @@
       "type": "function",
       "label": "template",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 27,
+      "end_line": 31,
       "community": null
     },
     {
@@ -2862,6 +3678,8 @@
       "type": "function",
       "label": "mock_gen_context",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 35,
+      "end_line": 37,
       "community": null
     },
     {
@@ -2869,6 +3687,8 @@
       "type": "function",
       "label": "mock_prompt",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 41,
+      "end_line": 43,
       "community": null
     },
     {
@@ -2876,6 +3696,8 @@
       "type": "function",
       "label": "mock_replay",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 47,
+      "end_line": 49,
       "community": null
     },
     {
@@ -2883,6 +3705,8 @@
       "type": "function",
       "label": "test_api_invocation",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 52,
+      "end_line": 64,
       "community": null
     },
     {
@@ -2890,6 +3714,8 @@
       "type": "function",
       "label": "test_default_output_dir",
       "source_file": "tests/test_specify_output_dir.py",
+      "line": 67,
+      "end_line": 79,
       "community": null
     },
     {
@@ -2897,6 +3723,8 @@
       "type": "module",
       "label": "tests.test_utils",
       "source_file": "tests/test_utils.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -2904,6 +3732,8 @@
       "type": "function",
       "label": "make_readonly",
       "source_file": "tests/test_utils.py",
+      "line": 11,
+      "end_line": 14,
       "community": null
     },
     {
@@ -2911,6 +3741,8 @@
       "type": "function",
       "label": "test_rmtree",
       "source_file": "tests/test_utils.py",
+      "line": 21,
+      "end_line": 29,
       "community": null
     },
     {
@@ -2918,6 +3750,8 @@
       "type": "function",
       "label": "test_make_sure_path_exists",
       "source_file": "tests/test_utils.py",
+      "line": 36,
+      "end_line": 52,
       "community": null
     },
     {
@@ -2925,6 +3759,8 @@
       "type": "function",
       "label": "test_make_sure_path_exists_correctly_handle_os_error",
       "source_file": "tests/test_utils.py",
+      "line": 55,
+      "end_line": 68,
       "community": null
     },
     {
@@ -2932,6 +3768,8 @@
       "type": "function",
       "label": "test_work_in",
       "source_file": "tests/test_utils.py",
+      "line": 75,
+      "end_line": 87,
       "community": null
     },
     {
@@ -2939,6 +3777,8 @@
       "type": "function",
       "label": "test_prompt_should_ask_and_rm_repo_dir",
       "source_file": "tests/test_utils.py",
+      "line": 90,
+      "end_line": 103,
       "community": null
     },
     {
@@ -2946,6 +3786,8 @@
       "type": "function",
       "label": "test_prompt_should_ask_and_exit_on_user_no_answer",
       "source_file": "tests/test_utils.py",
+      "line": 106,
+      "end_line": 121,
       "community": null
     },
     {
@@ -2953,6 +3795,8 @@
       "type": "function",
       "label": "test_prompt_should_ask_and_rm_repo_file",
       "source_file": "tests/test_utils.py",
+      "line": 124,
+      "end_line": 138,
       "community": null
     },
     {
@@ -2960,6 +3804,8 @@
       "type": "function",
       "label": "test_prompt_should_ask_and_keep_repo_on_no_reuse",
       "source_file": "tests/test_utils.py",
+      "line": 141,
+      "end_line": 154,
       "community": null
     },
     {
@@ -2967,6 +3813,8 @@
       "type": "function",
       "label": "test_prompt_should_ask_and_keep_repo_on_reuse",
       "source_file": "tests/test_utils.py",
+      "line": 157,
+      "end_line": 177,
       "community": null
     },
     {
@@ -2974,6 +3822,8 @@
       "type": "function",
       "label": "test_prompt_should_not_ask_if_no_input_and_rm_repo_dir",
       "source_file": "tests/test_utils.py",
+      "line": 180,
+      "end_line": 196,
       "community": null
     },
     {
@@ -2981,6 +3831,8 @@
       "type": "function",
       "label": "test_prompt_should_not_ask_if_no_input_and_rm_repo_file",
       "source_file": "tests/test_utils.py",
+      "line": 199,
+      "end_line": 216,
       "community": null
     },
     {
@@ -2988,6 +3840,8 @@
       "type": "function",
       "label": "raiser",
       "source_file": "tests/test_utils.py",
+      "line": 62,
+      "end_line": 63,
       "community": null
     },
     {
@@ -2995,6 +3849,8 @@
       "type": "function",
       "label": "answer",
       "source_file": "tests/test_utils.py",
+      "line": 161,
+      "end_line": 165,
       "community": null
     },
     {
@@ -3002,6 +3858,8 @@
       "type": "module",
       "label": "tests.undefined-variable.dir-name.{{cookiecutter.project_slug}}.{{cookiecutter.foobar}}.helloworld",
       "source_file": "tests/undefined-variable/dir-name/{{cookiecutter.project_slug}}/{{cookiecutter.foobar}}/helloworld.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -3009,6 +3867,8 @@
       "type": "module",
       "label": "tests.vcs.test_clone",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -3016,6 +3876,8 @@
       "type": "function",
       "label": "clone_dir",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 11,
+      "end_line": 14,
       "community": null
     },
     {
@@ -3023,6 +3885,8 @@
       "type": "function",
       "label": "test_clone_should_raise_if_vcs_not_installed",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 17,
+      "end_line": 25,
       "community": null
     },
     {
@@ -3030,6 +3894,8 @@
       "type": "function",
       "label": "test_clone_should_rstrip_trailing_slash_in_repo_url",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 28,
+      "end_line": 43,
       "community": null
     },
     {
@@ -3037,6 +3903,8 @@
       "type": "function",
       "label": "test_clone_should_abort_if_user_does_not_want_to_reclone",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 46,
+      "end_line": 66,
       "community": null
     },
     {
@@ -3044,6 +3912,8 @@
       "type": "function",
       "label": "test_clone_should_invoke_vcs_command",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 79,
+      "end_line": 109,
       "community": null
     },
     {
@@ -3051,6 +3921,8 @@
       "type": "function",
       "label": "test_clone_handles_repo_typo",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 121,
+      "end_line": 139,
       "community": null
     },
     {
@@ -3058,6 +3930,8 @@
       "type": "function",
       "label": "test_clone_handles_branch_typo",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 151,
+      "end_line": 172,
       "community": null
     },
     {
@@ -3065,6 +3939,8 @@
       "type": "function",
       "label": "test_clone_unknown_subprocess_error",
       "source_file": "tests/vcs/test_clone.py",
+      "line": 175,
+      "end_line": 192,
       "community": null
     },
     {
@@ -3072,6 +3948,8 @@
       "type": "module",
       "label": "tests.vcs.test_identify_repo",
       "source_file": "tests/vcs/test_identify_repo.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -3079,6 +3957,8 @@
       "type": "function",
       "label": "test_identify_known_repo",
       "source_file": "tests/vcs/test_identify_repo.py",
+      "line": 48,
+      "end_line": 50,
       "community": null
     },
     {
@@ -3086,6 +3966,8 @@
       "type": "function",
       "label": "unknown_repo_type_url",
       "source_file": "tests/vcs/test_identify_repo.py",
+      "line": 62,
+      "end_line": 64,
       "community": null
     },
     {
@@ -3093,6 +3975,8 @@
       "type": "function",
       "label": "test_identify_raise_on_unknown_repo",
       "source_file": "tests/vcs/test_identify_repo.py",
+      "line": 67,
+      "end_line": 70,
       "community": null
     },
     {
@@ -3100,6 +3984,8 @@
       "type": "module",
       "label": "tests.vcs.test_is_vcs_installed",
       "source_file": "tests/vcs/test_is_vcs_installed.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -3107,6 +3993,8 @@
       "type": "function",
       "label": "test_is_vcs_installed",
       "source_file": "tests/vcs/test_is_vcs_installed.py",
+      "line": 11,
+      "end_line": 14,
       "community": null
     },
     {
@@ -3114,6 +4002,8 @@
       "type": "module",
       "label": "tests.zipfile.test_unzip",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 0,
+      "end_line": 0,
       "community": null
     },
     {
@@ -3121,6 +4011,8 @@
       "type": "function",
       "label": "mock_download",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 10,
+      "end_line": 16,
       "community": null
     },
     {
@@ -3128,6 +4020,8 @@
       "type": "function",
       "label": "test_unzip_local_file",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 19,
+      "end_line": 32,
       "community": null
     },
     {
@@ -3135,6 +4029,8 @@
       "type": "function",
       "label": "test_unzip_protected_local_file_environment_password",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 35,
+      "end_line": 51,
       "community": null
     },
     {
@@ -3142,6 +4038,8 @@
       "type": "function",
       "label": "test_unzip_protected_local_file_bad_environment_password",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 54,
+      "end_line": 68,
       "community": null
     },
     {
@@ -3149,6 +4047,8 @@
       "type": "function",
       "label": "test_unzip_protected_local_file_user_password_with_noinput",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 71,
+      "end_line": 85,
       "community": null
     },
     {
@@ -3156,6 +4056,8 @@
       "type": "function",
       "label": "test_unzip_protected_local_file_user_password",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 88,
+      "end_line": 104,
       "community": null
     },
     {
@@ -3163,6 +4065,8 @@
       "type": "function",
       "label": "test_unzip_protected_local_file_user_bad_password",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 107,
+      "end_line": 123,
       "community": null
     },
     {
@@ -3170,6 +4074,8 @@
       "type": "function",
       "label": "test_empty_zip_file",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 126,
+      "end_line": 137,
       "community": null
     },
     {
@@ -3177,6 +4083,8 @@
       "type": "function",
       "label": "test_non_repo_zip_file",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 140,
+      "end_line": 151,
       "community": null
     },
     {
@@ -3184,6 +4092,8 @@
       "type": "function",
       "label": "test_bad_zip_file",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 154,
+      "end_line": 165,
       "community": null
     },
     {
@@ -3191,6 +4101,8 @@
       "type": "function",
       "label": "test_unzip_url",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 168,
+      "end_line": 190,
       "community": null
     },
     {
@@ -3198,6 +4110,8 @@
       "type": "function",
       "label": "test_unzip_url_existing_cache",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 193,
+      "end_line": 219,
       "community": null
     },
     {
@@ -3205,6 +4119,8 @@
       "type": "function",
       "label": "test_unzip_url_existing_cache_no_input",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 222,
+      "end_line": 244,
       "community": null
     },
     {
@@ -3212,6 +4128,8 @@
       "type": "function",
       "label": "test_unzip_should_abort_if_no_redownload",
       "source_file": "tests/zipfile/test_unzip.py",
+      "line": 247,
+      "end_line": 268,
       "community": null
     }
   ],
@@ -3250,7 +4168,7 @@
     },
     {
       "source": "cookiecutter/cli.py::main",
-      "target": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/log.py::configure_logger",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3266,7 +4184,7 @@
     },
     {
       "source": "cookiecutter/cli.py::main",
-      "target": "cookiecutter/log.py::configure_logger",
+      "target": "cookiecutter/main.py::cookiecutter",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3282,7 +4200,7 @@
     },
     {
       "source": "cookiecutter/config.py::get_config",
-      "target": "cookiecutter/config.py::merge_configs",
+      "target": "cookiecutter/exceptions.py::ConfigDoesNotExistException",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3298,7 +4216,7 @@
     },
     {
       "source": "cookiecutter/config.py::get_config",
-      "target": "cookiecutter/exceptions.py::ConfigDoesNotExistException",
+      "target": "cookiecutter/config.py::_expand_path",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3306,7 +4224,7 @@
     },
     {
       "source": "cookiecutter/config.py::get_config",
-      "target": "cookiecutter/config.py::_expand_path",
+      "target": "cookiecutter/config.py::merge_configs",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3538,14 +4456,6 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_context",
-      "target": "cookiecutter/generate.py::apply_overwrites_to_context",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/generate.py"
-    },
-    {
-      "source": "cookiecutter/generate.py::generate_context",
       "target": "cookiecutter/replay.py::load",
       "label": "calls",
       "evidence": "extracted",
@@ -3553,8 +4463,8 @@
       "source_file": "cookiecutter/generate.py"
     },
     {
-      "source": "cookiecutter/generate.py::render_and_create_dir",
-      "target": "cookiecutter/utils.py::make_sure_path_exists",
+      "source": "cookiecutter/generate.py::generate_context",
+      "target": "cookiecutter/generate.py::apply_overwrites_to_context",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3563,6 +4473,14 @@
     {
       "source": "cookiecutter/generate.py::render_and_create_dir",
       "target": "cookiecutter/exceptions.py::OutputDirExistsException",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/generate.py"
+    },
+    {
+      "source": "cookiecutter/generate.py::render_and_create_dir",
+      "target": "cookiecutter/utils.py::make_sure_path_exists",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3578,14 +4496,6 @@
     },
     {
       "source": "cookiecutter/generate.py::_run_hook_from_repo_dir",
-      "target": "cookiecutter/utils.py::rmtree",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/generate.py"
-    },
-    {
-      "source": "cookiecutter/generate.py::_run_hook_from_repo_dir",
       "target": "cookiecutter/utils.py::work_in",
       "label": "calls",
       "evidence": "extracted",
@@ -3593,8 +4503,16 @@
       "source_file": "cookiecutter/generate.py"
     },
     {
+      "source": "cookiecutter/generate.py::_run_hook_from_repo_dir",
+      "target": "cookiecutter/utils.py::rmtree",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/generate.py"
+    },
+    {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/environment.py::StrictEnvironment",
+      "target": "cookiecutter/find.py::find_template",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3610,7 +4528,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/generate.py::_run_hook_from_repo_dir",
+      "target": "cookiecutter/environment.py::StrictEnvironment",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3618,7 +4536,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/exceptions.py::UndefinedVariableInTemplate",
+      "target": "cookiecutter/generate.py::_run_hook_from_repo_dir",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3634,7 +4552,15 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/generate.py::render_and_create_dir",
+      "target": "cookiecutter/generate.py::generate_file",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/generate.py"
+    },
+    {
+      "source": "cookiecutter/generate.py::generate_files",
+      "target": "cookiecutter/exceptions.py::UndefinedVariableInTemplate",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3650,14 +4576,6 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/generate.py::generate_file",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/generate.py"
-    },
-    {
-      "source": "cookiecutter/generate.py::generate_files",
       "target": "cookiecutter/utils.py::work_in",
       "label": "calls",
       "evidence": "extracted",
@@ -3666,7 +4584,7 @@
     },
     {
       "source": "cookiecutter/generate.py::generate_files",
-      "target": "cookiecutter/find.py::find_template",
+      "target": "cookiecutter/generate.py::render_and_create_dir",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3698,14 +4616,6 @@
     },
     {
       "source": "cookiecutter/hooks.py::run_script",
-      "target": "cookiecutter/utils.py::make_executable",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/hooks.py"
-    },
-    {
-      "source": "cookiecutter/hooks.py::run_script",
       "target": "cookiecutter/exceptions.py::FailedHookException",
       "label": "calls",
       "evidence": "extracted",
@@ -3713,8 +4623,8 @@
       "source_file": "cookiecutter/hooks.py"
     },
     {
-      "source": "cookiecutter/hooks.py::run_script_with_context",
-      "target": "cookiecutter/hooks.py::run_script",
+      "source": "cookiecutter/hooks.py::run_script",
+      "target": "cookiecutter/utils.py::make_executable",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3723,6 +4633,14 @@
     {
       "source": "cookiecutter/hooks.py::run_script_with_context",
       "target": "cookiecutter/environment.py::StrictEnvironment",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/hooks.py"
+    },
+    {
+      "source": "cookiecutter/hooks.py::run_script_with_context",
+      "target": "cookiecutter/hooks.py::run_script",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3802,7 +4720,7 @@
     },
     {
       "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/generate.py::generate_files",
+      "target": "cookiecutter/utils.py::rmtree",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3826,6 +4744,30 @@
     },
     {
       "source": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/replay.py::load",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/main.py"
+    },
+    {
+      "source": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/prompt.py::prompt_for_config",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/main.py"
+    },
+    {
+      "source": "cookiecutter/main.py::cookiecutter",
+      "target": "cookiecutter/generate.py::generate_context",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/main.py"
+    },
+    {
+      "source": "cookiecutter/main.py::cookiecutter",
       "target": "cookiecutter/replay.py::dump",
       "label": "calls",
       "evidence": "extracted",
@@ -3842,31 +4784,7 @@
     },
     {
       "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/replay.py::load",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/main.py"
-    },
-    {
-      "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/utils.py::rmtree",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/main.py"
-    },
-    {
-      "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/generate.py::generate_context",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/main.py"
-    },
-    {
-      "source": "cookiecutter/main.py::cookiecutter",
-      "target": "cookiecutter/prompt.py::prompt_for_config",
+      "target": "cookiecutter/generate.py::generate_files",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3906,15 +4824,7 @@
     },
     {
       "source": "cookiecutter/prompt.py::prompt_for_config",
-      "target": "cookiecutter/prompt.py::read_user_variable",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/prompt.py"
-    },
-    {
-      "source": "cookiecutter/prompt.py::prompt_for_config",
-      "target": "cookiecutter/exceptions.py::UndefinedVariableInTemplate",
+      "target": "cookiecutter/prompt.py::prompt_choice_for_config",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3923,6 +4833,14 @@
     {
       "source": "cookiecutter/prompt.py::prompt_for_config",
       "target": "cookiecutter/environment.py::StrictEnvironment",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/prompt.py"
+    },
+    {
+      "source": "cookiecutter/prompt.py::prompt_for_config",
+      "target": "cookiecutter/exceptions.py::UndefinedVariableInTemplate",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -3946,7 +4864,7 @@
     },
     {
       "source": "cookiecutter/prompt.py::prompt_for_config",
-      "target": "cookiecutter/prompt.py::prompt_choice_for_config",
+      "target": "cookiecutter/prompt.py::read_user_variable",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4010,6 +4928,22 @@
     },
     {
       "source": "cookiecutter/repository.py::determine_repo_dir",
+      "target": "cookiecutter/repository.py::repository_has_cookiecutter_json",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/repository.py"
+    },
+    {
+      "source": "cookiecutter/repository.py::determine_repo_dir",
+      "target": "cookiecutter/exceptions.py::RepositoryNotFound",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/repository.py"
+    },
+    {
+      "source": "cookiecutter/repository.py::determine_repo_dir",
       "target": "cookiecutter/repository.py::is_zip_file",
       "label": "calls",
       "evidence": "extracted",
@@ -4026,22 +4960,6 @@
     },
     {
       "source": "cookiecutter/repository.py::determine_repo_dir",
-      "target": "cookiecutter/vcs.py::clone",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/repository.py"
-    },
-    {
-      "source": "cookiecutter/repository.py::determine_repo_dir",
-      "target": "cookiecutter/exceptions.py::RepositoryNotFound",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/repository.py"
-    },
-    {
-      "source": "cookiecutter/repository.py::determine_repo_dir",
       "target": "cookiecutter/repository.py::expand_abbreviations",
       "label": "calls",
       "evidence": "extracted",
@@ -4050,7 +4968,7 @@
     },
     {
       "source": "cookiecutter/repository.py::determine_repo_dir",
-      "target": "cookiecutter/repository.py::repository_has_cookiecutter_json",
+      "target": "cookiecutter/vcs.py::clone",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4074,7 +4992,7 @@
     },
     {
       "source": "cookiecutter/utils.py::prompt_and_delete",
-      "target": "cookiecutter/prompt.py::read_user_yes_no",
+      "target": "cookiecutter/utils.py::rmtree",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4082,7 +5000,7 @@
     },
     {
       "source": "cookiecutter/utils.py::prompt_and_delete",
-      "target": "cookiecutter/utils.py::rmtree",
+      "target": "cookiecutter/prompt.py::read_user_yes_no",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4106,31 +5024,7 @@
     },
     {
       "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/exceptions.py::RepositoryNotFound",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/vcs.py"
-    },
-    {
-      "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/utils.py::prompt_and_delete",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/vcs.py"
-    },
-    {
-      "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/vcs.py::is_vcs_installed",
-      "label": "calls",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "cookiecutter/vcs.py"
-    },
-    {
-      "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/exceptions.py::VCSNotInstalled",
+      "target": "cookiecutter/exceptions.py::RepositoryCloneFailed",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4154,7 +5048,31 @@
     },
     {
       "source": "cookiecutter/vcs.py::clone",
-      "target": "cookiecutter/exceptions.py::RepositoryCloneFailed",
+      "target": "cookiecutter/vcs.py::is_vcs_installed",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/vcs.py"
+    },
+    {
+      "source": "cookiecutter/vcs.py::clone",
+      "target": "cookiecutter/utils.py::prompt_and_delete",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/vcs.py"
+    },
+    {
+      "source": "cookiecutter/vcs.py::clone",
+      "target": "cookiecutter/exceptions.py::RepositoryNotFound",
+      "label": "calls",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "cookiecutter/vcs.py"
+    },
+    {
+      "source": "cookiecutter/vcs.py::clone",
+      "target": "cookiecutter/exceptions.py::VCSNotInstalled",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4194,7 +5112,7 @@
     },
     {
       "source": "cookiecutter/zipfile.py::unzip",
-      "target": "cookiecutter/exceptions.py::InvalidZipRepository",
+      "target": "cookiecutter/utils.py::make_sure_path_exists",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -4210,7 +5128,7 @@
     },
     {
       "source": "cookiecutter/zipfile.py::unzip",
-      "target": "cookiecutter/utils.py::make_sure_path_exists",
+      "target": "cookiecutter/exceptions.py::InvalidZipRepository",
       "label": "calls",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5674,7 +6592,7 @@
     },
     {
       "source": "tests/test_output_folder.py::test_output_folder",
-      "target": "cookiecutter/generate.py::generate_files",
+      "target": "cookiecutter/generate.py::generate_context",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5682,14 +6600,6 @@
     },
     {
       "source": "tests/test_output_folder.py::test_output_folder",
-      "target": "cookiecutter/generate.py::generate_context",
-      "label": "tested_by",
-      "evidence": "extracted",
-      "confidence": 0.9,
-      "source_file": "tests/test_output_folder.py"
-    },
-    {
-      "source": "tests/test_output_folder.py::test_exception_when_output_folder_exists",
       "target": "cookiecutter/generate.py::generate_files",
       "label": "tested_by",
       "evidence": "extracted",
@@ -5699,6 +6609,14 @@
     {
       "source": "tests/test_output_folder.py::test_exception_when_output_folder_exists",
       "target": "cookiecutter/generate.py::generate_context",
+      "label": "tested_by",
+      "evidence": "extracted",
+      "confidence": 0.9,
+      "source_file": "tests/test_output_folder.py"
+    },
+    {
+      "source": "tests/test_output_folder.py::test_exception_when_output_folder_exists",
+      "target": "cookiecutter/generate.py::generate_files",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5730,7 +6648,7 @@
     },
     {
       "source": "tests/test_prompt.py::test_convert_to_str_complex_variables",
-      "target": "cookiecutter/environment.py::StrictEnvironment",
+      "target": "cookiecutter/prompt.py::render_variable",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -5738,7 +6656,7 @@
     },
     {
       "source": "tests/test_prompt.py::test_convert_to_str_complex_variables",
-      "target": "cookiecutter/prompt.py::render_variable",
+      "target": "cookiecutter/environment.py::StrictEnvironment",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6026,7 +6944,7 @@
     },
     {
       "source": "tests/test_utils.py::test_rmtree",
-      "target": "tests/test_utils.py::make_readonly",
+      "target": "cookiecutter/utils.py::rmtree",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6034,7 +6952,7 @@
     },
     {
       "source": "tests/test_utils.py::test_rmtree",
-      "target": "cookiecutter/utils.py::rmtree",
+      "target": "tests/test_utils.py::make_readonly",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6282,7 +7200,7 @@
     },
     {
       "source": "tests/zipfile/test_unzip.py::test_unzip_url",
-      "target": "tests/zipfile/test_unzip.py::mock_download",
+      "target": "cookiecutter/zipfile.py::unzip",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,
@@ -6290,7 +7208,7 @@
     },
     {
       "source": "tests/zipfile/test_unzip.py::test_unzip_url",
-      "target": "cookiecutter/zipfile.py::unzip",
+      "target": "tests/zipfile/test_unzip.py::mock_download",
       "label": "tested_by",
       "evidence": "extracted",
       "confidence": 0.9,

@@ -29,6 +29,8 @@ class Node:
     type: NodeType
     label: str
     source_file: str
+    line: int = 0
+    end_line: int = 0
     community: int | None = None
 
     def to_dict(self) -> dict:
