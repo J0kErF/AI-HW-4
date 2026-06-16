@@ -60,6 +60,8 @@ class BenchmarkRunner:
             "total_tokens": run.total_tokens,
             "cost_usd": run.cost_usd,
             "units_read": run.units_read,
+            "chars_read": run.chars_read,
+            "token_log": state.get("token_log", []),
         }
 
     def _guided_arm(self) -> tuple[BenchmarkRun, dict, GraphTools]:
@@ -86,10 +88,15 @@ class BenchmarkRunner:
         llm = self._llm_factory(gk)
         return NaiveBaseline(gk, llm, self._repo).run(self._question, self._test_file)
 
-    def run(self, report_path: Path, chart_path: Path) -> tuple[BenchmarkRun, BenchmarkRun]:
-        """Run both arms, write the token report + chart, and return the runs."""
+    def measure(self) -> tuple[BenchmarkRun, BenchmarkRun]:
+        """Run both arms once and return (baseline, guided) without writing."""
         baseline = self._baseline_arm()
         guided, _, _ = self._guided_arm()
+        return baseline, guided
+
+    def run(self, report_path: Path, chart_path: Path) -> tuple[BenchmarkRun, BenchmarkRun]:
+        """Run both arms once, write the token report + chart, return the runs."""
+        baseline, guided = self.measure()
         comparator = BenchmarkComparator()
         comparator.render_report(baseline, guided, report_path)
         comparator.render_chart(baseline, guided, chart_path)

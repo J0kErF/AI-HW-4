@@ -1,0 +1,27 @@
+{
+  "n": 5,
+  "baseline": {
+    "arm": "baseline",
+    "input_tokens": 3393,
+    "output_tokens": 633,
+    "files_read": 2,
+    "units_read": 2,
+    "chars_read": 13641,
+    "iterations": 1,
+    "seconds": 0.0,
+    "cost_usd": 0.001612,
+    "localized": true
+  },
+  "guided": {
+    "arm": "graph_guided",
+    "input_tokens": 1363,
+    "output_tokens": 398,
+    "files_read": 2,
+    "units_read": 5,
+    "chars_read": 1386,
+    "iterations": 3,
+    "seconds": 0.0,
+    "cost_usd": 0.000806,
+    "localized": true
+  }
+}

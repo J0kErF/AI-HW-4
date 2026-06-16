@@ -13,7 +13,7 @@
 | 5 | How did we identify the bug, what was the **root cause**, and what steps led there? | `reports/BUG_REPORT.md` (OBS→REL→CONF→CTX→SRC) | ☑ agent localized find_hook graph-first |
 | 6 | What is the advantage of **graph navigation** vs linear file reading? | `reports/TOKEN_REPORT.md` | ☑ 71% fewer tokens, 94% fewer chars |
 | 7 | How did graph-guided agent use **save tokens** / avoid redundant reads? | `TOKEN_REPORT.md` + token chart | ☑ reads 20-line spans not 200-line files; span cached |
-| 8 | What **extensions / original ideas** did we add (centrality-ranked suspects, dynamic `hot.md` from `git diff`, orphan detection, etc.)? | README §"Extensions" | ☐ |
+| 8 | What **extensions / original ideas** did we add? | README §12 | ☑ chars_read metric, N-run suite + sensitivity, centrality-seeded hot.md, tested_by-following validate, semantic layer, faithful BugsInPy repro, interactive graph.html |
 
 ## Candidate original extensions (EX04 §5.6 — pick ≥1 per area)
 - Rank suspect nodes by `centrality` × proximity to the failing test.

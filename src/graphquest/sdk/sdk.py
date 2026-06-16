@@ -8,6 +8,8 @@ assignment phases as thin methods.
 
 from __future__ import annotations
 
+import json
+from dataclasses import asdict
 from pathlib import Path
 
 from graphquest.sdk.builders import SdkBuilders
@@ -87,19 +89,53 @@ class GraphQuestSDK(SdkBuilders):
         ReverseEngineeringReport().write(graph, metrics, block, oop, report_path)
         return {"block_diagram": block, "oop_schema": oop, "report_path": str(report_path)}
 
+    def _write_result(self, name: str, obj: dict) -> None:
+        """Persist a structured run result under ``results/`` (feeds the notebook)."""
+        base = Path(self._config.get("graphify.outputs_dir", "artifacts")).parent / "results"
+        base.mkdir(parents=True, exist_ok=True)
+        (base / name).write_text(json.dumps(obj, indent=2), encoding="utf-8")
+
     # --- Phase 4: graph-guided debugging agent ---
     def debug(self) -> dict:
         """Run the LangGraph agent to localize and fix the bug, graph-first."""
-        return self._runner().debug()
+        out = self._runner().debug()
+        self._write_result("debug_run.json", out)
+        return out
 
     # --- Phase 5: token-efficiency proof ---
     def benchmark(self) -> tuple[BenchmarkRun, BenchmarkRun]:
         """Run baseline vs graph-guided arms and write the token report + chart."""
         base_dir = Path(self._config.get("graphify.outputs_dir", "artifacts")).parent
         (base_dir / "reports").mkdir(parents=True, exist_ok=True)
-        return self._runner().run(
+        baseline, guided = self._runner().run(
             base_dir / "reports/TOKEN_REPORT.md", base_dir / "assets/token_savings.png"
         )
+        self._write_result("benchmark.json", {"baseline": asdict(baseline), "guided": asdict(guided)})
+        return baseline, guided
+
+    def benchmark_suite(self, n: int = 5) -> list[tuple[BenchmarkRun, BenchmarkRun]]:
+        """Run the benchmark ``n`` times; write per-run + mean results (V3 §9.1).
+
+        The mean drives ``TOKEN_REPORT.md`` + chart; the per-run list feeds the
+        analysis notebook's distribution charts.
+        """
+        from graphquest.services.benchmark.comparator import BenchmarkComparator
+        from graphquest.services.benchmark.suite import mean_run
+
+        runner = self._runner()
+        pairs = [runner.measure() for _ in range(n)]
+        self._write_result(
+            "benchmark_runs.json",
+            {"n": n, "runs": [{"baseline": asdict(b), "guided": asdict(g)} for b, g in pairs]},
+        )
+        mb = mean_run([b for b, _ in pairs], "baseline")
+        mg = mean_run([g for _, g in pairs], "graph_guided")
+        base_dir = Path(self._config.get("graphify.outputs_dir", "artifacts")).parent
+        comparator = BenchmarkComparator()
+        comparator.render_report(mb, mg, base_dir / "reports/TOKEN_REPORT.md")
+        comparator.render_chart(mb, mg, base_dir / "assets/token_savings.png")
+        self._write_result("benchmark.json", {"n": n, "baseline": asdict(mb), "guided": asdict(mg)})
+        return pairs
 
     @property
     def total_cost_usd(self) -> float:

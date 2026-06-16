@@ -1,0 +1,135 @@
+{
+  "n": 5,
+  "runs": [
+    {
+      "baseline": {
+        "arm": "baseline",
+        "input_tokens": 3393,
+        "output_tokens": 258,
+        "files_read": 2,
+        "units_read": 2,
+        "chars_read": 13641,
+        "iterations": 1,
+        "seconds": 0.0,
+        "cost_usd": 0.00119991,
+        "localized": true
+      },
+      "guided": {
+        "arm": "graph_guided",
+        "input_tokens": 1363,
+        "output_tokens": 435,
+        "files_read": 2,
+        "units_read": 5,
+        "chars_read": 1386,
+        "iterations": 3,
+        "seconds": 0.0,
+        "cost_usd": 0.0008465100000000002,
+        "localized": true
+      }
+    },
+    {
+      "baseline": {
+        "arm": "baseline",
+        "input_tokens": 3393,
+        "output_tokens": 258,
+        "files_read": 2,
+        "units_read": 2,
+        "chars_read": 13641,
+        "iterations": 1,
+        "seconds": 0.0,
+        "cost_usd": 0.00119991,
+        "localized": true
+      },
+      "guided": {
+        "arm": "graph_guided",
+        "input_tokens": 1363,
+        "output_tokens": 425,
+        "files_read": 2,
+        "units_read": 5,
+        "chars_read": 1386,
+        "iterations": 3,
+        "seconds": 0.0,
+        "cost_usd": 0.00083551,
+        "localized": true
+      }
+    },
+    {
+      "baseline": {
+        "arm": "baseline",
+        "input_tokens": 3393,
+        "output_tokens": 588,
+        "files_read": 2,
+        "units_read": 2,
+        "chars_read": 13641,
+        "iterations": 1,
+        "seconds": 0.0,
+        "cost_usd": 0.00156291,
+        "localized": true
+      },
+      "guided": {
+        "arm": "graph_guided",
+        "input_tokens": 1363,
+        "output_tokens": 307,
+        "files_read": 2,
+        "units_read": 5,
+        "chars_read": 1386,
+        "iterations": 3,
+        "seconds": 0.0,
+        "cost_usd": 0.00070571,
+        "localized": true
+      }
+    },
+    {
+      "baseline": {
+        "arm": "baseline",
+        "input_tokens": 3393,
+        "output_tokens": 303,
+        "files_read": 2,
+        "units_read": 2,
+        "chars_read": 13641,
+        "iterations": 1,
+        "seconds": 0.0,
+        "cost_usd": 0.00124941,
+        "localized": true
+      },
+      "guided": {
+        "arm": "graph_guided",
+        "input_tokens": 1363,
+        "output_tokens": 413,
+        "files_read": 2,
+        "units_read": 5,
+        "chars_read": 1386,
+        "iterations": 3,
+        "seconds": 0.0,
+        "cost_usd": 0.0008223100000000001,
+        "localized": true
+      }
+    },
+    {
+      "baseline": {
+        "arm": "baseline",
+        "input_tokens": 3393,
+        "output_tokens": 1758,
+        "files_read": 2,
+        "units_read": 2,
+        "chars_read": 13641,
+        "iterations": 1,
+        "seconds": 0.0,
+        "cost_usd": 0.00284991,
+        "localized": true
+      },
+      "guided": {
+        "arm": "graph_guided",
+        "input_tokens": 1363,
+        "output_tokens": 412,
+        "files_read": 2,
+        "units_read": 5,
+        "chars_read": 1386,
+        "iterations": 3,
+        "seconds": 0.0,
+        "cost_usd": 0.0008212100000000002,
+        "localized": true
+      }
+    }
+  ]
+}

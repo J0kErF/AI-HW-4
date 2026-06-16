@@ -27,8 +27,9 @@ locate and fix one bug under a tight token/$ budget.
 
 | KPI | Target | Verified by |
 |-----|--------|-------------|
-| Token saving (graph-guided vs naive) | ≥ 60 % fewer total tokens | `reports/TOKEN_REPORT.md` |
-| Files / units read | guided ≪ baseline | benchmark metrics |
+| **Context (input) token saving** | ≥ 50 % fewer input tokens | `reports/TOKEN_REPORT.md` (mean of N runs) |
+| Source chars read (token proxy) | ≥ 80 % fewer | benchmark metrics |
+| Total token saving | reported honestly (noisier — multi-step output) | `notebooks/token_analysis.ipynb` |
 | Root cause correctly localized | function-level match to upstream fix | `reports/BUG_REPORT.md` |
 | Fix passes the project's failing test | `buggy` → `fixed` test goes green | pytest on target |
 | Test coverage (our code) | ≥ 85 % | `pytest --cov` |

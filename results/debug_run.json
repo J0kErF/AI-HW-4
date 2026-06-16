@@ -1,0 +1,22 @@
+{
+  "root_cause": "The test expects `find_hook` to return a list (accessing index `[0]`), but the function returns a single string path or `None`.",
+  "fix_diff": "```diff\n--- a/cookiecutter/hooks.py\n+++ b/cookiecutter/hooks.py\n@@ -1,3 +1,3 @@\n def find_hook(hook_name, hooks_dir='hooks'):\n-    \"\"\"Return a dict of all hook scripts provided.\n+    \"\"\"Return a list of all hook scripts provided.\n \n     Must be called with the project template as the current working directory.\n@@ -5,3 +5,3 @@ def find_hook(hook_name, hooks_dir='hooks'):\n     will be the absolute path to the script. Missing scripts will not be\n-    included in the returned dict.\n+    included in the returned list.\n \n     :param hook_name: The hook to find\n@@ -9,3 +9,3 @@ def find_hook(hook_name, hooks_dir='hooks'):\n     :return: The absolute path to the hook script or None\n-    :return: The absolute path to the hook script or None\n+    :return: A list of absolute paths to hook scripts or None\n     \"\"\"\n@@ -13,3 +13,3 @@ def find_hook(hook_name, hooks_dir='hooks'):\n     if not os.path.isdir(hooks_dir):\n-        logger.debug('No hooks/dir in template_dir')\n-        return None\n+        logger.debug('No hooks dir in template_dir')\n+        return []\n \n@@ -17,5 +17,5 @@ def find_hook(hook_name, hooks_dir='hooks'):\n     for hook_file in os.listdir(hooks_dir):\n         if valid_hook(hook_file, hook_name):\n-            return os.path.abspath(os.path.join(hooks_dir, hook_file))\n+            return [os.path.abspath(os.path.join(hooks_dir, hook_file))]\n \n-    return None\n+    return []\n```",
+  "total_tokens": 1912,
+  "cost_usd": 0.00097191,
+  "units_read": 5,
+  "chars_read": 1386,
+  "token_log": [
+    [
+      627,
+      127
+    ],
+    [
+      442,
+      34
+    ],
+    [
+      294,
+      388
+    ]
+  ]
+}

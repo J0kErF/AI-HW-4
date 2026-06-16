@@ -70,6 +70,20 @@ def test_benchmark_writes_report_and_chart(repo_and_graph, fake_llm_client, tmp_
     assert guided.chars_read < baseline.chars_read  # spans << whole files
 
 
+def test_mean_run_averages_metrics() -> None:
+    """mean_run averages numeric metrics and ANDs the localized flags."""
+    from graphquest.services.benchmark.suite import mean_run
+
+    runs = [
+        BenchmarkRun(arm="x", input_tokens=100, output_tokens=20, chars_read=1000, localized=True),
+        BenchmarkRun(arm="x", input_tokens=200, output_tokens=40, chars_read=2000, localized=True),
+    ]
+    m = mean_run(runs, "x")
+    assert m.input_tokens == 150 and m.output_tokens == 30 and m.chars_read == 1500
+    assert m.localized is True
+    assert mean_run([], "x").input_tokens == 0  # empty is safe
+
+
 def test_comparator_renders_dash_for_zero_baseline(tmp_path: Path) -> None:
     """Saving column renders '—' when a baseline metric is zero (no divide error)."""
     out = tmp_path / "R.md"

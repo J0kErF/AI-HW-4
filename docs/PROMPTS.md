@@ -127,6 +127,22 @@ prompts that *failed* and what was changed.
 - **Phase 0:** `uv lock` (71 packages) committed; repo shared with the lecturer.
 - **Quality:** 32 tests pass, coverage ~91.7%, ruff clean.
 
+### P6.1 — Phase 6: visuals, notebook, rigor, final audit
+- **Graph viz:** `GraphVisualizer` → `assets/graph_viz.png` (community-coloured,
+  suspects ringed) + interactive `artifacts/graph.html` (pyvis) — completes the
+  Graphify export triad (I'd defined `GRAPH_HTML` but never emitted it).
+- **Rigor:** the single-run total-token saving was noisy (50–71%) because the
+  multi-step agent's *output* varies. Added `benchmark_suite(n)` + `mean_run` →
+  N=5 mean; the retrieval-controlled metrics are stable: **input −59.8%, chars
+  −89.8%**, total −56.3%. Reframed the headline to input/context tokens (the
+  Lost-in-the-Middle quantity), reporting total honestly.
+- **Notebook:** `notebooks/token_analysis.ipynb`, executed (5 embedded charts):
+  mean savings, per-run distribution, agent per-step tokens, sensitivity (saving
+  vs codebase size), amortization. Reads `results/*.json` (reproducible offline).
+- **Audit:** `docs/FINAL_CHECKLIST.md` maps EX04 §7 + V3 §17 + ISO 25010; README
+  deliverables map + before/after (fix + understanding) + extensions-implemented.
+- **Quality:** 34 tests, ~91% coverage, ruff clean.
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …

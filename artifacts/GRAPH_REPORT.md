@@ -1,6 +1,6 @@
 # GRAPH_REPORT — Graphify
 
-- Nodes: **459**  ·  Edges: **398**  ·  Communities: **138**  ·  Bridges: **251**
+- Nodes: **459**  ·  Edges: **398**  ·  Communities: **139**  ·  Bridges: **250**
 
 ## God-node / bottleneck candidates (highest betweenness)
 _All paths through one node = architectural risk; verify against source._

@@ -75,6 +75,7 @@ class SdkBuilders:
             semantic_layer=self._semantic_layer(),
             hot_seed=f"BugsInPy {self._config.get('target.project')} bug "
             f"{self._config.get('target.bug_id')} — {self._config.get('target.test_file')}",
+            highlight_labels=tuple(self._config.get("target.suspect_labels", [])),
         )
 
     def _runner(self) -> BenchmarkRunner:

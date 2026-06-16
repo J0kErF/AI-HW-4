@@ -10,15 +10,17 @@ graph; semantic enrichment only augments it.
 
 from __future__ import annotations
 
+import contextlib
 import json
 from pathlib import Path
 
-from graphquest.constants import GRAPH_JSON, GRAPH_REPORT
+from graphquest.constants import GRAPH_HTML, GRAPH_JSON, GRAPH_REPORT
 from graphquest.services.graphify.code_layer import CodeLayer
 from graphquest.services.graphify.metrics import MetricsCalculator
 from graphquest.services.graphify.models import CodeGraph
 from graphquest.services.graphify.report_writer import ReportWriter
 from graphquest.services.graphify.vault_writer import VaultWriter
+from graphquest.services.graphify.visualize import GraphVisualizer
 
 
 class Graphifier:
@@ -43,6 +45,8 @@ class Graphifier:
         artifacts_dir: Path,
         semantic_layer: object | None = None,
         hot_seed: str | None = None,
+        visualizer: GraphVisualizer | None = None,
+        highlight_labels: tuple[str, ...] = (),
     ) -> None:
         self._code = code_layer
         self._metrics = metrics
@@ -51,6 +55,8 @@ class Graphifier:
         self._artifacts = artifacts_dir
         self._semantic = semantic_layer
         self._hot_seed = hot_seed
+        self._viz = visualizer or GraphVisualizer()
+        self._highlight = highlight_labels
 
     def build(self) -> CodeGraph:
         """Run the full pipeline and return the assembled :class:`CodeGraph`."""
@@ -66,4 +72,13 @@ class Graphifier:
         )
         self._report.write(graph, metrics, self._artifacts / GRAPH_REPORT)
         self._vault.write(graph, metrics, hot_seed=self._hot_seed)
+        self._render_visuals(graph, metrics)
         return graph
+
+    def _render_visuals(self, graph: CodeGraph, metrics) -> None:  # noqa: ANN001
+        """Emit the PNG screenshot and the interactive graph.html (best-effort)."""
+        assets = self._artifacts.parent / "assets"
+        assets.mkdir(parents=True, exist_ok=True)
+        self._viz.render_png(graph, metrics, assets / "graph_viz.png", self._highlight)
+        with contextlib.suppress(Exception):  # pyvis optional; PNG already covers "see structure"
+            self._viz.render_html(graph, metrics, self._artifacts / GRAPH_HTML)

@@ -20,6 +20,7 @@
       "tests/test_hooks.py::TestExternalHooks::test_run_hook"
     ],
     "python_version": "3.6.9",
+    "suspect_labels": ["find_hook", "run_hook"],
     "fallback_bug_id": "1",
     "larger_alternative_project": "thefuck",
     "checkout_dir": "data/target_repo",
