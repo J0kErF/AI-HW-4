@@ -1,0 +1,69 @@
+[project]
+name = "graphquest"
+version = "1.00"
+description = "Graph-guided, token-efficient reverse-engineering and debugging of an unfamiliar Python codebase (BugsInPy) using a Graphify code-knowledge graph, an Obsidian vault, and a LangGraph debugging agent."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+authors = [{ name = "moamteam" }]
+keywords = [
+    "graphify", "obsidian", "reverse-engineering", "debugging",
+    "token-efficiency", "langgraph", "knowledge-graph", "bugsinpy",
+]
+
+dependencies = [
+    # Agentic graph-guided debugger
+    "langgraph>=0.2.0",
+    "langchain-core>=0.3.0",
+    "langchain-openai>=0.2.0",
+    # Graph construction & analysis (Graphify reimplementation)
+    "networkx>=3.3",
+    # Config, env, CLI, logging
+    "python-dotenv>=1.0",
+    "rich>=13.7",
+    # Token accounting for the baseline-vs-guided benchmark
+    "tiktoken>=0.7",
+    # Visualisation of graph + token reports
+    "matplotlib>=3.8",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+    "pytest-cov>=5.0",
+    "ruff>=0.6",
+]
+
+[project.scripts]
+graphquest = "graphquest.__main__:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/graphquest"]
+
+# ---------------------------------------------------------------------------
+# Quality gates (V3 guidelines §6, §7)
+# ---------------------------------------------------------------------------
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP", "B", "C4", "SIM"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+addopts = "-q --cov=src --cov-report=term-missing"
+testpaths = ["tests"]
+
+[tool.coverage.run]
+source = ["src"]
+omit = ["src/graphquest/__main__.py", "*/tests/*", "src/**/cli/*"]
+
+[tool.coverage.report]
+fail_under = 85
+show_missing = true

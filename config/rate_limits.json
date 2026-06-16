@@ -1,0 +1,28 @@
+{
+  "version": "1.00",
+  "global_budget_usd": 1.50,
+  "pricing_usd_per_million_tokens": {
+    "comment": "DeepSeek deepseek-chat list price; used by the Gatekeeper cost ledger.",
+    "deepseek-chat": { "input": 0.27, "output": 1.10 }
+  },
+  "services": {
+    "default": {
+      "requests_per_minute": 30,
+      "requests_per_hour": 500,
+      "concurrent_max": 4,
+      "retry_after_seconds": 30,
+      "max_retries": 3
+    },
+    "llm": {
+      "requests_per_minute": 20,
+      "requests_per_hour": 300,
+      "concurrent_max": 2,
+      "retry_after_seconds": 20,
+      "max_retries": 3
+    }
+  },
+  "queue": {
+    "max_depth": 64,
+    "backpressure": "block"
+  }
+}

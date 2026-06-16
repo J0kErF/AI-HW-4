@@ -1,0 +1,11 @@
+{
+  "version": "1.00",
+  "level": "INFO",
+  "log_dir": "logs",
+  "rotation": {
+    "strategy": "fifo",
+    "max_files": 10,
+    "max_bytes_per_file": 1048576
+  },
+  "format": "%(asctime)s | %(levelname)-7s | %(name)s | %(message)s"
+}

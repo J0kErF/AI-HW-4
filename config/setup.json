@@ -1,0 +1,48 @@
+{
+  "version": "1.00",
+  "project": {
+    "name": "graphquest",
+    "group_code": "moamteam",
+    "course": "Building with LLMs — Dr. Yoram Segal",
+    "assignment": "HW4 / EX04 — Reverse Engineering, Debugging and Token-Efficient Agentic AI"
+  },
+  "target": {
+    "comment": "The unfamiliar Python codebase under study. Primary: a single self-contained BugsInPy project whose many small modules make graph-guided navigation pay off. Finalize bug_id during Phase 1.",
+    "source": "bugsinpy",
+    "project": "thefuck",
+    "bug_id": "1",
+    "fallback_project": "cookiecutter",
+    "checkout_dir": "data/target_repo",
+    "buggy_ref": "buggy",
+    "fixed_ref": "fixed"
+  },
+  "graphify": {
+    "scan_root": "data/target_repo",
+    "include_globs": ["**/*.py", "**/*.md"],
+    "exclude_globs": ["**/tests/**", "**/.git/**", "**/__pycache__/**"],
+    "semantic_layer_enabled": true,
+    "semantic_max_nodes": 40,
+    "confidence_thresholds": {
+      "extracted": 0.9,
+      "inferred": 0.7,
+      "ambiguous": 0.55
+    },
+    "outputs_dir": "artifacts",
+    "vault_dir": "obsidian/wiki"
+  },
+  "agent": {
+    "framework": "langgraph",
+    "model_env": "GRAPHQUEST_MODEL",
+    "max_iterations": 6,
+    "hot_md": "obsidian/wiki/hot.md",
+    "index_md": "obsidian/wiki/index.md",
+    "graph_json": "artifacts/graph.json"
+  },
+  "benchmark": {
+    "comment": "Both arms run the SAME model, task and stopping criterion. Only the retrieval policy differs (see docs/PRD_token_benchmark.md).",
+    "model_env": "GRAPHQUEST_MODEL",
+    "stopping_criterion": "root_cause_localized_to_function",
+    "max_iterations": 10,
+    "report_path": "reports/TOKEN_REPORT.md"
+  }
+}
