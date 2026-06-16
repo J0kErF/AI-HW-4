@@ -12,8 +12,9 @@
     over stubbed `src/`. Run `pytest -p no:cov` for the 6 green infra tests.
 - ☐ Generate `uv.lock` and commit it (V3 hard requirement — needs `uv` + network)
   - *DoD:* `uv lock` run; `uv.lock` + `pyproject.toml` are the single dep source.
-- ☐ Push to GitHub; share with rmisegal@gmail.com
-  - *DoD:* repo public/shared, README renders, P0 commits tell PRD→PLAN→TODO→code story.
+- ◐ Push to GitHub → **https://github.com/J0kErF/AI-HW-4** (pushed `main`)
+  - ☐ Share repo with rmisegal@gmail.com (GitHub Settings → Collaborators — manual)
+  - *DoD:* repo shared, README renders, commits tell PRD→PLAN→TODO→code story.
 
 ## Phase 1 — Acquire the unfamiliar codebase  ◐
 - ☑ Pick & pin one BugsInPy project + bug id → **cookiecutter bug 2** (`setup.json`)
@@ -39,11 +40,14 @@
   - *DoD (remaining):* semantic edges added when key present; ≥85% cov reached as
     Phase 3-5 modules land.
 
-## Phase 3 — Reverse engineering  ☐
-- ☐ `DiagramGenerator.block_diagram()` (Mermaid flowchart from communities)
-- ☐ `DiagramGenerator.oop_schema()` (Mermaid classDiagram from class/inherits/uses)
-- ☐ Write `reports/REVERSE_ENGINEERING.md` with ≥2 insights (God-node, traceability gap)
-  - *DoD:* diagrams render in GitHub; insights cite `source_file` + evidence type.
+## Phase 3 — Reverse engineering  ☑
+- ☑ `DiagramGenerator.block_diagram()` (Mermaid flowchart, modules grouped by dir)
+- ☑ `DiagramGenerator.oop_schema()` (Mermaid classDiagram from class/inherits) —
+  renders the `CookiecutterException` hierarchy (17 inherits edges)
+- ☑ `reports/REVERSE_ENGINEERING.md` with 2 insights: God-node/bottleneck (auto
+  from betweenness) + the `find_hook` docstring-vs-code gap (cites source + edges)
+  - *DoD met:* diagrams render in GitHub; insights cite `source_file` + evidence.
+  - 20 tests pass; diagrams 100%, report 92%; ruff clean.
 
 ## Phase 4 — Graph-guided debug agent  ☐
 - ☐ `GraphTools` (query/path/explain/read_source_span)

@@ -19,6 +19,8 @@ from graphquest.services.graphify.metrics import MetricsCalculator
 from graphquest.services.graphify.models import CodeGraph
 from graphquest.services.graphify.report_writer import ReportWriter
 from graphquest.services.graphify.vault_writer import VaultWriter
+from graphquest.services.reverse_engineering.diagrams import DiagramGenerator
+from graphquest.services.reverse_engineering.report import ReverseEngineeringReport
 from graphquest.shared.config import Config
 from graphquest.shared.gatekeeper import ApiGatekeeper
 
@@ -91,8 +93,21 @@ class GraphQuestSDK:
 
     # --- Phase 3: reverse engineering ---
     def reverse_engineer(self, graph: CodeGraph) -> dict:
-        """Emit block + OOP diagrams and the two architectural insights."""
-        raise NotImplementedError("Phase 3")
+        """Emit block + OOP diagrams and the two architectural insights.
+
+        Returns:
+            Dict with the Mermaid sources and the report path.
+        """
+        metrics = MetricsCalculator().compute(graph)
+        gen = DiagramGenerator()
+        block = gen.block_diagram(graph)
+        oop = gen.oop_schema(graph)
+        report_path = Path(self._config.get("graphify.outputs_dir", "artifacts")).parent / (
+            "reports/REVERSE_ENGINEERING.md"
+        )
+        report_path.parent.mkdir(parents=True, exist_ok=True)
+        ReverseEngineeringReport().write(graph, metrics, block, oop, report_path)
+        return {"block_diagram": block, "oop_schema": oop, "report_path": str(report_path)}
 
     # --- Phase 4: graph-guided debugging agent ---
     def debug(self) -> dict:

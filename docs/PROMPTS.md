@@ -62,6 +62,16 @@ prompts that *failed* and what was changed.
   phase (need an LLM key); deterministic graph is complete and token-free.
 - **Quality:** 17 tests pass; ruff clean; coverage 77% (gap is Phase 3-5 stubs).
 
+### P3.1 — Reverse-engineering diagrams + insights
+- **Context given:** EX04 §5.2 (block diagram + OOP schema *from the graph*); the
+  real cookiecutter `graph.json`.
+- **Outcome:** `DiagramGenerator` (Mermaid `flowchart` of modules grouped by dir;
+  `classDiagram` from class+inherits edges) + `ReverseEngineeringReport`
+  (auto God-node insight from betweenness + the `find_hook` docstring-vs-code gap)
+  + `SDK.reverse_engineer` + `reverse` CLI. Ran on cookiecutter → renders the
+  `CookiecutterException` hierarchy (17 inherits) and both insights.
+- **Quality:** 20 tests pass (diagrams 100%, report 92%); ruff clean; coverage 78%.
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …

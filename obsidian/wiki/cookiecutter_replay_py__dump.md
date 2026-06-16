@@ -4,5 +4,5 @@
 - source: `cookiecutter/replay.py`
 
 ## Edges
-- `calls` → [[cookiecutter_utils_py__make_sure_path_exists]] (extracted 0.90)
 - `calls` → [[cookiecutter_replay_py__get_file_name]] (extracted 0.90)
+- `calls` → [[cookiecutter_utils_py__make_sure_path_exists]] (extracted 0.90)

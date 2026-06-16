@@ -32,11 +32,12 @@ def _dispatch(sdk: GraphQuestSDK, command: str) -> None:
     """Run one CLI command against the SDK facade."""
     if command in ("clone", "all"):
         print(f"cloned: {sdk.clone_target()}")
-    if command in ("graphify", "all"):
+    if command in ("graphify", "reverse", "all"):
         graph = sdk.build_graph()
         print(f"graph: {len(graph.nodes)} nodes, {len(graph.edges)} edges")
-    if command == "reverse":
-        sdk.reverse_engineer(sdk.build_graph())
+    if command in ("reverse", "all"):
+        result = sdk.reverse_engineer(graph)
+        print(f"reverse-engineering report: {result['report_path']}")
     if command == "debug":
         sdk.debug()
     if command == "benchmark":
