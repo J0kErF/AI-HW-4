@@ -11,8 +11,9 @@ contract below is what tests in tests/unit/shared/test_gatekeeper.py target.
 
 from __future__ import annotations
 
+from collections.abc import Callable
 from dataclasses import dataclass, field
-from typing import Any, Callable
+from typing import Any
 
 
 @dataclass

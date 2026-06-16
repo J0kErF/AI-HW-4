@@ -24,14 +24,20 @@
 - ☐ Reproduce the failing test in an isolated venv (`buggy` red → `fixed` green)
   - *DoD:* both `test_hooks.py` selectors fail at buggy commit, pass at fixed; logged in BUG_REPORT.
 
-## Phase 2 — Graphify  ☐
-- ☐ `CodeLayer.extract()` — AST nodes/edges (EXTRACTED), token-free
-  - *DoD:* deterministic `graph.json` for the target; unit tests on a fixture tree.
+## Phase 2 — Graphify  ◐
+- ☑ `CodeLayer.extract()` — AST nodes/edges (EXTRACTED), token-free; resilient to
+  non-Python fixtures. Ran on cookiecutter: **459 nodes / 390 edges**; the
+  `run_hook→find_hook` (calls) and `test_find_hook→find_hook` (tested_by) edges
+  are present. Unit tests on a fixture tree.
+- ☑ `MetricsCalculator.compute()` — NetworkX degree/betweenness, greedy-modularity
+  communities, bridges, God-nodes. (NetworkX is installed; pure graph theory.)
+- ☑ `VaultWriter.write()` — `index.md`, `hot.md`, per-node notes with `[[wikilinks]]`
+- ☑ `ReportWriter` → `GRAPH_REPORT.md`; `Graphifier` composition; `graphify` CLI + SDK
 - ☐ `SemanticLayer.augment()` — bounded INFERRED/AMBIGUOUS edges via Gatekeeper
-- ☐ `MetricsCalculator.compute()` — centrality, Louvain communities, bridges, God-nodes
-- ☐ `VaultWriter.write()` — `index.md`, `hot.md`, per-node notes with `[[wikilinks]]`
-- ☐ `GRAPH_REPORT.md` writer
-  - *DoD:* `graphify` command emits all artifacts; vault opens in Obsidian; ≥85% cov.
+  (needs LLM key + Gatekeeper.execute; comes with the agent phase). Pipeline runs
+  token-free without it (EXTRACTED-only) and graph is real.
+  - *DoD (remaining):* semantic edges added when key present; ≥85% cov reached as
+    Phase 3-5 modules land.
 
 ## Phase 3 — Reverse engineering  ☐
 - ☐ `DiagramGenerator.block_diagram()` (Mermaid flowchart from communities)

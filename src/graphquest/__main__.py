@@ -30,7 +30,17 @@ def main(argv: list[str] | None = None) -> int:
 
 def _dispatch(sdk: GraphQuestSDK, command: str) -> None:
     """Run one CLI command against the SDK facade."""
-    raise NotImplementedError("Phase 2: wire commands to SDK methods")
+    if command in ("clone", "all"):
+        print(f"cloned: {sdk.clone_target()}")
+    if command in ("graphify", "all"):
+        graph = sdk.build_graph()
+        print(f"graph: {len(graph.nodes)} nodes, {len(graph.edges)} edges")
+    if command == "reverse":
+        sdk.reverse_engineer(sdk.build_graph())
+    if command == "debug":
+        sdk.debug()
+    if command == "benchmark":
+        sdk.benchmark()
 
 
 if __name__ == "__main__":

@@ -44,6 +44,24 @@ prompts that *failed* and what was changed.
 - **Honesty note:** full pytest reproduction (needs cookiecutter deps in an
   isolated venv) deferred to a Phase-4 prerequisite; source-level defect verified.
 
+### P2.1 — Graphify deterministic pipeline
+- **Context given:** the Graphify "reading a graph" spec (Node=entity, Edge=claim
+  with evidence type + confidence + source_file; Code/Semantic layers); the
+  reproduced cookiecutter checkout.
+- **Goal:** build the token-free graph + Obsidian vault from real source.
+- **Outcome:** `ast_visitor` (per-file facts) + `CodeLayer` (module/class/function
+  nodes; imports/inherits/calls/tested_by EXTRACTED edges, conservative unique-name
+  resolution) + `MetricsCalculator` (NetworkX degree/betweenness/communities/
+  bridges/God-nodes) + `VaultWriter` + `ReportWriter` + `Graphifier` + `graphify`
+  CLI/SDK. Ran on cookiecutter → 459 nodes / 390 edges; the bug-relevant
+  `run_hook→find_hook` and `test_find_hook→find_hook` edges are present.
+- **Iteration / what failed:** a Jinja-template `.py` test fixture broke
+  `ast.parse`; fixed by skipping unparseable files (they aren't real source).
+- **Decision:** NetworkX is installed, so used it for real graph theory (rather
+  than a pure-Python fallback). Semantic layer + Gatekeeper deferred to the agent
+  phase (need an LLM key); deterministic graph is complete and token-free.
+- **Quality:** 17 tests pass; ruff clean; coverage 77% (gap is Phase 3-5 stubs).
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …

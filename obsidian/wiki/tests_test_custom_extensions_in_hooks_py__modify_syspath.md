@@ -1,0 +1,6 @@
+# modify_syspath
+
+- type: `function`
+- source: `tests/test_custom_extensions_in_hooks.py`
+
+## Edges

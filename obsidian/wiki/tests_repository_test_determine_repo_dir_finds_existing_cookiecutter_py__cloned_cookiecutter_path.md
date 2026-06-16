@@ -1,0 +1,6 @@
+# cloned_cookiecutter_path
+
+- type: `function`
+- source: `tests/repository/test_determine_repo_dir_finds_existing_cookiecutter.py`
+
+## Edges

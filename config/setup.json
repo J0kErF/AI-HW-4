@@ -27,8 +27,8 @@
   },
   "graphify": {
     "scan_root": "data/target_repo",
-    "include_globs": ["**/*.py", "**/*.md"],
-    "exclude_globs": ["**/tests/**", "**/.git/**", "**/__pycache__/**"],
+    "include_globs": ["**/*.py"],
+    "exclude_globs": ["**/.git/**", "**/__pycache__/**", "**/build/**", "**/docs/**", "**/setup.py", "**/conftest.py"],
     "semantic_layer_enabled": true,
     "semantic_max_nodes": 40,
     "confidence_thresholds": {

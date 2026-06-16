@@ -13,7 +13,12 @@ from pathlib import Path
 from graphquest.services.acquire.checkout import TargetCheckout
 from graphquest.services.acquire.models import BugInfo
 from graphquest.services.benchmark.models import BenchmarkRun
+from graphquest.services.graphify.code_layer import CodeLayer
+from graphquest.services.graphify.graphifier import Graphifier
+from graphquest.services.graphify.metrics import MetricsCalculator
 from graphquest.services.graphify.models import CodeGraph
+from graphquest.services.graphify.report_writer import ReportWriter
+from graphquest.services.graphify.vault_writer import VaultWriter
 from graphquest.shared.config import Config
 from graphquest.shared.gatekeeper import ApiGatekeeper
 
@@ -59,8 +64,30 @@ class GraphQuestSDK:
 
     # --- Phase 2: build the Graphify representation ---
     def build_graph(self) -> CodeGraph:
-        """Run Graphify -> graph.json, GRAPH_REPORT.md, Obsidian vault."""
-        raise NotImplementedError("Phase 2")
+        """Run Graphify -> graph.json, GRAPH_REPORT.md, Obsidian vault.
+
+        Deterministic (token-free) by default; the bounded semantic layer is
+        added later when an LLM key is wired (it only augments the graph).
+        """
+        scan_root = Path(self._config.get("graphify.scan_root", "data/target_repo"))
+        thresholds = self._config.get("graphify.confidence_thresholds", {})
+        code_layer = CodeLayer(
+            scan_root=scan_root,
+            include_globs=self._config.get("graphify.include_globs", ["**/*.py"]),
+            exclude_globs=self._config.get("graphify.exclude_globs", []),
+            confidence=float(thresholds.get("extracted", 0.95)),
+        )
+        graphifier = Graphifier(
+            code_layer=code_layer,
+            metrics=MetricsCalculator(),
+            vault_writer=VaultWriter(Path(self._config.get("graphify.vault_dir", "obsidian/wiki"))),
+            report_writer=ReportWriter(),
+            artifacts_dir=Path(self._config.get("graphify.outputs_dir", "artifacts")),
+            semantic_layer=None,
+            hot_seed=f"BugsInPy {self._config.get('target.project')} bug "
+            f"{self._config.get('target.bug_id')} — {self._config.get('target.test_file')}",
+        )
+        return graphifier.build()
 
     # --- Phase 3: reverse engineering ---
     def reverse_engineer(self, graph: CodeGraph) -> dict:
