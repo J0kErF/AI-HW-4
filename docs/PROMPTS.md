@@ -27,6 +27,23 @@ prompts that *failed* and what was changed.
   invented blind.
 
 ---
+### P1.1 — Acquire & pin the target bug
+- **Context given:** EX04 + L07 + V3; live BugsInPy metadata inspected via the
+  GitHub API (cookiecutter & thefuck bug lists, `bug.info`, `run_test.sh`,
+  `bug_patch.txt`).
+- **Goal:** pick one reproducible bug; implement `clone_target()` with offline,
+  mockable tests; reproduce the codebase.
+- **Decision & why:** flipped primary from `thefuck` to **cookiecutter bug 2** —
+  cross-platform reproducible, and its root cause spans `run_hook`→`find_hook`
+  (a changed return contract) for a stronger graph-navigation demo; also exhibits
+  a docstring-vs-code gap. Fallback bug 1; thefuck kept as larger alternative.
+- **Outcome:** `acquire` service (`BugInfo` / `bug_metadata` parser /
+  `TargetCheckout` with injected runner) + `SDK.clone_target()`; metadata vendored
+  into `config/setup.json` (no run-time network dependency); buggy commit cloned
+  into `data/target_repo` and the defect confirmed at source.
+- **Honesty note:** full pytest reproduction (needs cookiecutter deps in an
+  isolated venv) deferred to a Phase-4 prerequisite; source-level defect verified.
+
 <!-- Template for future entries:
 ### P<phase>.<n> — <short title>
 - **Context given:** …

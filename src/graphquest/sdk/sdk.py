@@ -10,6 +10,8 @@ from __future__ import annotations
 
 from pathlib import Path
 
+from graphquest.services.acquire.checkout import TargetCheckout
+from graphquest.services.acquire.models import BugInfo
 from graphquest.services.benchmark.models import BenchmarkRun
 from graphquest.services.graphify.models import CodeGraph
 from graphquest.shared.config import Config
@@ -42,9 +44,18 @@ class GraphQuestSDK:
         return None
 
     # --- Phase 1: acquire the unfamiliar codebase ---
-    def clone_target(self) -> Path:
-        """Check out the configured BugsInPy project into ``data/target_repo``."""
-        raise NotImplementedError("Phase 1: BugsInPy checkout")
+    def clone_target(self, ref: str = "buggy") -> Path:
+        """Check out the configured BugsInPy project into the checkout dir.
+
+        Args:
+            ref: "buggy" (default — the revision whose test fails) or "fixed".
+
+        Returns:
+            Path to the checked-out target repository.
+        """
+        bug = BugInfo.from_config(self._config.get("target"))
+        checkout_dir = Path(self._config.get("target.checkout_dir", "data/target_repo"))
+        return TargetCheckout(checkout_dir).checkout(bug, ref=ref)
 
     # --- Phase 2: build the Graphify representation ---
     def build_graph(self) -> CodeGraph:

@@ -22,10 +22,16 @@ lets an agent retrieve the *smallest evidence slice* needed — saving 70–95% 
 tokens vs naive reading (L07).
 
 ## 2. The base repository (chosen & why)
-A single self-contained **BugsInPy** project — primary **`thefuck`** (dozens of
-small rule modules make graph navigation, communities and God-node analysis
-vivid), fallback **`cookiecutter`**. One reproducible bug with the real upstream
-fix as ground truth. Pinned in [`config/setup.json`](config/setup.json).
+A single self-contained **BugsInPy** project — **`cookiecutter` bug 2** (pinned
+in [`config/setup.json`](config/setup.json)). Chosen because it is
+cross-platform reproducible and its root cause spans **two functions**
+(`run_hook` → `find_hook`, a changed return contract) — a far stronger
+*graph-navigation* demo than a single isolated function. It even ships a
+**docstring-vs-code gap** (`find_hook`'s docstring promises a dict of all hooks
+while the buggy code returns one path), which exercises Graphify's
+rationale-vs-implementation reading. Fallback: `cookiecutter` bug 1 (one-line
+`encoding='utf-8'` fix, bulletproof reproduction). Larger-codebase alternative
+for a bigger token delta: `thefuck`. Real upstream fix is the ground truth.
 
 ## 3. Installation
 ```bash

@@ -15,11 +15,14 @@
 - ☐ Push to GitHub; share with rmisegal@gmail.com
   - *DoD:* repo public/shared, README renders, P0 commits tell PRD→PLAN→TODO→code story.
 
-## Phase 1 — Acquire the unfamiliar codebase  ☐
-- ☐ Pick & pin one BugsInPy project + bug id (finalize `setup.json`)
-- ☐ Isolated venv/Docker checkout into `data/target_repo`; reproduce the failing test
-  - *DoD:* `buggy` ref fails the target test; `fixed` ref passes; documented in BUG_REPORT.
-- ☐ `SDK.clone_target()` implemented + tested (mock subprocess)
+## Phase 1 — Acquire the unfamiliar codebase  ◐
+- ☑ Pick & pin one BugsInPy project + bug id → **cookiecutter bug 2** (`setup.json`)
+- ☑ Checkout buggy commit into `data/target_repo`; source-level defect confirmed
+  (`find_hook` returns single path; docstring-vs-code gap noted in BUG_REPORT)
+- ☑ `acquire` service (`BugInfo`, `bug_metadata` parser, `TargetCheckout`) + SDK
+  `clone_target()` implemented + tested (subprocess mocked — no network)
+- ☐ Reproduce the failing test in an isolated venv (`buggy` red → `fixed` green)
+  - *DoD:* both `test_hooks.py` selectors fail at buggy commit, pass at fixed; logged in BUG_REPORT.
 
 ## Phase 2 — Graphify  ☐
 - ☐ `CodeLayer.extract()` — AST nodes/edges (EXTRACTED), token-free

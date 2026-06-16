@@ -7,14 +7,23 @@
     "assignment": "HW4 / EX04 — Reverse Engineering, Debugging and Token-Efficient Agentic AI"
   },
   "target": {
-    "comment": "The unfamiliar Python codebase under study. Primary: a single self-contained BugsInPy project whose many small modules make graph-guided navigation pay off. Finalize bug_id during Phase 1.",
+    "comment": "Unfamiliar Python codebase under study. Pinned in Phase 1 to cookiecutter bug 2 (cross-platform reproducible; root cause spans run_hook->find_hook, a changed return contract = strong graph-navigation demo). Fallback bug 1 (one-line encoding fix, bulletproof repro). Larger-codebase alternative for a bigger token delta: thefuck.",
     "source": "bugsinpy",
-    "project": "thefuck",
-    "bug_id": "1",
-    "fallback_project": "cookiecutter",
+    "project": "cookiecutter",
+    "bug_id": "2",
+    "github_url": "https://github.com/cookiecutter/cookiecutter",
+    "buggy_commit_id": "d7e7b28811e474e14d1bed747115e47dcdd15ba3",
+    "fixed_commit_id": "90434ff4ea4477941444f1e83313beb414838535",
+    "test_file": "tests/test_hooks.py",
+    "test_selectors": [
+      "tests/test_hooks.py::TestFindHooks::test_find_hook",
+      "tests/test_hooks.py::TestExternalHooks::test_run_hook"
+    ],
+    "python_version": "3.6.9",
+    "fallback_bug_id": "1",
+    "larger_alternative_project": "thefuck",
     "checkout_dir": "data/target_repo",
-    "buggy_ref": "buggy",
-    "fixed_ref": "fixed"
+    "default_ref": "buggy"
   },
   "graphify": {
     "scan_root": "data/target_repo",
