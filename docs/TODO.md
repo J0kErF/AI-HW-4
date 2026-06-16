@@ -8,6 +8,10 @@
 - ☑ `src/` skeleton (SDK, shared, services) pre-split ≤150 LOC
 - ☑ Mandatory docs: PRD, PLAN, TODO, PROMPTS, per-mechanism PRDs, RESEARCH_QUESTIONS
 - ☑ `shared/version.py` + `shared/config.py` implemented with passing tests
+  - *Note:* default `pytest` is **red until Phase 2** by design — `fail_under=85`
+    over stubbed `src/`. Run `pytest -p no:cov` for the 6 green infra tests.
+- ☐ Generate `uv.lock` and commit it (V3 hard requirement — needs `uv` + network)
+  - *DoD:* `uv lock` run; `uv.lock` + `pyproject.toml` are the single dep source.
 - ☐ Push to GitHub; share with rmisegal@gmail.com
   - *DoD:* repo public/shared, README renders, P0 commits tell PRD→PLAN→TODO→code story.
 

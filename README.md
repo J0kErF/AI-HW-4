@@ -47,8 +47,15 @@ uv run python -m graphquest all         # full pipeline
 
 # Quality gates
 uv run ruff check                       # 0 errors
-uv run pytest                           # ≥85% coverage
+uv run pytest -p no:cov                 # 6 infra tests pass (version + config)
+uv run pytest                           # red until Phase 2: coverage <85% by design (TDD)
 ```
+> **Phase 0 is intentionally a TDD "red" state.** The 6 infrastructure tests
+> (`version`, `config`) pass, but the default `pytest` run enforces
+> `fail_under = 85` over all of `src/` — the service modules are specified
+> stubs (`NotImplementedError`) until their phase in `docs/TODO.md`, so the
+> coverage gate is expected to fail until Phase 2. We do **not** `omit` stubs to
+> inflate the number.
 Or through the SDK (the single entry point for all logic):
 ```python
 from graphquest import GraphQuestSDK
