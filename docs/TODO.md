@@ -8,8 +8,8 @@
 - ☑ `src/` skeleton (SDK, shared, services) pre-split ≤150 LOC
 - ☑ Mandatory docs: PRD, PLAN, TODO, PROMPTS, per-mechanism PRDs, RESEARCH_QUESTIONS
 - ☑ `shared/version.py` + `shared/config.py` implemented with passing tests
-  - *Note:* default `pytest` is **red until Phase 2** by design — `fail_under=85`
-    over stubbed `src/`. Run `pytest -p no:cov` for the 6 green infra tests.
+  - *Status now:* full suite green — **32 tests pass, coverage ~91.7%** (≥85 gate
+    met), ruff clean. (Was a deliberate TDD-red state during early phases.)
 - ☑ Generate `uv.lock` and commit it (`uv lock` — 71 packages resolved);
   `pyproject.toml` + `uv.lock` are the single dependency source.
 - ☑ Push to GitHub → **https://github.com/J0kErF/AI-HW-4** (`main` pushed)
