@@ -2,7 +2,7 @@
 
 > Version **1.00** · Status keys: ☐ not started · ◐ in progress · ☑ done. Each task lists its Definition of Done (DoD).
 
-## Phase 0 — Scaffold & docs-first  ◐
+## Phase 0 — Scaffold & docs-first  ☑
 - ☑ Repo tree, git init, `pyproject.toml`, `.gitignore`, `.env.example`
 - ☑ Config: `setup.json`, `rate_limits.json`, `logging_config.json` (versioned)
 - ☑ `src/` skeleton (SDK, shared, services) pre-split ≤150 LOC
@@ -16,7 +16,7 @@
 - ☑ Shared repo with rmisegal@gmail.com (done by submitter via GitHub Settings)
   - *DoD met:* repo shared, README renders, commits tell PRD→PLAN→TODO→code story.
 
-## Phase 1 — Acquire the unfamiliar codebase  ◐
+## Phase 1 — Acquire the unfamiliar codebase  ☑
 - ☑ Pick & pin one BugsInPy project + bug id → **cookiecutter bug 2** (`setup.json`)
 - ☑ Checkout buggy commit into `data/target_repo`; source-level defect confirmed
   (`find_hook` returns single path; docstring-vs-code gap noted in BUG_REPORT)
@@ -26,7 +26,7 @@
   **verified** (Windows/py3.13): both `test_hooks.py` selectors **2 failed** at buggy,
   **2 passed** at fixed; logged in `reports/BUG_REPORT.md §5`.
 
-## Phase 2 — Graphify  ◐
+## Phase 2 — Graphify  ☑
 - ☑ `CodeLayer.extract()` — AST nodes/edges (EXTRACTED), token-free; resilient to
   non-Python fixtures. Ran on cookiecutter: **459 nodes / 390 edges**; the
   `run_hook→find_hook` (calls) and `test_find_hook→find_hook` (tested_by) edges
